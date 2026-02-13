@@ -1,4 +1,5 @@
 import Image from "next/image";
+import profileImg from "../../public/visakh-unni.avif";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
 
       <div className="flex shrink-0 justify-center">
         <Image
-          src="/visakh-unni.avif"
+          src={profileImg}
           alt="Visakh Unni"
           width={280}
           height={280}
