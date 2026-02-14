@@ -69,7 +69,7 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="right" className="w-64">
         <SheetTitle className="sr-only">Navigation</SheetTitle>
-        <nav className="flex flex-col gap-4 px-2 pt-4">
+        <nav className="flex flex-col gap-4 px-6 pt-14">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -80,7 +80,7 @@ export function MobileNav() {
             </Link>
           ))}
         </nav>
-        <div className="mt-auto border-t border-border/60 px-2 pb-6 pt-4">
+        <div className="mt-auto border-t border-border/60 px-6 pb-8 pt-4">
           <div className="flex items-center gap-4">
             {socialLinks.map((link) => (
               <a
