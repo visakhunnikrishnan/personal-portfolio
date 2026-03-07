@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import profileImg from "../../public/visakh-unni.avif";
 
+import heroBilt from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-estate.png";
 import hero0 from "../../public/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png";
 import hero17 from "../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.png";
 import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png";
@@ -10,6 +11,16 @@ import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.
 import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.png";
 
 const featuredPosts = [
+  {
+    slug: "why-india-needs-its-own-bilt-rewards",
+    title: "Why India Needs Its Own Bilt Rewards, And Why It Could Be Even Bigger",
+    description:
+      "How Bilt Rewards turned rent into a wealth-building tool in the US, and why the same opportunity exists in India with UPI and a $170 billion rental market.",
+    date: "Mar 7, 2026",
+    readTime: "18 min read",
+    image: heroBilt,
+    tag: "Fintech",
+  },
   {
     slug: "beyond-the-obvious-seeing-through-the-lens-of-first-principles",
     title: "Beyond the Obvious: Seeing Through the Lens of First Principles",

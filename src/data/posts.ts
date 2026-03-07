@@ -22,6 +22,7 @@ import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-be
 import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png";
 import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.png";
 import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.png";
+import hero22 from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-estate.png";
 
 export interface Post {
   slug: string;
@@ -34,6 +35,15 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "why-india-needs-its-own-bilt-rewards",
+    title: "Why India Needs Its Own Bilt Rewards, And Why It Could Be Even Bigger",
+    description: "How Bilt Rewards turned rent into a wealth-building tool in the US, why the same opportunity exists in India with UPI and a $170 billion rental market, and what the regulatory landscape means for anyone building in this space.",
+    date: "Mar 7, 2026",
+    readTime: "18 min read",
+    image: hero22,
+    tags: ["Strategy", "Finance"],
+  },
   {
     slug: "a-quantitative-approach-to-personalized-investment-planning",
     title: "A Quantitative Approach to Personalized Investment Planning",
