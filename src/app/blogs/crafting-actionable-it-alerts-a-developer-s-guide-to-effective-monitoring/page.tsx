@@ -18,11 +18,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-01-29",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/vintage-camera-hands-closeup.png",
+        width: 1200,
+        height: 630,
+        alt: "Crafting Actionable IT Alerts: A Developer's Guide to Effective Monitoring",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Crafting Actionable IT Alerts: A Developer's Guide to Effective Monitoring",
     description: "How to build alerting systems that catch real problems without drowning your team in noise - lessons from Google SRE.",
+    images: [
+      "https://visakhunni.com/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/vintage-camera-hands-closeup.png",
+    ],
   },
 };
 

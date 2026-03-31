@@ -28,12 +28,23 @@ export const metadata: Metadata = {
     url: "https://visakhunni.com",
     siteName: "Visakh Unni",
     type: "website",
+    images: [
+      {
+        url: "https://visakhunni.com/visakh-unni.avif",
+        width: 1200,
+        height: 630,
+        alt: "Visakh Unni",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Visakh Unni",
     description:
       "Research engineer exploring hidden pattern mining, parallel computing, data storytelling, and developer platforms.",
+    images: [
+      "https://visakhunni.com/visakh-unni.avif",
+    ],
   },
 };
 

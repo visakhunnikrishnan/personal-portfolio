@@ -17,11 +17,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-01-29",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.png",
+        width: 1200,
+        height: 630,
+        alt: "The Codebase Principle",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Codebase Principle",
     description: "Why one repository should produce every deploy, and how to keep development, staging, and production running the same code.",
+    images: [
+      "https://visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.png",
+    ],
   },
 };
 

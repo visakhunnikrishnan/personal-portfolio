@@ -26,11 +26,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-01-29",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png",
+        width: 1200,
+        height: 630,
+        alt: "A Quantitative Approach to Personalized Investment Planning",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "A Quantitative Approach to Personalized Investment Planning",
     description: "Using compound interest, Monte Carlo simulations, Modern Portfolio Theory, and rebalancing strategies to build a data-driven investment plan.",
+    images: [
+      "https://visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png",
+    ],
   },
 };
 

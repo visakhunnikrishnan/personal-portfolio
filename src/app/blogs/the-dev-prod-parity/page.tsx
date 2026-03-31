@@ -16,11 +16,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-01-29",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/the-dev-prod-parity/golden-nebula-space-explosion.png",
+        width: 1200,
+        height: 630,
+        alt: "The Dev/Prod Parity",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Dev/Prod Parity",
     description: "Why 'works on my machine' is a design problem, the three gaps that cause dev/prod drift, and practical strategies for environment parity.",
+    images: [
+      "https://visakhunni.com/blog/the-dev-prod-parity/golden-nebula-space-explosion.png",
+    ],
   },
 };
 

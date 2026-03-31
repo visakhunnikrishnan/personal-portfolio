@@ -19,11 +19,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2023-08-19",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png",
+        width: 1200,
+        height: 630,
+        alt: "Silence, Stories, and Strategies: The Jeff Bezos Method for Transforming Dialogue in the Boardroom",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Jeff Bezos Method for Transforming Dialogue in the Boardroom",
     description: "How Amazon replaced PowerPoint with narrative memos, silent reading, and structured discussion to make meetings actually productive.",
+    images: [
+      "https://visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png",
+    ],
   },
 };
 

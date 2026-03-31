@@ -26,6 +26,31 @@ export const metadata: Metadata = {
   title: "Bookshelf - Visakh Unni",
   description:
     "A collection of books that have shaped my thinking on engineering, strategy, design, and technology.",
+  openGraph: {
+    title: "Bookshelf - Visakh Unni",
+    description:
+      "A collection of books that have shaped my thinking on engineering, strategy, design, and technology.",
+    url: "https://visakhunni.com/bookshelf",
+    siteName: "Visakh Unni",
+    type: "website",
+    images: [
+      {
+        url: "https://visakhunni.com/visakh-unni.avif",
+        width: 1200,
+        height: 630,
+        alt: "Visakh Unni - Bookshelf",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bookshelf - Visakh Unni",
+    description:
+      "A collection of books that have shaped my thinking on engineering, strategy, design, and technology.",
+    images: [
+      "https://visakhunni.com/visakh-unni.avif",
+    ],
+  },
 };
 
 const books = [

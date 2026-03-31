@@ -22,11 +22,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2023-03-10",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/data-storytelling/data-storytelling-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "From Numbers to Narratives: The UX of Storytelling with Data",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "From Numbers to Narratives: The UX of Storytelling with Data",
     description: "Delving into the UX aspects of data visualization, drawing inspiration from Don Norman and Edward Tufte.",
+    images: [
+      "https://visakhunni.com/blog/data-storytelling/data-storytelling-cover.png",
+    ],
   },
 };
 

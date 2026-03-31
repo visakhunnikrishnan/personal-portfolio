@@ -17,11 +17,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-01-29",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png",
+        width: 1200,
+        height: 630,
+        alt: "Three Stages of App Deployment: Build, Release, and Run",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Three Stages of App Deployment: Build, Release, and Run",
     description: "Why separating build, release, and run stages matters, and how immutable releases make rollbacks trivial and deployments predictable.",
+    images: [
+      "https://visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png",
+    ],
   },
 };
 

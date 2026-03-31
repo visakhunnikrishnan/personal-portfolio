@@ -16,11 +16,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-03-07",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/why-india-needs-its-own-bilt-rewards/real-estate.png",
+        width: 1200,
+        height: 630,
+        alt: "Why India Needs Its Own Bilt Rewards, And Why It Could Be Even Bigger",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Why India Needs Its Own Bilt Rewards",
     description: "How Bilt Rewards turned rent into a wealth-building tool in the US, and why the same opportunity exists in India with UPI and a $170 billion rental market.",
+    images: [
+      "https://visakhunni.com/blog/why-india-needs-its-own-bilt-rewards/real-estate.png",
+    ],
   },
 };
 

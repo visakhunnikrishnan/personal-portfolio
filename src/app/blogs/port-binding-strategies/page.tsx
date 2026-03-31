@@ -16,11 +16,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-01-29",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/port-binding-strategies/cat-beside-network-cables.png",
+        width: 1200,
+        height: 630,
+        alt: "Port Binding Strategies",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Port Binding Strategies",
     description: "Why your application should bind to a port and serve requests directly, and how port binding works with Docker, reverse proxies, and cloud platforms.",
+    images: [
+      "https://visakhunni.com/blog/port-binding-strategies/cat-beside-network-cables.png",
+    ],
   },
 };
 

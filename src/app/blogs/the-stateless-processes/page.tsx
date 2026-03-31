@@ -16,11 +16,22 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-01-29",
     authors: ["Visakh Unni"],
+    images: [
+      {
+        url: "https://visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.png",
+        width: 1200,
+        height: 630,
+        alt: "The Stateless Processes",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Stateless Processes",
     description: "Why your application processes should not store anything locally, and practical patterns for moving state out of your app.",
+    images: [
+      "https://visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.png",
+    ],
   },
 };
 
