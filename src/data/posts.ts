@@ -23,6 +23,7 @@ import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-in
 import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.png";
 import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.png";
 import hero22 from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-estate.png";
+import hero23 from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg";
 
 export interface Post {
   slug: string;
@@ -35,6 +36,15 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "what-i-learned-in-my-first-week-as-a-new-parent",
+    title: "What I Learned in My First Month as a New Parent",
+    description: "A first-time father from Kerala shares everything he learned about newborn feeding, sleep, maternal nutrition, and staying sane as working parents, backed by WHO, AAP, and ICMR research.",
+    date: "Mar 31, 2026",
+    readTime: "28 min read",
+    image: hero23,
+    tags: ["Parenting", "Health"],
+  },
   {
     slug: "why-india-needs-its-own-bilt-rewards",
     title: "Why India Needs Its Own Bilt Rewards, And Why It Could Be Even Bigger",

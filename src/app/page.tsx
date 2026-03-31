@@ -4,6 +4,7 @@ import profileImg from "../../public/visakh-unni.avif";
 
 import heroBilt from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-estate.png";
 import hero0 from "../../public/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png";
+import heroNewborn from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg";
 import hero17 from "../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.png";
 import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png";
 import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png";
@@ -79,6 +80,14 @@ const featuredPosts = [
     readTime: "24 min read",
     image: hero0,
     tag: "Strategy",
+  },
+  {
+    slug: "what-i-learned-in-my-first-week-as-a-new-parent",
+    title: "What I Learned in My First Month as a New Parent",
+    date: "Mar 31, 2026",
+    readTime: "28 min read",
+    image: heroNewborn,
+    tag: "Parenting",
   },
 ];
 
