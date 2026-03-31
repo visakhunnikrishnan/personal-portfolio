@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg",
+        url: "https://www.visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg",
         width: 1200,
         height: 630,
         alt: "What I Learned in My First Month as a New Parent",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     description:
       "Notes from a first-time father on newborn feeding, sleep, postpartum nutrition, and managing it all as working parents.",
     images: [
-      "https://visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg",
+      "https://www.visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg",
     ],
   },
 };
