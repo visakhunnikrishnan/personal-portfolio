@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/simplifying-application-logging/aerial-view-feet-over-city.png",
+        url: "https://www.visakhunni.com/blog/simplifying-application-logging/aerial-view-feet-over-city.png",
         width: 1200,
         height: 630,
         alt: "Simplifying Application Logging",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Simplifying Application Logging",
     description: "Why your application should write logs to stdout and nothing else, and how structured logging and log aggregation work in modern deployments.",
     images: [
-      "https://visakhunni.com/blog/simplifying-application-logging/aerial-view-feet-over-city.png",
+      "https://www.visakhunni.com/blog/simplifying-application-logging/aerial-view-feet-over-city.png",
     ],
   },
 };

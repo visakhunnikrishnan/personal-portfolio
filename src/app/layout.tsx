@@ -25,12 +25,12 @@ export const metadata: Metadata = {
     title: "Visakh Unni",
     description:
       "Research engineer exploring hidden pattern mining, parallel computing, data storytelling, and developer platforms.",
-    url: "https://visakhunni.com",
+    url: "https://www.visakhunni.com",
     siteName: "Visakh Unni",
     type: "website",
     images: [
       {
-        url: "https://visakhunni.com/visakh-unni.avif",
+        url: "https://www.visakhunni.com/visakh-unni.avif",
         width: 1200,
         height: 630,
         alt: "Visakh Unni",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description:
       "Research engineer exploring hidden pattern mining, parallel computing, data storytelling, and developer platforms.",
     images: [
-      "https://visakhunni.com/visakh-unni.avif",
+      "https://www.visakhunni.com/visakh-unni.avif",
     ],
   },
 };

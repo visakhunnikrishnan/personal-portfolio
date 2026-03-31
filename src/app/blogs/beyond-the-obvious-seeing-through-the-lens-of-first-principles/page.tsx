@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/first-principles/first-principles-thinking-cover.png",
+        url: "https://www.visakhunni.com/blog/first-principles/first-principles-thinking-cover.png",
         width: 1200,
         height: 630,
         alt: "Beyond the Obvious: Seeing Through the Lens of First Principles",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Beyond the Obvious: Seeing Through the Lens of First Principles",
     description: "To get past biases, we need a careful and thoughtful approach called first principles thinking.",
     images: [
-      "https://visakhunni.com/blog/first-principles/first-principles-thinking-cover.png",
+      "https://www.visakhunni.com/blog/first-principles/first-principles-thinking-cover.png",
     ],
   },
 };

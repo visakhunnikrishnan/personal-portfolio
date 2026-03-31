@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png",
+        url: "https://www.visakhunni.com/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png",
         width: 1200,
         height: 630,
         alt: "Beyond Goals: How OKRs Foster Growth and Innovation",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Beyond Goals: How OKRs Foster Growth and Innovation",
     description: "How OKRs and CFRs, pioneered by Andrew Grove at Intel and popularized by John Doerr at Google, create focus and alignment.",
     images: [
-      "https://visakhunni.com/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png",
+      "https://www.visakhunni.com/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png",
     ],
   },
 };

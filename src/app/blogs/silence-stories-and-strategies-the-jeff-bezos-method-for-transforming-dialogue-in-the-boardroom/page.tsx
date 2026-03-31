@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png",
+        url: "https://www.visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png",
         width: 1200,
         height: 630,
         alt: "Silence, Stories, and Strategies: The Jeff Bezos Method for Transforming Dialogue in the Boardroom",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "The Jeff Bezos Method for Transforming Dialogue in the Boardroom",
     description: "How Amazon replaced PowerPoint with narrative memos, silent reading, and structured discussion to make meetings actually productive.",
     images: [
-      "https://visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png",
+      "https://www.visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png",
     ],
   },
 };

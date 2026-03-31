@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png",
+        url: "https://www.visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png",
         width: 1200,
         height: 630,
         alt: "A Quantitative Approach to Personalized Investment Planning",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "A Quantitative Approach to Personalized Investment Planning",
     description: "Using compound interest, Monte Carlo simulations, Modern Portfolio Theory, and rebalancing strategies to build a data-driven investment plan.",
     images: [
-      "https://visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png",
+      "https://www.visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png",
     ],
   },
 };

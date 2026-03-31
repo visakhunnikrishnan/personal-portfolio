@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png",
+        url: "https://www.visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png",
         width: 1200,
         height: 630,
         alt: "Three Stages of App Deployment: Build, Release, and Run",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Three Stages of App Deployment: Build, Release, and Run",
     description: "Why separating build, release, and run stages matters, and how immutable releases make rollbacks trivial and deployments predictable.",
     images: [
-      "https://visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png",
+      "https://www.visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png",
     ],
   },
 };

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/one-off-admin-processes/technician-in-server-room.png",
+        url: "https://www.visakhunni.com/blog/one-off-admin-processes/technician-in-server-room.png",
         width: 1200,
         height: 630,
         alt: "One-Off Admin Processes",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "One-Off Admin Processes",
     description: "Why admin tasks like database migrations and data fixes should run as one-off processes in the same environment as your application.",
     images: [
-      "https://visakhunni.com/blog/one-off-admin-processes/technician-in-server-room.png",
+      "https://www.visakhunni.com/blog/one-off-admin-processes/technician-in-server-room.png",
     ],
   },
 };

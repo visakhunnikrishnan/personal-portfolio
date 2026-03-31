@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/on-dependency-management/chain-links-closeup.png",
+        url: "https://www.visakhunni.com/blog/on-dependency-management/chain-links-closeup.png",
         width: 1200,
         height: 630,
         alt: "On Dependency Management",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "On Dependency Management",
     description: "Why every dependency should be explicitly declared and isolated, and how virtual environments, lock files, and containers solve this.",
     images: [
-      "https://visakhunni.com/blog/on-dependency-management/chain-links-closeup.png",
+      "https://www.visakhunni.com/blog/on-dependency-management/chain-links-closeup.png",
     ],
   },
 };

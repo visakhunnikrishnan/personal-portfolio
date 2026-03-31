@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/embracing-config-flexibility/developers-at-config-cafe.png",
+        url: "https://www.visakhunni.com/blog/embracing-config-flexibility/developers-at-config-cafe.png",
         width: 1200,
         height: 630,
         alt: "Embracing Config Flexibility",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Embracing Config Flexibility",
     description: "Why configuration should live in the environment and never in code, and practical patterns for managing config across environments.",
     images: [
-      "https://visakhunni.com/blog/embracing-config-flexibility/developers-at-config-cafe.png",
+      "https://www.visakhunni.com/blog/embracing-config-flexibility/developers-at-config-cafe.png",
     ],
   },
 };

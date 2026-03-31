@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/understanding-backing-services/abstract-colorful-circles-black-background.jpg",
+        url: "https://www.visakhunni.com/blog/understanding-backing-services/abstract-colorful-circles-black-background.jpg",
         width: 1200,
         height: 630,
         alt: "Understanding Backing Services",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Understanding Backing Services",
     description: "Why your application shouldn't care where its dependencies live, and the resilience patterns that matter when services go down.",
     images: [
-      "https://visakhunni.com/blog/understanding-backing-services/abstract-colorful-circles-black-background.jpg",
+      "https://www.visakhunni.com/blog/understanding-backing-services/abstract-colorful-circles-black-background.jpg",
     ],
   },
 };

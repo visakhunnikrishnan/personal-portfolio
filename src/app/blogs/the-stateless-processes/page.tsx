@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.png",
+        url: "https://www.visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.png",
         width: 1200,
         height: 630,
         alt: "The Stateless Processes",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "The Stateless Processes",
     description: "Why your application processes should not store anything locally, and practical patterns for moving state out of your app.",
     images: [
-      "https://visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.png",
+      "https://www.visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.png",
     ],
   },
 };

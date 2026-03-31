@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.png",
+        url: "https://www.visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.png",
         width: 1200,
         height: 630,
         alt: "The Codebase Principle",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "The Codebase Principle",
     description: "Why one repository should produce every deploy, and how to keep development, staging, and production running the same code.",
     images: [
-      "https://visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.png",
+      "https://www.visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.png",
     ],
   },
 };
