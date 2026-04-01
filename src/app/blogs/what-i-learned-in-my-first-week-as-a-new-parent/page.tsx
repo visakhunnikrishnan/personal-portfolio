@@ -143,7 +143,11 @@ export default function BlogPost() {
           comes down. By month 2, most babies are doing 6&ndash;8 feeds of
           120&ndash;150 ml each. By months 4&ndash;6, daily intake plateaus
           around 750&ndash;1050 ml - it doesn&apos;t keep increasing
-          linearly.
+          linearly
+          <sup>
+            <a href="#ref-1">[1]</a>
+          </sup>
+          .
         </p>
 
         <FeedingVolumeChart />
@@ -900,7 +904,10 @@ export default function BlogPost() {
             Queensland Government Health (2024). &ldquo;Infant formula
             feeding.&rdquo; Recommends 150 ml per kg of body weight per day
             for infants 5 days to 3 months old.{" "}
-            <a href="https://www.qld.gov.au/health/condition/child-health/babies-and-toddlers/infant-formula-feeding" target="_blank" rel="noopener noreferrer">QLD Health</a>
+            <a href="https://www.qld.gov.au/health/condition/child-health/babies-and-toddlers/infant-formula-feeding" target="_blank" rel="noopener noreferrer">QLD Health</a>.
+            Also: AAP HealthyChildren.org, &ldquo;How Often and How Much
+            Should Your Baby Eat?&rdquo;{" "}
+            <a href="https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/how-often-and-how-much-should-your-baby-eat.aspx" target="_blank" rel="noopener noreferrer">AAP</a>
           </li>
           <li id="ref-2">
             Kent JC et al. (1999). &ldquo;Breast volume and milk production
