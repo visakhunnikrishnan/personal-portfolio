@@ -21,7 +21,7 @@ import imgNest from "../../../../public/blog/what-i-learned-in-my-first-week-as-
 export const metadata: Metadata = {
   title: "What I Learned in My First Month as a New Parent",
   description:
-    "Notes from a first-time father on newborn feeding, sleep, postpartum nutrition, and managing it all as working parents. Backed by WHO, AAP, and ICMR guidelines.",
+    "Notes from a first-time parent on newborn feeding, sleep, and postpartum nutrition - what the research says and what actually helped.",
   keywords: [
     "newborn care",
     "new parent guide",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "What I Learned in My First Month as a New Parent",
     description:
-      "Notes from a first-time father on newborn feeding, sleep, postpartum nutrition, and managing it all as working parents. Backed by WHO, AAP, and ICMR guidelines.",
+      "Notes from a first-time parent on newborn feeding, sleep, and postpartum nutrition - what the research says and what actually helped.",
     type: "article",
     publishedTime: "2026-03-31",
     authors: ["Visakh Unni"],
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "What I Learned in My First Month as a New Parent",
     description:
-      "Notes from a first-time father on newborn feeding, sleep, postpartum nutrition, and managing it all as working parents.",
+      "Notes from a first-time parent on newborn feeding, sleep, and postpartum nutrition - what the research says and what actually helped.",
     images: [
       "https://www.visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg",
     ],
@@ -783,7 +783,7 @@ export default function BlogPost() {
           <sup>
             <a href="#ref-17">[17]</a>
           </sup>
-          . The approach we adopted: split the night into two 4&ndash;5 hour
+          . One approach that can be adopted: split the night into two 4&ndash;5 hour
           blocks. One parent is on duty while the other sleeps in a separate
           room, undisturbed. Then they switch.
         </p>
@@ -828,7 +828,7 @@ export default function BlogPost() {
         <h3>What&apos;s helped so far</h3>
 
         <p>
-          Sleep in shifts (see above). Accept help from whoever offers - this
+          Accept help from whoever offers - this
           is not the time to be polite about it.
         </p>
 

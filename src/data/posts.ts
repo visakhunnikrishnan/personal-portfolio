@@ -39,7 +39,7 @@ export const posts: Post[] = [
   {
     slug: "what-i-learned-in-my-first-week-as-a-new-parent",
     title: "What I Learned in My First Month as a New Parent",
-    description: "A first-time father from Kerala shares everything he learned about newborn feeding, sleep, maternal nutrition, and staying sane as working parents, backed by WHO, AAP, and ICMR research.",
+    description: "Notes from a first-time parent on newborn feeding, sleep, and postpartum nutrition - what the research says and what actually helped.",
     date: "Mar 31, 2026",
     readTime: "28 min read",
     image: hero23,
