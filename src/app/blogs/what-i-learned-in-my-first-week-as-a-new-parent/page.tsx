@@ -569,8 +569,7 @@ export default function BlogPost() {
 
         <p>
           <strong>Iron</strong> is the big one. The body lost 150&ndash;250 mg
-          of iron during delivery, and about 50% of Indian women are already
-          anaemic. The ICMR recommends continuing iron supplements (60 mg iron
+          of iron during delivery, and about 57% of Indian women are anaemic (per NFHS-5). The ICMR recommends continuing iron supplements (60 mg iron
           + 400 &mu;g folic acid) for at least 3 months postpartum. One tip
           that makes a difference: pair iron-rich foods with vitamin C (it
           helps absorption), and avoid tea or coffee with meals (tannins reduce
@@ -615,8 +614,10 @@ export default function BlogPost() {
             digestion
           </li>
           <li>
-            <strong>Drumstick leaves</strong> - very nutrient-dense (28 mg
-            iron + 440 mg calcium per 100g)
+            <strong>Drumstick leaves</strong> - very nutrient-dense.
+            Fresh leaves contain about 4 mg iron and 185 mg calcium per 100g;
+            dried leaf powder is much higher at 28 mg iron and 440 mg calcium
+            per 100g
           </li>
           <li>
             <strong>Turmeric in food</strong> - documented wound-healing
