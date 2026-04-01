@@ -127,7 +127,7 @@ export default function BlogPost() {
         <NewbornStomachSize />
 
         <p>
-          The general guideline from research is about{" "}
+          A commonly used guideline in paediatric practice is about{" "}
           <strong>150 ml per kg of body weight per day</strong>
           <sup>
             <a href="#ref-1">[1]</a>
@@ -897,9 +897,10 @@ export default function BlogPost() {
 
         <ol className="text-sm">
           <li id="ref-1">
-            Butte NF et al. (2005). &ldquo;Energy requirements of
-            infants.&rdquo; <em>Public Health Nutrition</em>, 8(7a):953&ndash;967.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/16277814/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            Queensland Government Health (2024). &ldquo;Infant formula
+            feeding.&rdquo; Recommends 150 ml per kg of body weight per day
+            for infants 5 days to 3 months old.{" "}
+            <a href="https://www.qld.gov.au/health/condition/child-health/babies-and-toddlers/infant-formula-feeding" target="_blank" rel="noopener noreferrer">QLD Health</a>
           </li>
           <li id="ref-2">
             Kent JC et al. (1999). &ldquo;Breast volume and milk production
