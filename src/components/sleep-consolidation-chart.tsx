@@ -253,7 +253,11 @@ export function SleepConsolidationChart() {
       </svg>
       <figcaption className="mt-2 text-center text-sm text-muted-foreground">
         Sleep gradually consolidates into nighttime. By month 4&ndash;6, the
-        longest unbroken stretch reaches 6&ndash;8 hours.
+        longest unbroken stretch reaches 6&ndash;8 hours
+        <sup>
+          <a href="#ref-26">[26]</a>
+        </sup>
+        .
       </figcaption>
     </figure>
   );

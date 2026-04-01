@@ -209,10 +209,18 @@ export default function BlogPost() {
         <h3>How to tell if your baby is getting enough</h3>
 
         <p>
-          You don&apos;t actually need to measure millilitres. The most reliable
-          indicator is output: by day 5&ndash;7, you should see at least 6 wet
-          diapers and 3&ndash;4 dirty diapers per 24 hours. Weight is the other
-          key metric - it&apos;s normal for newborns to lose up to
+          You don&apos;t actually need to measure millilitres. The most
+          reliable indicator is output. In the first few days, diaper counts
+          ramp up gradually - 1&ndash;2 on day 1, 3&ndash;4 by day 3. By day
+          5&ndash;7, you should see at least 6 wet diapers and 2+ dirty
+          diapers per 24 hours. This isn&apos;t just a first-week target - it
+          stays the benchmark through the first month
+          <sup>
+            <a href="#ref-25">[25]</a>
+          </sup>
+          . After about 6 weeks, stool frequency often decreases (and
+          that&apos;s normal), but wet diapers should stay at 6+. Weight is
+          the other key metric - it&apos;s normal for newborns to lose up to
           7&ndash;10% of birth weight in the first few days, but they should
           regain it by day 10&ndash;14. After that, expect about 150&ndash;200
           grams per week through 3 months
@@ -295,9 +303,12 @@ export default function BlogPost() {
           The studies suggest this gets better over time. Over the first few
           months, nighttime sleep gradually consolidates - the longest
           unbroken stretch grows from about 3 hours in week 1 to 6&ndash;8
-          hours by month 4&ndash;6. Daytime sleep reduces proportionally.
-          Total sleep also decreases slightly, from around 17 hours to about
-          15.
+          hours by month 4&ndash;6
+          <sup>
+            <a href="#ref-26">[26]</a>
+          </sup>
+          . Daytime sleep reduces proportionally. Total sleep also decreases
+          slightly, from around 17 hours to about 15.
         </p>
 
         <SleepConsolidationChart />
@@ -321,10 +332,14 @@ export default function BlogPost() {
         <p>
           One concept that helped us was <strong>wake windows</strong> -
           the amount of time a baby can comfortably stay awake between sleeps.
-          In the first two weeks, it&apos;s only 30&ndash;45 minutes, and that
-          includes the feed. According to the research, this gradually
-          stretches to about 1.5&ndash;2 hours by month 3, and 2&ndash;3 hours
-          by 6 months.
+          In the first month, it&apos;s only about 30&ndash;60 minutes, and
+          that includes the feed. According to Cleveland Clinic, this
+          gradually stretches to 1&ndash;2 hours by months 1&ndash;3, and
+          2&ndash;4 hours by 5&ndash;7 months
+          <sup>
+            <a href="#ref-27">[27]</a>
+          </sup>
+          .
         </p>
 
         <WakeWindowsChart />
@@ -1044,6 +1059,28 @@ export default function BlogPost() {
             Composition.&rdquo; <em>Pediatric Clinics of North America</em>,
             60(1):49&ndash;74.{" "}
             <a href="https://pubmed.ncbi.nlm.nih.gov/23178060/" target="_blank" rel="noopener noreferrer">PubMed</a>
+          </li>
+          <li id="ref-25">
+            La Leche League International. &ldquo;Frequency of Feeding -
+            Frequently Asked Questions.&rdquo; Recommends 6+ wet diapers and
+            2+ stools daily through the first month; notes stool frequency
+            often decreases after 6 weeks.{" "}
+            <a href="https://www.llli.org/breastfeeding-info/frequency-feeding-frequently-asked-questions-faqs/" target="_blank" rel="noopener noreferrer">LLLI</a>
+          </li>
+          <li id="ref-26">
+            Henderson JMT et al. (2010). &ldquo;Sleeping Through the Night:
+            The Consolidation of Self-regulated Sleep Across the First Year of
+            Life.&rdquo; <em>Pediatrics</em>, 126(5):e1081&ndash;e1087.{" "}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/20974775/" target="_blank" rel="noopener noreferrer">PubMed</a>.
+            Also: Stanford Children&apos;s Health, &ldquo;Infant Sleep.&rdquo;{" "}
+            <a href="https://www.stanfordchildrens.org/en/topic/default?id=infant-sleep-90-P02237" target="_blank" rel="noopener noreferrer">Stanford</a>
+          </li>
+          <li id="ref-27">
+            Cleveland Clinic (2024). &ldquo;Wake Windows by Age.&rdquo;
+            Birth&ndash;1 month: 30&ndash;60 min; 1&ndash;3 months:
+            1&ndash;2 hours; 3&ndash;4 months: 1.25&ndash;2.5 hours;
+            5&ndash;7 months: 2&ndash;4 hours.{" "}
+            <a href="https://health.clevelandclinic.org/wake-windows-by-age" target="_blank" rel="noopener noreferrer">Cleveland Clinic</a>
           </li>
         </ol>
       </div>

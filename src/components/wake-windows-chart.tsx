@@ -4,17 +4,13 @@ const PAD = { top: 40, right: 20, bottom: 44, left: 20 };
 const CW = W - PAD.left - PAD.right;
 
 const data = [
-  { age: "0–2 wk", min: 30, max: 45 },
-  { age: "2–4 wk", min: 30, max: 60 },
-  { age: "4–8 wk", min: 45, max: 75 },
-  { age: "2 mo", min: 60, max: 90 },
-  { age: "3 mo", min: 75, max: 120 },
-  { age: "4 mo", min: 90, max: 150 },
-  { age: "5 mo", min: 120, max: 150 },
-  { age: "6 mo", min: 120, max: 180 },
+  { age: "0–1 mo", min: 30, max: 60 },
+  { age: "1–3 mo", min: 60, max: 120 },
+  { age: "3–4 mo", min: 75, max: 150 },
+  { age: "5–7 mo", min: 120, max: 240 },
 ];
 
-const MAX_MIN = 200;
+const MAX_MIN = 270;
 const CH = H - PAD.top - PAD.bottom;
 
 function xPos(i: number) {
@@ -41,7 +37,7 @@ export function WakeWindowsChart() {
         viewBox={`0 0 ${W} ${H}`}
         className="w-full"
         role="img"
-        aria-label="Wake windows growing from 30-45 minutes at birth to 2-3 hours by 6 months"
+        aria-label="Wake windows growing from 30-60 minutes at birth to 2-4 hours by 5-7 months"
       >
         <defs>
           <linearGradient id="wake-area" x1="0" y1="0" x2="0" y2="1">
@@ -51,7 +47,7 @@ export function WakeWindowsChart() {
         </defs>
 
         {/* Grid lines */}
-        {[30, 60, 90, 120, 150, 180].map((v) => (
+        {[30, 60, 120, 180, 240].map((v) => (
           <g key={v}>
             <line
               x1={PAD.left}
@@ -119,24 +115,28 @@ export function WakeWindowsChart() {
                 {d.age}
               </text>
               {/* Range label on top */}
-              {i % 2 === 0 && (
-                <text
-                  x={cx}
-                  y={y(d.max) - 8}
-                  textAnchor="middle"
-                  className="text-[8px] font-medium fill-orange-600 dark:fill-orange-400"
-                >
-                  {d.min}–{d.max}m
-                </text>
-              )}
+              <text
+                x={cx}
+                y={y(d.max) - 8}
+                textAnchor="middle"
+                className="text-[8px] font-medium fill-orange-600 dark:fill-orange-400"
+              >
+                {d.min >= 60
+                  ? `${d.min / 60}–${d.max / 60}h`
+                  : `${d.min}m–${d.max >= 60 ? `${d.max / 60}h` : `${d.max}m`}`}
+              </text>
             </g>
           );
         })}
       </svg>
       <figcaption className="mt-2 text-center text-sm text-muted-foreground">
-        Wake windows grow from 30&ndash;45 minutes at birth to 2&ndash;3 hours
-        by 6 months. For the first few months, watching for sleepy cues is more
-        reliable than watching the clock.
+        Wake windows grow from 30&ndash;60 minutes at birth to 2&ndash;4 hours
+        by 5&ndash;7 months
+        <sup>
+          <a href="#ref-27">[27]</a>
+        </sup>
+        . For the first few months, watching for sleepy cues is more reliable
+        than watching the clock.
       </figcaption>
     </figure>
   );
