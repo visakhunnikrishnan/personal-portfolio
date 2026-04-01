@@ -13,7 +13,7 @@ export function BlogImageLightbox({ children }: { children: React.ReactNode }) {
     const article = containerRef.current.querySelector("article");
     if (!article) return [];
     return Array.from(article.querySelectorAll("img")).filter(
-      (img) => !img.closest("a")
+      (img) => !img.closest("a") && !img.src.endsWith(".svg")
     );
   }, []);
 
@@ -71,7 +71,7 @@ export function BlogImageLightbox({ children }: { children: React.ReactNode }) {
   return (
     <div ref={containerRef} className="blog-lightbox-container">
       <style jsx global>{`
-        .blog-lightbox-container article img:not(a img) {
+        .blog-lightbox-container article img:not(a img):not([src$=".svg"]) {
           cursor: pointer;
         }
       `}</style>

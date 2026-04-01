@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+
+  <!-- Title -->
+  <text x="280" y="24" text-anchor="middle" fill="#6366f1" font-size="16" font-weight="600" letter-spacing="-0.3">Braess&#39;s Paradox</text>
+  <text x="280" y="44" text-anchor="middle" fill="#9ca3af" font-size="11">Adding a road can make traffic worse for everyone</text>
+
+  <!-- ===== LEFT: WITHOUT SHORTCUT ===== -->
+  <!-- Header pill -->
+  <text x="135" y="78" text-anchor="middle" fill="#059669" font-size="12" font-weight="700">Without shortcut</text>
+
+  <!-- Nodes -->
+  <circle cx="55" cy="178" r="20" fill="#6366f1" fill-opacity="0.06" stroke="#6366f1" stroke-width="1" stroke-opacity="0.18"/>
+  <text x="55" y="175" text-anchor="middle" fill="#6366f1" font-size="9" font-weight="700">Start</text>
+  <text x="55" y="186" text-anchor="middle" fill="#6366f1" font-size="7">S</text>
+
+  <circle cx="135" cy="118" r="16" fill="#6b7280" fill-opacity="0.04" stroke="#d1d5db" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="135" y="122" text-anchor="middle" fill="#6b7280" font-size="10" font-weight="600">A</text>
+
+  <circle cx="135" cy="238" r="16" fill="#6b7280" fill-opacity="0.04" stroke="#d1d5db" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="135" y="242" text-anchor="middle" fill="#6b7280" font-size="10" font-weight="600">B</text>
+
+  <circle cx="215" cy="178" r="20" fill="#059669" fill-opacity="0.06" stroke="#059669" stroke-width="1" stroke-opacity="0.18"/>
+  <text x="215" y="175" text-anchor="middle" fill="#059669" font-size="9" font-weight="700">End</text>
+  <text x="215" y="186" text-anchor="middle" fill="#059669" font-size="7">E</text>
+
+  <!-- Roads: S->A (narrow) -->
+  <line x1="73" y1="166" x2="121" y2="128" stroke="#8b5cf6" stroke-width="2" opacity="0.35"/>
+  <path d="M 117 126 L 123 128 L 119 133" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <text x="86" y="138" text-anchor="middle" fill="#8b5cf6" font-size="7" font-weight="500">T/10</text>
+  <text x="86" y="148" text-anchor="middle" fill="#8b5cf6" font-size="6" opacity="0.6">narrow</text>
+
+  <!-- S->B (wide) -->
+  <line x1="73" y1="190" x2="121" y2="228" stroke="#0891b2" stroke-width="2" opacity="0.35"/>
+  <path d="M 119 223 L 123 228 L 117 230" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <text x="86" y="218" text-anchor="middle" fill="#0891b2" font-size="7" font-weight="500">45 min</text>
+  <text x="86" y="228" text-anchor="middle" fill="#0891b2" font-size="6" opacity="0.6">wide</text>
+
+  <!-- A->E (wide) -->
+  <line x1="149" y1="128" x2="197" y2="166" stroke="#0891b2" stroke-width="2" opacity="0.35"/>
+  <path d="M 195 161 L 199 166 L 193 168" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <text x="184" y="138" text-anchor="middle" fill="#0891b2" font-size="7" font-weight="500">45 min</text>
+  <text x="184" y="148" text-anchor="middle" fill="#0891b2" font-size="6" opacity="0.6">wide</text>
+
+  <!-- B->E (narrow) -->
+  <line x1="149" y1="228" x2="197" y2="190" stroke="#8b5cf6" stroke-width="2" opacity="0.35"/>
+  <path d="M 193 188 L 199 190 L 195 195" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <text x="184" y="218" text-anchor="middle" fill="#8b5cf6" font-size="7" font-weight="500">T/10</text>
+  <text x="184" y="228" text-anchor="middle" fill="#8b5cf6" font-size="6" opacity="0.6">narrow</text>
+
+  <!-- Result -->
+  <text x="135" y="272" text-anchor="middle" fill="#6b7280" font-size="8">200 drivers each route</text>
+  <text x="135" y="286" text-anchor="middle" fill="#6b7280" font-size="8">T/10 = 200/10 = 20 min</text>
+  <text x="135" y="306" text-anchor="middle" fill="#059669" font-size="11" font-weight="700">65 min</text>
+  <text x="135" y="320" text-anchor="middle" fill="#059669" font-size="8">20 + 45 per driver</text>
+
+  <!-- ===== DIVIDER ===== -->
+  <line x1="275" y1="72" x2="275" y2="330" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- ===== RIGHT: WITH SHORTCUT ===== -->
+  <text x="415" y="78" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="700">With shortcut added</text>
+
+  <!-- Nodes -->
+  <circle cx="335" cy="178" r="20" fill="#6366f1" fill-opacity="0.06" stroke="#6366f1" stroke-width="1" stroke-opacity="0.18"/>
+  <text x="335" y="175" text-anchor="middle" fill="#6366f1" font-size="9" font-weight="700">Start</text>
+  <text x="335" y="186" text-anchor="middle" fill="#6366f1" font-size="7">S</text>
+
+  <circle cx="415" cy="118" r="16" fill="#6b7280" fill-opacity="0.04" stroke="#d1d5db" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="415" y="122" text-anchor="middle" fill="#6b7280" font-size="10" font-weight="600">A</text>
+
+  <circle cx="415" cy="238" r="16" fill="#6b7280" fill-opacity="0.04" stroke="#d1d5db" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="415" y="242" text-anchor="middle" fill="#6b7280" font-size="10" font-weight="600">B</text>
+
+  <circle cx="495" cy="178" r="20" fill="#dc2626" fill-opacity="0.06" stroke="#dc2626" stroke-width="1" stroke-opacity="0.18"/>
+  <text x="495" y="175" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="700">End</text>
+  <text x="495" y="186" text-anchor="middle" fill="#dc2626" font-size="7">E</text>
+
+  <!-- Roads: S->A (narrow) -->
+  <line x1="353" y1="166" x2="401" y2="128" stroke="#8b5cf6" stroke-width="2" opacity="0.35"/>
+  <path d="M 397 126 L 403 128 L 399 133" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <text x="366" y="138" text-anchor="middle" fill="#8b5cf6" font-size="7" font-weight="500">T/10</text>
+  <text x="366" y="148" text-anchor="middle" fill="#8b5cf6" font-size="6" opacity="0.6">narrow</text>
+
+  <!-- S->B (wide) -->
+  <line x1="353" y1="190" x2="401" y2="228" stroke="#0891b2" stroke-width="2" opacity="0.2"/>
+  <path d="M 399 223 L 403 228 L 397 230" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.2"/>
+  <text x="366" y="218" text-anchor="middle" fill="#0891b2" font-size="7" font-weight="500" opacity="0.4">45 min</text>
+
+  <!-- A->E (wide) -->
+  <line x1="429" y1="128" x2="477" y2="166" stroke="#0891b2" stroke-width="2" opacity="0.2"/>
+  <path d="M 475 161 L 479 166 L 473 168" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.2"/>
+  <text x="464" y="138" text-anchor="middle" fill="#0891b2" font-size="7" font-weight="500" opacity="0.4">45 min</text>
+
+  <!-- B->E (narrow) -->
+  <line x1="429" y1="228" x2="477" y2="190" stroke="#8b5cf6" stroke-width="2" opacity="0.35"/>
+  <path d="M 473 188 L 479 190 L 475 195" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <text x="464" y="218" text-anchor="middle" fill="#8b5cf6" font-size="7" font-weight="500">T/10</text>
+  <text x="464" y="228" text-anchor="middle" fill="#8b5cf6" font-size="6" opacity="0.6">narrow</text>
+
+  <!-- NEW SHORTCUT: A -> B -->
+  <line x1="415" y1="136" x2="415" y2="220" stroke="#ef4444" stroke-width="2.5" opacity="0.4" stroke-dasharray="5,4"/>
+  <path d="M 411 216 L 415 222 L 419 216" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  <text x="436" y="176" text-anchor="start" fill="#dc2626" font-size="8" font-weight="700">NEW</text>
+  <text x="436" y="188" text-anchor="start" fill="#dc2626" font-size="7">0 min</text>
+
+  <!-- Result -->
+  <text x="415" y="272" text-anchor="middle" fill="#6b7280" font-size="8">All 400 on both narrow roads</text>
+  <text x="415" y="286" text-anchor="middle" fill="#6b7280" font-size="8">T/10 = 400/10 = 40 min</text>
+  <text x="415" y="306" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="700">80 min</text>
+  <text x="415" y="320" text-anchor="middle" fill="#dc2626" font-size="8">40 + 0 + 40 per driver</text>
+
+  <!-- ===== BOTTOM ===== -->
+  <line x1="40" y1="340" x2="520" y2="340" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
+
+  <text x="280" y="364" text-anchor="middle" fill="#374151" font-size="10" font-weight="600">A free road made everyone 15 minutes slower</text>
+  <text x="280" y="382" text-anchor="middle" fill="#6b7280" font-size="9">Each driver picks the individually fastest route, but when everyone does,</text>
+  <text x="280" y="396" text-anchor="middle" fill="#6b7280" font-size="9">the narrow roads get overloaded and the collective outcome is worse.</text>
+
+  <!-- Legend -->
+  <text x="280" y="420" text-anchor="middle" fill="#9ca3af" font-size="8">T = number of drivers on that road &#183; 400 drivers total</text>
+  <text x="140" y="436" text-anchor="middle" fill="#8b5cf6" font-size="8">Narrow (purple): T/10 min - slows with traffic</text>
+  <text x="420" y="436" text-anchor="middle" fill="#0891b2" font-size="8">Wide (teal): always 45 min</text>
+</svg>

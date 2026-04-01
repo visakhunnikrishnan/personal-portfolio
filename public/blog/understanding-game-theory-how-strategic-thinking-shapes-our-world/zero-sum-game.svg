@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 400" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+  <defs>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="270" y="28" text-anchor="middle" fill="#6366f1" font-size="17" font-weight="600" letter-spacing="-0.3">Zero-Sum: Matching Pennies</text>
+  <text x="270" y="48" text-anchor="middle" fill="#9ca3af" font-size="11">One wins exactly what the other loses</text>
+
+  <!-- Player labels -->
+  <text x="300" y="82" text-anchor="middle" fill="#8b5cf6" font-size="11" font-weight="600" letter-spacing="1.5">BOB</text>
+  <text x="88" y="216" text-anchor="middle" fill="#10b981" font-size="11" font-weight="600" letter-spacing="1.5" transform="rotate(-90 88 216)">ALICE</text>
+
+  <!-- Column sub-headers -->
+  <text x="238" y="102" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">Heads</text>
+  <text x="382" y="102" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">Tails</text>
+
+  <!-- Row sub-headers -->
+  <text x="128" y="178" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">Heads</text>
+  <text x="128" y="290" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">Tails</text>
+
+  <!-- Cell: H/H - Alice wins -->
+  <rect x="166" y="118" width="144" height="108" rx="16" fill="#10b981" fill-opacity="0.07" stroke="#10b981" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="238" y="166" text-anchor="middle" fill="#059669" font-size="28" font-weight="300" filter="url(#glow2)">+$1</text>
+  <text x="238" y="190" text-anchor="middle" fill="#dc2626" font-size="16" font-weight="300" opacity="0.5">-$1</text>
+  <text x="238" y="216" text-anchor="middle" fill="#9ca3af" font-size="9">Alice wins</text>
+
+  <!-- Cell: H/T - Bob wins -->
+  <rect x="318" y="118" width="144" height="108" rx="16" fill="#ef4444" fill-opacity="0.05" stroke="#ef4444" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="390" y="166" text-anchor="middle" fill="#dc2626" font-size="28" font-weight="300">-$1</text>
+  <text x="390" y="190" text-anchor="middle" fill="#059669" font-size="16" font-weight="300" opacity="0.5">+$1</text>
+  <text x="390" y="216" text-anchor="middle" fill="#9ca3af" font-size="9">Bob wins</text>
+
+  <!-- Cell: T/H - Bob wins -->
+  <rect x="166" y="234" width="144" height="108" rx="16" fill="#ef4444" fill-opacity="0.05" stroke="#ef4444" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="238" y="282" text-anchor="middle" fill="#dc2626" font-size="28" font-weight="300">-$1</text>
+  <text x="238" y="306" text-anchor="middle" fill="#059669" font-size="16" font-weight="300" opacity="0.5">+$1</text>
+  <text x="238" y="332" text-anchor="middle" fill="#9ca3af" font-size="9">Bob wins</text>
+
+  <!-- Cell: T/T - Alice wins -->
+  <rect x="318" y="234" width="144" height="108" rx="16" fill="#10b981" fill-opacity="0.07" stroke="#10b981" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="390" y="282" text-anchor="middle" fill="#059669" font-size="28" font-weight="300" filter="url(#glow2)">+$1</text>
+  <text x="390" y="306" text-anchor="middle" fill="#dc2626" font-size="16" font-weight="300" opacity="0.5">-$1</text>
+  <text x="390" y="332" text-anchor="middle" fill="#9ca3af" font-size="9">Alice wins</text>
+
+  <!-- Zero sum note -->
+  <text x="270" y="383" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="500">Every outcome sums to zero</text>
+</svg>

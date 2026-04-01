@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 280" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+  <defs>
+    <filter id="glow4">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Card 1: Prisoner's Dilemma -->
+  <rect x="16" y="16" width="208" height="248" rx="16" fill="#ef4444" fill-opacity="0.04" stroke="#ef4444" stroke-width="0.75" stroke-opacity="0.15"/>
+  <circle cx="120" cy="60" r="20" fill="#ef4444" fill-opacity="0.08"/>
+  <text x="120" y="66" text-anchor="middle" fill="#dc2626" font-size="16">&#9878;</text>
+  <text x="120" y="100" text-anchor="middle" fill="#374151" font-size="14" font-weight="600">Prisoner&#39;s Dilemma</text>
+  <line x1="44" y1="114" x2="196" y2="114" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="120" y="136" text-anchor="middle" fill="#6b7280" font-size="10">Individual vs. collective</text>
+  <text x="120" y="152" text-anchor="middle" fill="#6b7280" font-size="10">rationality</text>
+  <line x1="44" y1="166" x2="196" y2="166" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="120" y="188" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="500">Both defect (suboptimal)</text>
+  <line x1="44" y1="202" x2="196" y2="202" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="120" y="224" text-anchor="middle" fill="#9ca3af" font-size="10">Arms races &#183; Climate</text>
+  <text x="120" y="240" text-anchor="middle" fill="#9ca3af" font-size="10">Price wars</text>
+
+  <!-- Card 2: Zero-Sum -->
+  <rect x="236" y="16" width="208" height="248" rx="16" fill="#8b5cf6" fill-opacity="0.04" stroke="#8b5cf6" stroke-width="0.75" stroke-opacity="0.15"/>
+  <circle cx="340" cy="60" r="20" fill="#8b5cf6" fill-opacity="0.08"/>
+  <text x="340" y="67" text-anchor="middle" fill="#7c3aed" font-size="18">&#9812;</text>
+  <text x="340" y="100" text-anchor="middle" fill="#374151" font-size="14" font-weight="600">Zero-Sum Game</text>
+  <line x1="264" y1="114" x2="416" y2="114" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="340" y="136" text-anchor="middle" fill="#6b7280" font-size="10">One&#39;s gain equals</text>
+  <text x="340" y="152" text-anchor="middle" fill="#6b7280" font-size="10">another&#39;s loss</text>
+  <line x1="264" y1="166" x2="416" y2="166" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="340" y="188" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="500">Randomize (mixed strategy)</text>
+  <line x1="264" y1="202" x2="416" y2="202" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="340" y="224" text-anchor="middle" fill="#9ca3af" font-size="10">Poker &#183; Elections</text>
+  <text x="340" y="240" text-anchor="middle" fill="#9ca3af" font-size="10">Stock trading</text>
+
+  <!-- Card 3: Coordination -->
+  <rect x="456" y="16" width="208" height="248" rx="16" fill="#0891b2" fill-opacity="0.04" stroke="#0891b2" stroke-width="0.75" stroke-opacity="0.15"/>
+  <circle cx="560" cy="60" r="20" fill="#0891b2" fill-opacity="0.08"/>
+  <text x="560" y="66" text-anchor="middle" fill="#0891b2" font-size="16">&#9734;</text>
+  <text x="560" y="100" text-anchor="middle" fill="#374151" font-size="14" font-weight="600">Coordination Game</text>
+  <line x1="484" y1="114" x2="636" y2="114" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="560" y="136" text-anchor="middle" fill="#6b7280" font-size="10">Multiple beneficial</text>
+  <text x="560" y="152" text-anchor="middle" fill="#6b7280" font-size="10">equilibria</text>
+  <line x1="484" y1="166" x2="636" y2="166" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="560" y="188" text-anchor="middle" fill="#0891b2" font-size="10" font-weight="500">Coordinate on same choice</text>
+  <line x1="484" y1="202" x2="636" y2="202" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="560" y="224" text-anchor="middle" fill="#9ca3af" font-size="10">Tech standards &#183; Traffic</text>
+  <text x="560" y="240" text-anchor="middle" fill="#9ca3af" font-size="10">Social norms</text>
+</svg>

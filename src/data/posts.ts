@@ -24,6 +24,7 @@ import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.
 import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.png";
 import hero22 from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-estate.png";
 import hero23 from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg";
+import hero24 from "../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png";
 
 export interface Post {
   slug: string;
@@ -36,6 +37,16 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "understanding-game-theory-how-strategic-thinking-shapes-our-world",
+    title: "Understanding Game Theory: How Strategic Thinking Shapes Our World",
+    description:
+      "From the Prisoner's Dilemma to AI development, discover how game theory reveals the hidden logic behind decision-making in politics, business, and everyday life.",
+    date: "Jan 23, 2026",
+    readTime: "24 min read",
+    image: hero24,
+    tags: ["Strategy", "Mathematics"],
+  },
   {
     slug: "what-i-learned-in-my-first-week-as-a-new-parent",
     title: "What I Learned in My First Month as a New Parent",

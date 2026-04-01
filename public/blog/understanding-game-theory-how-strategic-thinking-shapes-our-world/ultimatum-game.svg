@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 360" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="b1" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="b2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="b3" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="b4" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="b5" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="270" y="28" text-anchor="middle" fill="#6366f1" font-size="17" font-weight="600" letter-spacing="-0.3">The Ultimatum Game</text>
+  <text x="270" y="48" text-anchor="middle" fill="#9ca3af" font-size="11">Humans reject free money when it feels unfair</text>
+
+  <!-- Y axis -->
+  <line x1="80" y1="74" x2="80" y2="238" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="72" y="79" text-anchor="end" fill="#9ca3af" font-size="8">100%</text>
+  <text x="72" y="160" text-anchor="end" fill="#9ca3af" font-size="8">50%</text>
+  <text x="72" y="242" text-anchor="end" fill="#9ca3af" font-size="8">0%</text>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="75" x2="480" y2="75" stroke="#e5e7eb" stroke-width="0.3" stroke-dasharray="2,6" stroke-opacity="0.3"/>
+  <line x1="80" y1="156" x2="480" y2="156" stroke="#e5e7eb" stroke-width="0.3" stroke-dasharray="2,6" stroke-opacity="0.3"/>
+
+  <!-- X axis -->
+  <line x1="80" y1="238" x2="480" y2="238" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.5"/>
+
+  <!-- 10% offer - ~10% acceptance -->
+  <rect x="104" y="222" width="48" height="16" rx="6" fill="url(#b1)"/>
+  <text x="128" y="218" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="500">10%</text>
+  <text x="128" y="258" text-anchor="middle" fill="#9ca3af" font-size="9">10%</text>
+
+  <!-- 20% offer - ~30% acceptance -->
+  <rect x="176" y="189" width="48" height="49" rx="6" fill="url(#b2)"/>
+  <text x="200" y="185" text-anchor="middle" fill="#d97706" font-size="9" font-weight="500">30%</text>
+  <text x="200" y="258" text-anchor="middle" fill="#9ca3af" font-size="9">20%</text>
+
+  <!-- 30% offer - ~60% acceptance -->
+  <rect x="248" y="140" width="48" height="98" rx="6" fill="url(#b3)"/>
+  <text x="272" y="136" text-anchor="middle" fill="#d97706" font-size="9" font-weight="500">60%</text>
+  <text x="272" y="258" text-anchor="middle" fill="#9ca3af" font-size="9">30%</text>
+
+  <!-- 40% offer - ~85% acceptance -->
+  <rect x="320" y="100" width="48" height="138" rx="6" fill="url(#b4)"/>
+  <text x="344" y="96" text-anchor="middle" fill="#059669" font-size="9" font-weight="500">85%</text>
+  <text x="344" y="258" text-anchor="middle" fill="#9ca3af" font-size="9">40%</text>
+
+  <!-- 50% offer - ~97% acceptance -->
+  <rect x="392" y="80" width="48" height="158" rx="6" fill="url(#b5)"/>
+  <text x="416" y="76" text-anchor="middle" fill="#059669" font-size="9" font-weight="500">97%</text>
+  <text x="416" y="258" text-anchor="middle" fill="#9ca3af" font-size="9">50%</text>
+
+  <!-- Fairness threshold -->
+  <line x1="248" y1="68" x2="248" y2="240" stroke="#f59e0b" stroke-width="0.75" stroke-dasharray="3,4" opacity="0.35"/>
+  <text x="244" y="66" text-anchor="end" fill="#d97706" font-size="8" font-weight="500" opacity="0.6">fairness threshold</text>
+
+  <!-- Axis label -->
+  <text x="280" y="276" text-anchor="middle" fill="#9ca3af" font-size="9">Offer as % of total</text>
+
+  <!-- Bottom labels -->
+  <text x="148" y="316" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="600">Theory: accept any offer &gt; $0</text>
+  <text x="148" y="332" text-anchor="middle" fill="#9ca3af" font-size="9">Pure economic rationality</text>
+
+  <text x="388" y="316" text-anchor="middle" fill="#059669" font-size="10" font-weight="600">Reality: reject offers &lt; 30%</text>
+  <text x="388" y="332" text-anchor="middle" fill="#9ca3af" font-size="9">Fairness overrides self-interest</text>
+</svg>

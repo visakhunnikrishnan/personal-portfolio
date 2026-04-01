@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+
+  <!-- Title -->
+  <text x="280" y="24" text-anchor="middle" fill="#6366f1" font-size="16" font-weight="600" letter-spacing="-0.3">Shapley Values: Fair Credit Assignment</text>
+  <text x="280" y="44" text-anchor="middle" fill="#9ca3af" font-size="11">How much did each player (feature) truly contribute?</text>
+
+  <!-- ===== EXAMPLE: 3 players (A, B, C) coalition game ===== -->
+  <!-- Central node: Grand coalition value = 12 -->
+  <circle cx="280" cy="136" r="32" fill="#6366f1" fill-opacity="0.06" stroke="#6366f1" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="280" y="130" text-anchor="middle" fill="#6366f1" font-size="11" font-weight="700">{A,B,C}</text>
+  <text x="280" y="146" text-anchor="middle" fill="#6366f1" font-size="10">v = 12</text>
+
+  <!-- Player A -->
+  <circle cx="120" cy="86" r="24" fill="#8b5cf6" fill-opacity="0.06" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="120" y="83" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="700">A</text>
+  <text x="120" y="97" text-anchor="middle" fill="#7c3aed" font-size="8">v = 2</text>
+
+  <!-- Player B -->
+  <circle cx="120" cy="186" r="24" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="120" y="183" text-anchor="middle" fill="#059669" font-size="11" font-weight="700">B</text>
+  <text x="120" y="197" text-anchor="middle" fill="#059669" font-size="8">v = 3</text>
+
+  <!-- Player C -->
+  <circle cx="280" cy="236" r="24" fill="#f59e0b" fill-opacity="0.06" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="280" y="233" text-anchor="middle" fill="#d97706" font-size="11" font-weight="700">C</text>
+  <text x="280" y="247" text-anchor="middle" fill="#d97706" font-size="8">v = 1</text>
+
+  <!-- Pair coalitions -->
+  <!-- {A,B} -->
+  <text x="80" y="140" text-anchor="middle" fill="#6b7280" font-size="8">{A,B}=7</text>
+  <!-- {A,C} -->
+  <text x="200" y="76" text-anchor="middle" fill="#6b7280" font-size="8">{A,C}=5</text>
+  <!-- {B,C} -->
+  <text x="200" y="224" text-anchor="middle" fill="#6b7280" font-size="8">{B,C}=6</text>
+
+  <!-- Connecting lines -->
+  <line x1="142" y1="94" x2="250" y2="122" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+  <line x1="142" y1="178" x2="250" y2="150" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+  <line x1="280" y1="212" x2="280" y2="170" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ===== RIGHT SIDE: Shapley calculation result ===== -->
+  <!-- Result bars -->
+  <text x="430" y="82" text-anchor="middle" fill="#374151" font-size="11" font-weight="600">Shapley Values</text>
+
+  <!-- Player A bar -->
+  <text x="380" y="110" text-anchor="end" fill="#7c3aed" font-size="10" font-weight="600">A</text>
+  <rect x="390" y="98" width="100" height="16" rx="4" fill="#e5e7eb" fill-opacity="0.2"/>
+  <rect x="390" y="98" width="100" height="16" rx="4" fill="#8b5cf6" fill-opacity="0.3"/>
+  <text x="496" y="110" text-anchor="start" fill="#7c3aed" font-size="9" font-weight="600">4.17</text>
+
+  <!-- Player B bar -->
+  <text x="380" y="140" text-anchor="end" fill="#059669" font-size="10" font-weight="600">B</text>
+  <rect x="390" y="128" width="100" height="16" rx="4" fill="#e5e7eb" fill-opacity="0.2"/>
+  <rect x="390" y="128" width="86" height="16" rx="4" fill="#10b981" fill-opacity="0.3"/>
+  <text x="482" y="140" text-anchor="start" fill="#059669" font-size="9" font-weight="600">4.50</text>
+
+  <!-- Player C bar -->
+  <text x="380" y="170" text-anchor="end" fill="#d97706" font-size="10" font-weight="600">C</text>
+  <rect x="390" y="158" width="100" height="16" rx="4" fill="#e5e7eb" fill-opacity="0.2"/>
+  <rect x="390" y="158" width="66" height="16" rx="4" fill="#f59e0b" fill-opacity="0.3"/>
+  <text x="462" y="170" text-anchor="start" fill="#d97706" font-size="9" font-weight="600">3.33</text>
+
+  <!-- Sum check -->
+  <line x1="390" y1="182" x2="490" y2="182" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+  <text x="440" y="198" text-anchor="middle" fill="#6b7280" font-size="9">Sum = 12.00 = v({A,B,C})</text>
+
+  <!-- ===== FORMULA ===== -->
+  <line x1="40" y1="278" x2="520" y2="278" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+
+  <text x="280" y="304" text-anchor="middle" fill="#374151" font-size="11" font-weight="600">The Shapley Formula</text>
+
+  <!-- Formula: φᵢ(v) = Σ  |S|!(n−|S|−1)! / n!  · [v(S∪{i}) − v(S)] -->
+  <!-- Built with positioned elements for proper layout -->
+
+  <!-- φᵢ(v) = -->
+  <text x="78" y="334" fill="#6366f1" font-size="14" font-style="italic" font-weight="500">&#966;</text>
+  <text x="90" y="338" fill="#6366f1" font-size="9" font-style="italic">i</text>
+  <text x="97" y="334" fill="#6366f1" font-size="14" font-style="italic" font-weight="500">(v)</text>
+  <text x="122" y="334" fill="#6b7280" font-size="14">=</text>
+
+  <!-- Σ (big) with S⊆N\{i} below -->
+  <text x="144" y="332" fill="#6366f1" font-size="20" font-weight="300">&#8721;</text>
+  <text x="148" y="348" fill="#9ca3af" font-size="7" text-anchor="middle">S</text>
+
+  <!-- Fraction: |S|!(n−|S|−1)! over n! -->
+  <!-- Numerator -->
+  <text x="196" y="322" text-anchor="middle" fill="#6366f1" font-size="10" font-style="italic">|S|! (n - |S| - 1)!</text>
+  <!-- Fraction line -->
+  <line x1="163" y1="327" x2="230" y2="327" stroke="#6366f1" stroke-width="0.75" opacity="0.5"/>
+  <!-- Denominator -->
+  <text x="196" y="342" text-anchor="middle" fill="#6366f1" font-size="10" font-style="italic">n!</text>
+
+  <!-- · -->
+  <text x="240" y="334" fill="#6b7280" font-size="14">&#183;</text>
+
+  <!-- [ v(S ∪ {i}) − v(S) ] -->
+  <text x="254" y="334" fill="#6b7280" font-size="14">[</text>
+  <text x="262" y="334" fill="#6366f1" font-size="12" font-style="italic">v</text>
+  <text x="272" y="334" fill="#6366f1" font-size="12">(S</text>
+  <text x="290" y="334" fill="#6366f1" font-size="12">&#8746;</text>
+  <text x="304" y="334" fill="#6366f1" font-size="12">{i})</text>
+  <text x="332" y="334" fill="#6b7280" font-size="12">&#8722;</text>
+  <text x="346" y="334" fill="#6366f1" font-size="12" font-style="italic">v</text>
+  <text x="356" y="334" fill="#6366f1" font-size="12">(S)</text>
+  <text x="378" y="334" fill="#6b7280" font-size="14">]</text>
+
+  <!-- Formula explanation -->
+  <text x="280" y="366" text-anchor="middle" fill="#6b7280" font-size="9">For every coalition S without player i: measure what i adds when joining,</text>
+  <text x="280" y="380" text-anchor="middle" fill="#6b7280" font-size="9">weight by the number of orderings that produce S, then sum.</text>
+
+  <!-- Key insight -->
+  <text x="280" y="406" text-anchor="middle" fill="#9ca3af" font-size="9">Lloyd Shapley &#183; Nobel Prize 2012 &#183; The only fair way to divide credit among cooperating players</text>
+</svg>

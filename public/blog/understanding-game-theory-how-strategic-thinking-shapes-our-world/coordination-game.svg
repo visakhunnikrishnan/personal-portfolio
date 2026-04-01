@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 400" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+  <defs>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="270" y="28" text-anchor="middle" fill="#6366f1" font-size="17" font-weight="600" letter-spacing="-0.3">Coordination: Battle of the Sexes</text>
+  <text x="270" y="48" text-anchor="middle" fill="#9ca3af" font-size="11">Being together matters more than where</text>
+
+  <!-- Player labels -->
+  <text x="300" y="82" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="600" letter-spacing="1.5">BOB</text>
+  <text x="88" y="222" text-anchor="middle" fill="#ec4899" font-size="11" font-weight="600" letter-spacing="1.5" transform="rotate(-90 88 222)">ALICE</text>
+
+  <!-- Column sub-headers -->
+  <text x="238" y="102" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">Opera</text>
+  <text x="382" y="102" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">Football</text>
+
+  <!-- Row sub-headers -->
+  <text x="128" y="184" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">Opera</text>
+  <text x="128" y="296" text-anchor="middle" fill="#6b7280" font-size="11" font-weight="500">Football</text>
+
+  <!-- Cell: Opera/Opera - Nash #1 -->
+  <rect x="166" y="118" width="144" height="108" rx="16" fill="#8b5cf6" fill-opacity="0.08" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="238" y="176" text-anchor="middle" fill="#7c3aed" font-size="34" font-weight="300" filter="url(#glow3)">3 , 2</text>
+  <rect x="191" y="198" width="94" height="18" rx="9" fill="#8b5cf6" fill-opacity="0.1"/>
+  <text x="238" y="211" text-anchor="middle" fill="#7c3aed" font-size="8" font-weight="600" letter-spacing="0.5">Nash Equilibrium</text>
+
+  <!-- Cell: Opera/Football - miscoordination -->
+  <rect x="318" y="118" width="144" height="108" rx="16" fill="#6b7280" fill-opacity="0.03" stroke="#d1d5db" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="390" y="176" text-anchor="middle" fill="#9ca3af" font-size="34" font-weight="300">0 , 0</text>
+
+  <!-- Cell: Football/Opera - miscoordination -->
+  <rect x="166" y="234" width="144" height="108" rx="16" fill="#6b7280" fill-opacity="0.03" stroke="#d1d5db" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="238" y="292" text-anchor="middle" fill="#9ca3af" font-size="34" font-weight="300">0 , 0</text>
+
+  <!-- Cell: Football/Football - Nash #2 -->
+  <rect x="318" y="234" width="144" height="108" rx="16" fill="#0891b2" fill-opacity="0.08" stroke="#0891b2" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="390" y="292" text-anchor="middle" fill="#0891b2" font-size="34" font-weight="300" filter="url(#glow3)">2 , 3</text>
+  <rect x="343" y="314" width="94" height="18" rx="9" fill="#0891b2" fill-opacity="0.1"/>
+  <text x="390" y="327" text-anchor="middle" fill="#0891b2" font-size="8" font-weight="600" letter-spacing="0.5">Nash Equilibrium</text>
+
+  <!-- Bottom note -->
+  <text x="270" y="374" text-anchor="middle" fill="#9ca3af" font-size="10">Payoffs (Alice, Bob) &#183; higher is better</text>
+  <text x="270" y="392" text-anchor="middle" fill="#6b7280" font-size="10">Two stable outcomes - the hard part is choosing which one</text>
+</svg>

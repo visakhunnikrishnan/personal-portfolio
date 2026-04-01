@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+  <style>
+    /* 8s total cycle, looping */
+
+    /* Step 1: Generator glows (0-1.5s) */
+    .gen-circle {
+      animation: genGlow 8s ease-in-out infinite;
+    }
+    @keyframes genGlow {
+      0%, 5%   { stroke-opacity: 0.12; fill-opacity: 0.04 }
+      10%, 18% { stroke-opacity: 0.4; fill-opacity: 0.1 }
+      25%      { stroke-opacity: 0.12; fill-opacity: 0.04 }
+      100%     { stroke-opacity: 0.12; fill-opacity: 0.04 }
+    }
+
+    /* Step 2: Fake data travels (1.5-3s) */
+    .fake-line {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: drawLine 8s ease-in-out infinite;
+    }
+    .fake-arrow {
+      opacity: 0;
+      animation: fadeArrow 8s ease-in-out infinite;
+    }
+    .fake-label {
+      opacity: 0;
+      animation: fakeLabelShow 8s ease-in-out infinite;
+    }
+    @keyframes drawLine {
+      0%, 18%  { stroke-dashoffset: 200 }
+      30%, 100% { stroke-dashoffset: 0 }
+    }
+    @keyframes fadeArrow {
+      0%, 28%  { opacity: 0 }
+      32%, 100% { opacity: 0.6 }
+    }
+    @keyframes fakeLabelShow {
+      0%, 22%  { opacity: 0 }
+      28%, 100% { opacity: 1 }
+    }
+
+    /* Step 3: Real data travels (3-4.5s) */
+    .real-line {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: drawReal 8s ease-in-out infinite;
+    }
+    .real-arrow {
+      opacity: 0;
+      animation: realArrowShow 8s ease-in-out infinite;
+    }
+    .real-label {
+      opacity: 0;
+      animation: realLabelShow 8s ease-in-out infinite;
+    }
+    @keyframes drawReal {
+      0%, 32%  { stroke-dashoffset: 200 }
+      44%, 100% { stroke-dashoffset: 0 }
+    }
+    @keyframes realArrowShow {
+      0%, 42%  { opacity: 0 }
+      46%, 100% { opacity: 0.6 }
+    }
+    @keyframes realLabelShow {
+      0%, 36%  { opacity: 0 }
+      42%, 100% { opacity: 1 }
+    }
+
+    /* Step 4: Discriminator glows (4.5-5.5s) */
+    .disc-circle {
+      animation: discGlow 8s ease-in-out infinite;
+    }
+    @keyframes discGlow {
+      0%, 44%  { stroke-opacity: 0.12; fill-opacity: 0.04 }
+      50%, 58% { stroke-opacity: 0.4; fill-opacity: 0.1 }
+      65%      { stroke-opacity: 0.12; fill-opacity: 0.04 }
+      100%     { stroke-opacity: 0.12; fill-opacity: 0.04 }
+    }
+
+    /* Step 5: Output appears (5.5-6s) */
+    .output {
+      opacity: 0;
+      animation: outputShow 8s ease-in-out infinite;
+    }
+    @keyframes outputShow {
+      0%, 56%  { opacity: 0 }
+      62%, 72% { opacity: 1 }
+      80%, 100% { opacity: 0.3 }
+    }
+
+    /* Step 6: Feedback flows back (6-7.5s) */
+    .feedback-path {
+      stroke-dasharray: 600;
+      stroke-dashoffset: 600;
+      animation: drawFeedback 8s ease-in-out infinite;
+    }
+    .feedback-arrow {
+      opacity: 0;
+      animation: feedbackArrowShow 8s ease-in-out infinite;
+    }
+    .feedback-label {
+      opacity: 0;
+      animation: feedbackLabelShow 8s ease-in-out infinite;
+    }
+    @keyframes drawFeedback {
+      0%, 65%  { stroke-dashoffset: 600 }
+      82%, 90% { stroke-dashoffset: 0 }
+      100%     { stroke-dashoffset: 0 }
+    }
+    @keyframes feedbackArrowShow {
+      0%, 80%  { opacity: 0 }
+      85%, 90% { opacity: 0.5 }
+      100%     { opacity: 0 }
+    }
+    @keyframes feedbackLabelShow {
+      0%, 72%  { opacity: 0 }
+      78%, 90% { opacity: 1 }
+      100%     { opacity: 0 }
+    }
+  </style>
+
+  <!-- Title -->
+  <text x="250" y="24" text-anchor="middle" fill="#6366f1" font-size="16" font-weight="600" letter-spacing="-0.3">GANs as a Zero-Sum Game</text>
+
+  <!-- ===== GENERATOR ===== -->
+  <circle class="gen-circle" cx="100" cy="130" r="56" fill="#8b5cf6" fill-opacity="0.04" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="100" y="126" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="700">Generator</text>
+  <text x="100" y="142" text-anchor="middle" fill="#9ca3af" font-size="8">Creates fakes</text>
+
+  <!-- Noise input -->
+  <text x="100" y="56" text-anchor="middle" fill="#9ca3af" font-size="8">Random noise</text>
+  <line x1="100" y1="60" x2="100" y2="72" stroke="#8b5cf6" stroke-width="1.5" opacity="0.3"/>
+  <path d="M 95 68 L 100 75 L 105 68" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+
+  <!-- ===== FAKE DATA ===== -->
+  <line class="fake-line" x1="158" y1="110" x2="342" y2="110" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round"/>
+  <path class="fake-arrow" d="M 337 106 L 344 110 L 337 114" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="fake-label" x="250" y="104" text-anchor="middle" fill="#8b5cf6" font-size="8" font-weight="500">Fake data</text>
+
+  <!-- ===== REAL DATA ===== -->
+  <line class="real-line" x1="158" y1="150" x2="342" y2="150" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+  <path class="real-arrow" d="M 337 146 L 344 150 L 337 154" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="real-label" x="250" y="166" text-anchor="middle" fill="#059669" font-size="8" font-weight="500">Real data</text>
+
+  <!-- ===== DISCRIMINATOR ===== -->
+  <circle class="disc-circle" cx="400" cy="130" r="56" fill="#ef4444" fill-opacity="0.04" stroke="#ef4444" stroke-width="1"/>
+  <text x="400" y="126" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="700">Discriminator</text>
+  <text x="400" y="142" text-anchor="middle" fill="#9ca3af" font-size="8">Detects fakes</text>
+
+  <!-- Output -->
+  <g class="output">
+    <line x1="458" y1="130" x2="474" y2="130" stroke="#ef4444" stroke-width="1.5" opacity="0.4"/>
+    <path d="M 470 126 L 477 130 L 470 134" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+    <text x="497" y="127" text-anchor="middle" fill="#dc2626" font-size="7" font-weight="600">Real</text>
+    <text x="497" y="138" text-anchor="middle" fill="#dc2626" font-size="7" font-weight="600">or Fake?</text>
+  </g>
+
+  <!-- ===== FEEDBACK LOOP ===== -->
+  <path class="feedback-path" d="M 400 188 L 400 210 Q 400 218 392 218 L 108 218 Q 100 218 100 210 L 100 188" fill="none" stroke="#d97706" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="feedback-arrow" d="M 104 192 L 100 186 L 96 192" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="feedback-label" x="250" y="232" text-anchor="middle" fill="#d97706" font-size="8">Feedback loop - generator improves</text>
+
+  <!-- ===== BOTTOM ===== -->
+  <line x1="40" y1="250" x2="470" y2="250" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="100" y="268" text-anchor="middle" fill="#7c3aed" font-size="8" font-weight="600">Minimize detection</text>
+  <text x="250" y="268" text-anchor="middle" fill="#d97706" font-size="8" font-weight="600">Minimax equilibrium</text>
+  <text x="400" y="268" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="600">Maximize accuracy</text>
+</svg>

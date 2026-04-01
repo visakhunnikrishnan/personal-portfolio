@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 310" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+
+  <!-- Title -->
+  <text x="300" y="24" text-anchor="middle" fill="#6366f1" font-size="17" font-weight="600" letter-spacing="-0.3">Tit-for-Tat Strategy</text>
+  <text x="300" y="43" text-anchor="middle" fill="#9ca3af" font-size="11">Watch how it mirrors the opponent&#39;s last move</text>
+
+
+  <!-- ===== ROUND 1 ===== -->
+  <g>
+    <!-- Opponent's last move -->
+    <text x="80" y="76" text-anchor="middle" fill="#9ca3af" font-size="9">Round 1</text>
+    <text x="80" y="94" text-anchor="middle" fill="#9ca3af" font-size="9">They played:</text>
+    <text x="80" y="110" text-anchor="middle" fill="#6b7280" font-size="12" font-weight="600">-</text>
+
+    <!-- Your move -->
+    <circle cx="80" cy="156" r="28" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="80" y="163" text-anchor="middle" fill="#059669" font-size="22" font-weight="700">C</text>
+
+    <!-- Principle -->
+    <rect x="38" y="200" width="84" height="22" rx="11" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.75" stroke-opacity="0.25"/>
+    <text x="80" y="215" text-anchor="middle" fill="#059669" font-size="9" font-weight="700">BE NICE</text>
+
+    <!-- Explanation -->
+    <text x="80" y="238" text-anchor="middle" fill="#059669" font-size="8">Always start</text>
+    <text x="80" y="249" text-anchor="middle" fill="#059669" font-size="8">by cooperating</text>
+  </g>
+
+  <!-- ===== ROUND 2 ===== -->
+  <g>
+    <text x="190" y="76" text-anchor="middle" fill="#9ca3af" font-size="9">Round 2</text>
+    <text x="190" y="94" text-anchor="middle" fill="#9ca3af" font-size="9">They played:</text>
+    <text x="190" y="110" text-anchor="middle" fill="#059669" font-size="12" font-weight="600">C (cooperate)</text>
+
+    <circle cx="190" cy="156" r="28" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="190" y="163" text-anchor="middle" fill="#059669" font-size="22" font-weight="700">C</text>
+
+    <rect x="153" y="200" width="74" height="22" rx="11" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.75" stroke-opacity="0.25"/>
+    <text x="190" y="215" text-anchor="middle" fill="#059669" font-size="9" font-weight="700">MIRROR</text>
+
+    <text x="190" y="238" text-anchor="middle" fill="#6b7280" font-size="8">They cooperated,</text>
+    <text x="190" y="249" text-anchor="middle" fill="#6b7280" font-size="8">so do we</text>
+  </g>
+
+  <!-- ===== ROUND 3 ===== -->
+  <g>
+    <text x="300" y="76" text-anchor="middle" fill="#9ca3af" font-size="9">Round 3</text>
+    <text x="300" y="94" text-anchor="middle" fill="#9ca3af" font-size="9">They played:</text>
+    <text x="300" y="110" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="700">D (defect!)</text>
+
+    <circle cx="300" cy="156" r="28" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="300" y="163" text-anchor="middle" fill="#dc2626" font-size="22" font-weight="700">D</text>
+
+    <rect x="249" y="200" width="102" height="22" rx="11" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="0.75" stroke-opacity="0.25"/>
+    <text x="300" y="215" text-anchor="middle" fill="#d97706" font-size="9" font-weight="700">RETALIATE</text>
+
+    <text x="300" y="238" text-anchor="middle" fill="#dc2626" font-size="8">They defected,</text>
+    <text x="300" y="249" text-anchor="middle" fill="#dc2626" font-size="8">so we defect back</text>
+  </g>
+
+  <!-- ===== ROUND 4 ===== -->
+  <g>
+    <text x="410" y="76" text-anchor="middle" fill="#9ca3af" font-size="9">Round 4</text>
+    <text x="410" y="94" text-anchor="middle" fill="#9ca3af" font-size="9">They played:</text>
+    <text x="410" y="110" text-anchor="middle" fill="#059669" font-size="12" font-weight="600">C (cooperate)</text>
+
+    <circle cx="410" cy="156" r="28" fill="#10b981" fill-opacity="0.1" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="410" y="163" text-anchor="middle" fill="#059669" font-size="22" font-weight="700">C</text>
+
+    <rect x="368" y="200" width="84" height="22" rx="11" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="0.75" stroke-opacity="0.25"/>
+    <text x="410" y="215" text-anchor="middle" fill="#2563eb" font-size="9" font-weight="700">FORGIVE</text>
+
+    <text x="410" y="238" text-anchor="middle" fill="#2563eb" font-size="8">They returned to C,</text>
+    <text x="410" y="249" text-anchor="middle" fill="#2563eb" font-size="8">so we forgive instantly</text>
+  </g>
+
+  <!-- ===== ROUND 5 ===== -->
+  <g>
+    <text x="520" y="76" text-anchor="middle" fill="#9ca3af" font-size="9">Round 5</text>
+    <text x="520" y="94" text-anchor="middle" fill="#9ca3af" font-size="9">They played:</text>
+    <text x="520" y="110" text-anchor="middle" fill="#059669" font-size="12" font-weight="600">C (cooperate)</text>
+
+    <circle cx="520" cy="156" r="28" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="520" y="163" text-anchor="middle" fill="#059669" font-size="22" font-weight="700">C</text>
+
+    <rect x="483" y="200" width="74" height="22" rx="11" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.75" stroke-opacity="0.25"/>
+    <text x="520" y="215" text-anchor="middle" fill="#059669" font-size="9" font-weight="700">MIRROR</text>
+
+    <text x="520" y="238" text-anchor="middle" fill="#6b7280" font-size="8">Back to stable</text>
+    <text x="520" y="249" text-anchor="middle" fill="#6b7280" font-size="8">cooperation</text>
+  </g>
+
+  <!-- Bottom -->
+  <line x1="40" y1="270" x2="560" y2="270" stroke="#e5e7eb" stroke-width="0.5" stroke-opacity="0.25"/>
+  <text x="300" y="292" text-anchor="middle" fill="#9ca3af" font-size="10">Won Axelrod&#39;s famous computer tournament &#183; simplest strategy, best results</text>
+</svg>
