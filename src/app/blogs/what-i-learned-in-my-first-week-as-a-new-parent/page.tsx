@@ -12,11 +12,11 @@ import { WakeWindowsChart } from "@/components/wake-windows-chart";
 import { TummyTimeChart } from "@/components/tummy-time-chart";
 import { MaternalNutritionChart } from "@/components/maternal-nutrition-chart";
 import { ShiftSleepModel } from "@/components/shift-sleep-model";
-import imgPump from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/promom-pump.png";
-import imgBottle from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/avent-bottle.png";
-import imgSterilizer from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/avent-sterilizer.png";
-import imgCarseat from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/joie-igemm.png";
-import imgNest from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/zoey-nest.png";
+import imgPump from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/promom-pump.jpg";
+import imgBottle from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/avent-bottle.jpg";
+import imgSterilizer from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/avent-sterilizer.jpg";
+import imgCarseat from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/joie-igemm.jpg";
+import imgNest from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/gear/zoey-nest.jpg";
 
 export const metadata: Metadata = {
   title: "What I Learned in My First Month as a New Parent",
