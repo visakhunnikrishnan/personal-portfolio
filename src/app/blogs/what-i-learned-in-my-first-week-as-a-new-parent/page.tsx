@@ -246,7 +246,7 @@ export default function BlogPost() {
           <strong>1 level scoop (4.4 g) per 30 ml of water</strong>. A few
           safety rules from the WHO/FAO guidelines
           <sup>
-            <a href="#ref-22">[22]</a>
+            <a href="#ref-21">[21]</a>
           </sup>
           : use boiled water cooled to about 70&deg;C (not boiling, not room
           temperature - the heat kills potential Cronobacter sakazakii
@@ -401,7 +401,9 @@ export default function BlogPost() {
 
         <p>
           Bed-sharing is where it gets culturally tricky. Research shows it
-          increases SIDS risk 5x in infants under 3 months
+          increases SIDS risk significantly in young infants - one
+          meta-analysis found an odds ratio of over 10 for infants under 12
+          weeks
           <sup>
             <a href="#ref-10">[10]</a>
           </sup>
@@ -429,9 +431,9 @@ export default function BlogPost() {
           for sleep), <strong>Shush</strong> (loud, near the ear - the womb
           is about 80 dB), <strong>Swing</strong> (small jiggly movements, not
           large swings), and <strong>Suck</strong> (pacifier or breastfeeding).
-          A 2016 RCT in <em>Pediatrics</em> found that responsive parenting
-          including these techniques helped infants sleep 35 minutes longer at 8
-          weeks.
+          A 2016 RCT by Paul et al. in <em>Pediatrics</em> found that
+          responsive parenting including these techniques helped infants sleep
+          35 minutes longer at 8 weeks.
         </p>
 
         <p>
@@ -441,7 +443,7 @@ export default function BlogPost() {
           long-term study found the effects on self-regulation were still
           measurable at a 10-year follow-up
           <sup>
-            <a href="#ref-24">[24]</a>
+            <a href="#ref-23">[23]</a>
           </sup>
           .
         </p>
@@ -638,14 +640,15 @@ export default function BlogPost() {
           do pass through, but research suggests this is actually a good
           thing - it exposes the baby to different tastes early
           <sup>
-            <a href="#ref-23">[23]</a>
+            <a href="#ref-22">[22]</a>
           </sup>
           .
         </p>
 
         <p>
           The one real exception is <strong>cow&apos;s milk protein</strong>,
-          which can trigger colic in about 2&ndash;3% of breastfed infants.
+          which can trigger colic in about 2&ndash;3% of infants (lower in
+          exclusively breastfed babies).
           If the baby shows persistent colic, bloody stools, or eczema, your
           paediatrician may suggest trying a dairy elimination diet.
         </p>
@@ -873,17 +876,6 @@ export default function BlogPost() {
         </blockquote>
 
         <p>
-          Research on quality vs quantity is clear: the amount of time parents
-          spend with children aged 0&ndash;3 has very little relationship to
-          outcomes
-          <sup>
-            <a href="#ref-20">[20]</a>
-          </sup>
-          . What matters is being present and responsive during whatever time
-          you have.
-        </p>
-
-        <p>
           Take the nap. Accept the help. Eat well. The house can wait.
         </p>
 
@@ -973,7 +965,7 @@ export default function BlogPost() {
             <a href="https://pubmed.ncbi.nlm.nih.gov/38597251/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-13">
-            ICMR-NIN (2020). &ldquo;Nutrient Requirements and Recommended
+            ICMR-NIN (2024). &ldquo;Nutrient Requirements and Recommended
             Dietary Allowances for Indians.&rdquo; National Institute of
             Nutrition, Hyderabad.{" "}
             <a href="https://www.nin.res.in/RDA_Full_Report_2024.html" target="_blank" rel="noopener noreferrer">NIN</a>
@@ -1005,7 +997,7 @@ export default function BlogPost() {
           <li id="ref-18">
             Upadhyay RP et al. (2017). &ldquo;Postpartum depression in India:
             a systematic review and meta-analysis.&rdquo;{" "}
-            <em>Women and Birth</em>, 30(5):382&ndash;394.{" "}
+            <em>Bulletin of the World Health Organization</em>, 95(10):706&ndash;717.{" "}
             <a href="https://pubmed.ncbi.nlm.nih.gov/29147043/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-19">
@@ -1015,28 +1007,22 @@ export default function BlogPost() {
             <a href="https://pubmed.ncbi.nlm.nih.gov/20483973/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-20">
-            Milkie MA et al. (2015). &ldquo;Does the Amount of Time Mothers
-            Spend With Children or Adolescents Matter?&rdquo;{" "}
-            <em>Journal of Marriage and Family</em>, 77(2):355&ndash;372.{" "}
-            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jomf.12170" target="_blank" rel="noopener noreferrer">Wiley</a>
-          </li>
-          <li>
             ABM Clinical Protocol #3 (2017). &ldquo;Supplementary Feedings in
             the Healthy Term Breastfed Neonate.&rdquo;{" "}
             <em>Breastfeeding Medicine</em>, 12(3):188&ndash;198.{" "}
             <a href="https://pubmed.ncbi.nlm.nih.gov/28294631/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
-          <li id="ref-22">
+          <li id="ref-21">
             WHO/FAO (2007). &ldquo;Safe Preparation, Storage and Handling of
             Powdered Infant Formula: Guidelines.&rdquo;{" "}
             <a href="https://www.who.int/publications/i/item/9789241595414" target="_blank" rel="noopener noreferrer">WHO</a>
           </li>
-          <li id="ref-23">
+          <li id="ref-22">
             Allen LH (2012). &ldquo;B Vitamins in Breast Milk.&rdquo;{" "}
             <em>Advances in Nutrition</em>, 3(3):362&ndash;369.{" "}
             <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3649471/" target="_blank" rel="noopener noreferrer">PMC</a>
           </li>
-          <li id="ref-24">
+          <li id="ref-23">
             Feldman R et al. (2002). &ldquo;Skin-to-Skin Contact Promotes
             Self-Regulation.&rdquo; <em>Developmental Psychology</em>,
             38(2):194&ndash;207.{" "}
