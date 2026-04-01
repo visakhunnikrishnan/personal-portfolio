@@ -907,19 +907,19 @@ export default function BlogPost() {
           <li id="ref-1">
             Butte NF et al. (2005). &ldquo;Energy requirements of
             infants.&rdquo; <em>Public Health Nutrition</em>, 8(7a):953&ndash;967.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/16277816/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/16277814/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-2">
             Kent JC et al. (1999). &ldquo;Breast volume and milk production
             during extended lactation.&rdquo;{" "}
             <em>Experimental Physiology</em>, 84(2):435&ndash;447.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/10226182/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/10226183/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-3">
             Stern JM, Reichlin S (1990). &ldquo;Prolactin circadian rhythm
             persists throughout lactation in women.&rdquo;{" "}
             <em>Neuroendocrinology</em>, 51(1):31&ndash;37.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/2314058/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/2106085/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-4">
             WHO (2006). &ldquo;WHO Child Growth Standards.&rdquo; Multicentre
@@ -940,7 +940,7 @@ export default function BlogPost() {
           <li id="ref-7">
             Paruthi S et al. (2016). &ldquo;Recommended Amount of Sleep for
             Pediatric Populations.&rdquo; <em>JCSM</em>, 12(6):785&ndash;786.{" "}
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308/" target="_blank" rel="noopener noreferrer">PMC</a>.
+            <a href="https://aasm.org/resources/pdf/pediatricsleepdurationconsensus.pdf" target="_blank" rel="noopener noreferrer">AASM</a>.
             Also: Mindell JA, Owens JA (2015), <em>A Clinical Guide to
             Pediatric Sleep</em>, 3rd ed.
           </li>
@@ -948,75 +948,65 @@ export default function BlogPost() {
             Moon RY et al. (2022). &ldquo;Sleep-Related Infant Deaths: Updated
             2022 Recommendations.&rdquo; <em>Pediatrics</em>,
             150(1):e2022057990.{" "}
-            <a href="https://publications.aap.org/pediatrics/article/150/1/e2022057990/188304/" target="_blank" rel="noopener noreferrer">AAP</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35726558/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-9">
             Spencer JA et al. (1990). &ldquo;White Noise and Sleep
             Induction.&rdquo; <em>Archives of Disease in Childhood</em>,
             65(1):135&ndash;137.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/2405784/" target="_blank" rel="noopener noreferrer">PubMed</a>.
-            Also: Hugh SC et al. (2014), <em>Pediatrics</em>,
-            133(4):677&ndash;681.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/24616361/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/2405784/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-10">
             Vennemann MM et al. (2012). &ldquo;Bed Sharing and the Risk of
             SIDS.&rdquo; <em>The Journal of Pediatrics</em>,
             160(1):44&ndash;48.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/21868032/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            <a href="https://www.jpeds.com/article/S0022-3476(11)00680-9/pdf" target="_blank" rel="noopener noreferrer">Journal</a>
           </li>
           <li id="ref-11">
-            Karp H (2002). <em>The Happiest Baby on the Block</em>. Bantam
-            Dell. Also: Paul IM et al. (2016), <em>Pediatrics</em>,
-            138(1):e20160762.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/27354460/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            Karp H (2002). <em>The Happiest Baby on the Block</em>.{" "}
+            <a href="https://www.amazon.in/Happiest-Baby-Block-Harvey-Karp/dp/0553381466" target="_blank" rel="noopener noreferrer">Amazon</a>
           </li>
           <li id="ref-12">
-            Hershon L et al. (2024). &ldquo;Associations Between Feeding
-            Method and Sleep in Infants.&rdquo; <em>Acta Paediatrica</em>,
-            113(6).{" "}
-            <a href="https://onlinelibrary.wiley.com/doi/10.1111/apa.17237" target="_blank" rel="noopener noreferrer">Wiley</a>
+            Hershon L et al. (2024). &ldquo;To sleep or to breastfeed:
+            Associations between feeding method and sleep in infants and
+            children.&rdquo; <em>Acta Paediatrica</em>, 113(6).{" "}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38597251/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-13">
             ICMR-NIN (2020). &ldquo;Nutrient Requirements and Recommended
             Dietary Allowances for Indians.&rdquo; National Institute of
             Nutrition, Hyderabad.{" "}
-            <a href="https://www.nin.res.in/RDA_Full_Report_2020.html" target="_blank" rel="noopener noreferrer">NIN</a>
+            <a href="https://www.nin.res.in/RDA_Full_Report_2024.html" target="_blank" rel="noopener noreferrer">NIN</a>
           </li>
           <li id="ref-14">
             Hollis BW et al. (2015). &ldquo;Maternal Versus Infant Vitamin D
             Supplementation During Lactation.&rdquo; <em>Pediatrics</em>,
             136(4):625&ndash;634.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/26416936/" target="_blank" rel="noopener noreferrer">PubMed</a>.
-            Also: Ritu G &amp; Gupta A (2014),{" "}
-            <em>Indian Journal of Medical Research</em>.{" "}
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4277112/" target="_blank" rel="noopener noreferrer">PMC</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/26416936/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-15">
             Bazzano AN et al. (2016). &ldquo;A Review of Herbal and
             Pharmaceutical Galactagogues for Breast-Feeding.&rdquo;{" "}
             <em>Ochsner Journal</em>, 16(4):511&ndash;524.{" "}
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5158159/" target="_blank" rel="noopener noreferrer">PMC</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27999511/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-16">
             Francois CA et al. (1998). &ldquo;Acute effects of dietary fatty
             acids on the fatty acids of human milk.&rdquo;{" "}
             <em>American Journal of Clinical Nutrition</em>,
             67(2):301&ndash;308.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/9459380/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            <a href="https://doi.org/10.1093/ajcn/67.2.301" target="_blank" rel="noopener noreferrer">DOI</a>
           </li>
           <li id="ref-17">
             Tikotzky L &amp; Sadeh A. &ldquo;Maternal sleep-related cognitions
             and infant sleep.&rdquo; <em>Western Journal of Nursing Research</em>.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/19420277/" target="_blank" rel="noopener noreferrer">PubMed</a>.
-            Also: Dennis CL &amp; Ross L (2005), <em>Birth</em>.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/15935502/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/19489908/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-18">
             Upadhyay RP et al. (2017). &ldquo;Postpartum depression in India:
             a systematic review and meta-analysis.&rdquo;{" "}
             <em>Women and Birth</em>, 30(5):382&ndash;394.{" "}
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5689195/" target="_blank" rel="noopener noreferrer">PMC</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29147043/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
           <li id="ref-19">
             Paulson JF &amp; Bazemore SD (2010). &ldquo;Prenatal and
@@ -1028,7 +1018,7 @@ export default function BlogPost() {
             Milkie MA et al. (2015). &ldquo;Does the Amount of Time Mothers
             Spend With Children or Adolescents Matter?&rdquo;{" "}
             <em>Journal of Marriage and Family</em>, 77(2):355&ndash;372.{" "}
-            <a href="https://onlinelibrary.wiley.com/doi/10.1111/jomf.12170" target="_blank" rel="noopener noreferrer">Wiley</a>
+            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jomf.12170" target="_blank" rel="noopener noreferrer">Wiley</a>
           </li>
           <li>
             ABM Clinical Protocol #3 (2017). &ldquo;Supplementary Feedings in
@@ -1044,22 +1034,21 @@ export default function BlogPost() {
           <li id="ref-23">
             Allen LH (2012). &ldquo;B Vitamins in Breast Milk.&rdquo;{" "}
             <em>Advances in Nutrition</em>, 3(3):362&ndash;369.{" "}
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3649473/" target="_blank" rel="noopener noreferrer">PMC</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3649471/" target="_blank" rel="noopener noreferrer">PMC</a>
           </li>
           <li id="ref-24">
             Feldman R et al. (2002). &ldquo;Skin-to-Skin Contact Promotes
             Self-Regulation.&rdquo; <em>Developmental Psychology</em>,
             38(2):194&ndash;207.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/11881756/" target="_blank" rel="noopener noreferrer">PubMed</a>.
+            <a href="https://psycnet.apa.org/record/2002-10732-002" target="_blank" rel="noopener noreferrer">APA PsycNet</a>.
             Also: Feldman R et al. (2014),{" "}
-            <em>Biological Psychiatry</em>, 75(1):56&ndash;64.{" "}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/23890734/" target="_blank" rel="noopener noreferrer">PubMed</a>
+            <em>Biological Psychiatry</em>, 75(1):56&ndash;64.
           </li>
           <li>
             Ballard O &amp; Morrow AL (2013). &ldquo;Human Milk
             Composition.&rdquo; <em>Pediatric Clinics of North America</em>,
             60(1):49&ndash;74.{" "}
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3586783/" target="_blank" rel="noopener noreferrer">PMC</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/23178060/" target="_blank" rel="noopener noreferrer">PubMed</a>
           </li>
         </ol>
       </div>
