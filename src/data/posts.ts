@@ -25,6 +25,7 @@ import hero21 from "../../public/blog/first-principles/first-principles-thinking
 import hero22 from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-estate.png";
 import hero23 from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg";
 import hero24 from "../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png";
+import hero25 from "../../public/blog/the-science-of-meditation/meditation.png";
 
 export interface Post {
   slug: string;
@@ -37,6 +38,16 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "the-science-of-meditation",
+    title: "The Science of Meditation",
+    description:
+      "What 30,000 studies reveal about meditation's effects on your brain, stress, and mental health - the evidence, the mechanisms, and the risks nobody talks about.",
+    date: "Feb 10, 2026",
+    readTime: "30 min read",
+    image: hero25,
+    tags: ["Health", "Science"],
+  },
   {
     slug: "understanding-game-theory-how-strategic-thinking-shapes-our-world",
     title: "Understanding Game Theory: How Strategic Thinking Shapes Our World",
