@@ -26,6 +26,7 @@ import hero22 from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-
 import hero23 from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg";
 import hero24 from "../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png";
 import hero25 from "../../public/blog/the-science-of-meditation/meditation.png";
+import hero26 from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.png";
 
 export interface Post {
   slug: string;
@@ -38,6 +39,16 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "intelligence-measurement-and-the-path-to-agi",
+    title: "Measuring Machine Intelligence",
+    description:
+      "What intelligence actually means, how we measure it in humans and machines, and where we really stand on the road to AGI - the definitions, the benchmarks, and the open questions.",
+    date: "Mar 20, 2026",
+    readTime: "28 min read",
+    image: hero26,
+    tags: ["AI", "Science"],
+  },
   {
     slug: "the-science-of-meditation",
     title: "The Science of Meditation",

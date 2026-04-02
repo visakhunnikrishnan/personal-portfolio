@@ -7,6 +7,7 @@ import hero0 from "../../public/blog/a-quantitative-approach-to-personalized-inv
 import heroNewborn from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg";
 import heroGameTheory from "../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png";
 import heroMeditation from "../../public/blog/the-science-of-meditation/meditation.png";
+import heroAGI from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.png";
 import hero17 from "../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.png";
 import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png";
 import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png";
@@ -106,6 +107,14 @@ const featuredPosts = [
     readTime: "30 min read",
     image: heroMeditation,
     tag: "Health",
+  },
+  {
+    slug: "intelligence-measurement-and-the-path-to-agi",
+    title: "Measuring Machine Intelligence",
+    date: "Mar 20, 2026",
+    readTime: "28 min read",
+    image: heroAGI,
+    tag: "AI",
   },
 ];
 
