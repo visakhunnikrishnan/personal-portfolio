@@ -82,9 +82,9 @@ export default function AiNativeSEBlog() {
 
       <div className="prose sm:prose-lg prose-neutral max-w-none dark:prose-invert prose-headings:tracking-tight prose-p:leading-relaxed prose-blockquote:border-l-primary prose-blockquote:not-italic prose-img:rounded-md">
         <p className="italic text-muted-foreground">
-          I work on an internal developer platform and we&apos;ve been using
-          AI models a lot - for building the platform and for helping other
-          teams adopt AI in their own work. At some point I realized I was
+          At my current org, I work on the internal developer platform and
+          we&apos;ve been using frontier AI models a lot - for building the platform
+          and for helping other teams adopt AI in their own work. At some point I realized I was
           just using these tools without really knowing what the best teams
           are doing differently. So I started reading - engineering blogs,
           research papers, conference talks, earnings calls. This post is
