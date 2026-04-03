@@ -27,6 +27,7 @@ import hero23 from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-p
 import hero24 from "../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png";
 import hero25 from "../../public/blog/the-science-of-meditation/meditation.png";
 import hero26 from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.png";
+import hero27 from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.png";
 
 export interface Post {
   slug: string;
@@ -39,6 +40,16 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "ai-native-software-engineering",
+    title: "AI-Native Software Engineering",
+    description:
+      "What changes when AI writes most of the code - the productivity paradox, the new developer skillset, and how Anthropic, Stripe, and others are rebuilding software engineering from the ground up.",
+    date: "Apr 2, 2026",
+    readTime: "27 min read",
+    image: hero27,
+    tags: ["AI", "Software Engineering"],
+  },
   {
     slug: "intelligence-measurement-and-the-path-to-agi",
     title: "Measuring Machine Intelligence",
@@ -60,16 +71,6 @@ export const posts: Post[] = [
     tags: ["Health", "Science"],
   },
   {
-    slug: "understanding-game-theory-how-strategic-thinking-shapes-our-world",
-    title: "Understanding Game Theory: How Strategic Thinking Shapes Our World",
-    description:
-      "From the Prisoner's Dilemma to AI development, discover how game theory reveals the hidden logic behind decision-making in politics, business, and everyday life.",
-    date: "Jan 23, 2026",
-    readTime: "24 min read",
-    image: hero24,
-    tags: ["Strategy", "Mathematics"],
-  },
-  {
     slug: "what-i-learned-in-my-first-week-as-a-new-parent",
     title: "What I Learned in My First Month as a New Parent",
     description: "Notes from a first-time parent on newborn feeding, sleep, and postpartum nutrition - what the research says and what actually helped.",
@@ -86,6 +87,16 @@ export const posts: Post[] = [
     readTime: "18 min read",
     image: hero22,
     tags: ["Strategy", "Finance"],
+  },
+  {
+    slug: "understanding-game-theory-how-strategic-thinking-shapes-our-world",
+    title: "Understanding Game Theory: How Strategic Thinking Shapes Our World",
+    description:
+      "From the Prisoner's Dilemma to AI development, discover how game theory reveals the hidden logic behind decision-making in politics, business, and everyday life.",
+    date: "Jan 23, 2026",
+    readTime: "24 min read",
+    image: hero24,
+    tags: ["Strategy", "Mathematics"],
   },
   {
     slug: "a-quantitative-approach-to-personalized-investment-planning",

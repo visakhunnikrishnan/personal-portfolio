@@ -8,6 +8,7 @@ import heroNewborn from "../../public/blog/what-i-learned-in-my-first-week-as-a-
 import heroGameTheory from "../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png";
 import heroMeditation from "../../public/blog/the-science-of-meditation/meditation.png";
 import heroAGI from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.png";
+import heroAiNative from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.png";
 import hero17 from "../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.png";
 import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png";
 import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png";
@@ -15,6 +16,30 @@ import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.
 import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.png";
 
 const featuredPosts = [
+  {
+    slug: "ai-native-software-engineering",
+    title: "AI-Native Software Engineering",
+    date: "Apr 2, 2026",
+    readTime: "27 min read",
+    image: heroAiNative,
+    tag: "Software Engineering",
+  },
+  {
+    slug: "what-i-learned-in-my-first-week-as-a-new-parent",
+    title: "What I Learned in My First Month as a New Parent",
+    date: "Mar 31, 2026",
+    readTime: "28 min read",
+    image: heroNewborn,
+    tag: "Parenting",
+  },
+  {
+    slug: "intelligence-measurement-and-the-path-to-agi",
+    title: "Measuring Machine Intelligence",
+    date: "Mar 20, 2026",
+    readTime: "28 min read",
+    image: heroAGI,
+    tag: "AI",
+  },
   {
     slug: "why-india-needs-its-own-bilt-rewards",
     title: "Why India Needs Its Own Bilt Rewards, And Why It Could Be Even Bigger",
@@ -26,44 +51,27 @@ const featuredPosts = [
     tag: "Fintech",
   },
   {
-    slug: "beyond-the-obvious-seeing-through-the-lens-of-first-principles",
-    title: "Beyond the Obvious: Seeing Through the Lens of First Principles",
-    description:
-      "To get past biases, we need a careful and thoughtful approach called first principles thinking.",
-    date: "Aug 3, 2022",
-    readTime: "9 min read",
-    image: hero21,
-    tag: "Critical Thinking",
+    slug: "the-science-of-meditation",
+    title: "The Science of Meditation",
+    date: "Feb 10, 2026",
+    readTime: "30 min read",
+    image: heroMeditation,
+    tag: "Health",
   },
   {
-    slug: "from-numbers-to-narratives-the-ux-of-storytelling-with-data",
-    title: "From Numbers to Narratives: The UX of Storytelling with Data",
-    description:
-      "Delving into the UX aspects of data visualization, drawing inspiration from Don Norman and Edward Tufte.",
-    date: "Mar 10, 2023",
-    readTime: "13 min read",
-    image: hero20,
-    tag: "UX",
-  },
-  {
-    slug: "beyond-goals-how-okrs-foster-growth-and-innovation",
-    title: "Beyond Goals: How OKRs Foster Growth and Innovation",
-    description:
-      "This article delves into the frameworks of OKRs and CFRs, initially introduced by Intel's former CEO Andrew Grove and subsequently populariz",
-    date: "May 22, 2023",
-    readTime: "15 min read",
-    image: hero19,
+    slug: "understanding-game-theory-how-strategic-thinking-shapes-our-world",
+    title: "Understanding Game Theory: How Strategic Thinking Shapes Our World",
+    date: "Jan 23, 2026",
+    readTime: "24 min read",
+    image: heroGameTheory,
     tag: "Strategy",
   },
   {
-    slug: "silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom",
-    title:
-      "Silence, Stories, and Strategies: The Jeff Bezos Method for Transforming Dialogue in the Boardroom",
-    description:
-      "Moving Beyond Monologues with Insights from 'The Bezos Blueprint' for Productive Meetings.",
-    date: "Aug 19, 2023",
-    readTime: "9 min read",
-    image: hero18,
+    slug: "a-quantitative-approach-to-personalized-investment-planning",
+    title: "A Quantitative Approach to Personalized Investment Planning",
+    date: "Jan 29, 2025",
+    readTime: "24 min read",
+    image: hero0,
     tag: "Strategy",
   },
   {
@@ -77,44 +85,45 @@ const featuredPosts = [
     tag: "Systems Thinking",
   },
   {
-    slug: "a-quantitative-approach-to-personalized-investment-planning",
-    title: "A Quantitative Approach to Personalized Investment Planning",
-    date: "Jan 29, 2025",
-    readTime: "24 min read",
-    image: hero0,
+    slug: "silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom",
+    title:
+      "Silence, Stories, and Strategies: The Jeff Bezos Method for Transforming Dialogue in the Boardroom",
+    description:
+      "Moving Beyond Monologues with Insights from 'The Bezos Blueprint' for Productive Meetings.",
+    date: "Aug 19, 2023",
+    readTime: "9 min read",
+    image: hero18,
     tag: "Strategy",
   },
   {
-    slug: "what-i-learned-in-my-first-week-as-a-new-parent",
-    title: "What I Learned in My First Month as a New Parent",
-    date: "Mar 31, 2026",
-    readTime: "28 min read",
-    image: heroNewborn,
-    tag: "Parenting",
-  },
-  {
-    slug: "understanding-game-theory-how-strategic-thinking-shapes-our-world",
-    title: "Understanding Game Theory: How Strategic Thinking Shapes Our World",
-    date: "Jan 23, 2026",
-    readTime: "24 min read",
-    image: heroGameTheory,
+    slug: "beyond-goals-how-okrs-foster-growth-and-innovation",
+    title: "Beyond Goals: How OKRs Foster Growth and Innovation",
+    description:
+      "This article delves into the frameworks of OKRs and CFRs, initially introduced by Intel's former CEO Andrew Grove and subsequently populariz",
+    date: "May 22, 2023",
+    readTime: "15 min read",
+    image: hero19,
     tag: "Strategy",
   },
   {
-    slug: "the-science-of-meditation",
-    title: "The Science of Meditation",
-    date: "Feb 10, 2026",
-    readTime: "30 min read",
-    image: heroMeditation,
-    tag: "Health",
+    slug: "from-numbers-to-narratives-the-ux-of-storytelling-with-data",
+    title: "From Numbers to Narratives: The UX of Storytelling with Data",
+    description:
+      "Delving into the UX aspects of data visualization, drawing inspiration from Don Norman and Edward Tufte.",
+    date: "Mar 10, 2023",
+    readTime: "13 min read",
+    image: hero20,
+    tag: "UX",
   },
   {
-    slug: "intelligence-measurement-and-the-path-to-agi",
-    title: "Measuring Machine Intelligence",
-    date: "Mar 20, 2026",
-    readTime: "28 min read",
-    image: heroAGI,
-    tag: "AI",
+    slug: "beyond-the-obvious-seeing-through-the-lens-of-first-principles",
+    title: "Beyond the Obvious: Seeing Through the Lens of First Principles",
+    description:
+      "To get past biases, we need a careful and thoughtful approach called first principles thinking.",
+    date: "Aug 3, 2022",
+    readTime: "9 min read",
+    image: hero21,
+    tag: "Critical Thinking",
   },
 ];
 
