@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/understanding-sboms-a-developer-s-guid/developer-with-cat-at-computer.png";
-import img0 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/sbom-dependency-tree-diagram.png";
-import img1 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/sbom-dependency-license-compliance-tree.png";
-import img9 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/container-sbom-generation-with-trivy.png";
-import img10 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/sbom-generation-and-analysis-challenges.png";
-import img14 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/dependency-track-components-dashboard.png";
-import img16 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/dependency-track-audit-vulnerabilities-view.png";
+import heroImg from "../../../../public/blog/understanding-sboms-a-developer-s-guid/developer-with-cat-at-computer.webp";
+import img0 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/sbom-dependency-tree-diagram.webp";
+import img1 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/sbom-dependency-license-compliance-tree.webp";
+import img9 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/container-sbom-generation-with-trivy.webp";
+import img10 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/sbom-generation-and-analysis-challenges.webp";
+import img14 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/dependency-track-components-dashboard.webp";
+import img16 from "../../../../public/blog/understanding-sboms-a-developer-s-guid/dependency-track-audit-vulnerabilities-view.webp";
 import { CodeBlock } from "@/components/code-block";
 import { CvssEpssChart } from "@/components/cvss-epss-chart";
 import { RelatedPosts } from "@/components/related-posts";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/understanding-sboms-a-developer-s-guid/developer-with-cat-at-computer.png",
+        url: "https://www.visakhunni.com/blog/understanding-sboms-a-developer-s-guid/developer-with-cat-at-computer.webp",
         width: 1200,
         height: 630,
         alt: "Third-Party Dependency Management: A Developer's Guide",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Third-Party Dependency Management: A Developer's Guide",
     description: "How SBOMs help you track what's in your software, why regulations now require them, and the practical path to managing third-party dependencies.",
     images: [
-      "https://www.visakhunni.com/blog/understanding-sboms-a-developer-s-guid/developer-with-cat-at-computer.png",
+      "https://www.visakhunni.com/blog/understanding-sboms-a-developer-s-guid/developer-with-cat-at-computer.webp",
     ],
   },
 };

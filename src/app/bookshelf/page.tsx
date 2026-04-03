@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 import heroImg from "../../../public/bookshelf/hero.jpg";
-import measureWhatMatters from "../../../public/bookshelf/measure-what-matters.jpg";
-import superintelligence from "../../../public/bookshelf/superintelligence.png";
-import designEverydayThings from "../../../public/bookshelf/design-of-everyday-things.png";
+import measureWhatMatters from "../../../public/bookshelf/measure-what-matters.webp";
+import superintelligence from "../../../public/bookshelf/superintelligence.webp";
+import designEverydayThings from "../../../public/bookshelf/design-of-everyday-things.webp";
 import handsOnMl from "../../../public/bookshelf/hands-on-ml.jpg";
 import hooked from "../../../public/bookshelf/hooked.webp";
-import almanackNaval from "../../../public/bookshelf/almanack-naval.jpeg";
-import hbrAt100 from "../../../public/bookshelf/hbr-at-100.jpeg";
-import phoenixProject from "../../../public/bookshelf/phoenix-project.jpg";
+import almanackNaval from "../../../public/bookshelf/almanack-naval.webp";
+import hbrAt100 from "../../../public/bookshelf/hbr-at-100.webp";
+import phoenixProject from "../../../public/bookshelf/phoenix-project.webp";
 import criticalThinking from "../../../public/bookshelf/critical-thinking.jpg";
 import cleanCode from "../../../public/bookshelf/clean-code.jpeg";
 import cleanArchitecture from "../../../public/bookshelf/clean-architecture.jpeg";

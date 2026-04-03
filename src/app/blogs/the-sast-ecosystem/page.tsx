@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/the-sast-ecosystem/developer-analyzing-charts-on-monitor.png";
-import img0 from "../../../../public/blog/the-sast-ecosystem/sast-analysis-pipeline-ast-dataflow.png";
-import img1 from "../../../../public/blog/the-sast-ecosystem/sast-cicd-pipeline-workflow-diagram.png";
-import img2 from "../../../../public/blog/the-sast-ecosystem/false-positives-vs-false-negatives.png";
-import img3 from "../../../../public/blog/the-sast-ecosystem/sast-tool-selection-criteria-flowchart.png";
+import heroImg from "../../../../public/blog/the-sast-ecosystem/developer-analyzing-charts-on-monitor.webp";
+import img0 from "../../../../public/blog/the-sast-ecosystem/sast-analysis-pipeline-ast-dataflow.webp";
+import img1 from "../../../../public/blog/the-sast-ecosystem/sast-cicd-pipeline-workflow-diagram.webp";
+import img2 from "../../../../public/blog/the-sast-ecosystem/false-positives-vs-false-negatives.webp";
+import img3 from "../../../../public/blog/the-sast-ecosystem/sast-tool-selection-criteria-flowchart.webp";
 import { RelatedPosts } from "@/components/related-posts";
 import { SastTradeoffChart } from "@/components/sast-tradeoff-chart";
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/the-sast-ecosystem/developer-analyzing-charts-on-monitor.png",
+        url: "https://www.visakhunni.com/blog/the-sast-ecosystem/developer-analyzing-charts-on-monitor.webp",
         width: 1200,
         height: 630,
         alt: "A Developer's Guide to Static Analysis",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "A Developer's Guide to Static Analysis",
     description: "How static analysis tools find bugs before they ship, the false positive problem, and strategies for making SAST work without slowing you down.",
     images: [
-      "https://www.visakhunni.com/blog/the-sast-ecosystem/developer-analyzing-charts-on-monitor.png",
+      "https://www.visakhunni.com/blog/the-sast-ecosystem/developer-analyzing-charts-on-monitor.webp",
     ],
   },
 };

@@ -17,7 +17,7 @@ const companies = [
       "Deployed at 90% of Fortune 100 companies.",
       "Auto-reviewed 8M+ pull requests by Apr 2025.",
     ],
-    logo: `${LOGO_BASE}/github.png`,
+    logo: `${LOGO_BASE}/github.webp`,
   },
   {
     date: "2025",
@@ -101,7 +101,7 @@ const companies = [
       "Virtually all engineers use AI coding tools daily.",
       "Southeast Asia's largest tech company by AI adoption.",
     ],
-    logo: `${LOGO_BASE}/grab.png`,
+    logo: `${LOGO_BASE}/grab.webp`,
   },
 ];
 

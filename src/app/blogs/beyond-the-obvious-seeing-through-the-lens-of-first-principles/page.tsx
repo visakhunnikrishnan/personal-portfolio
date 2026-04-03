@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import heroImg from "../../../../public/blog/first-principles/first-principles-thinking-cover.png";
-import stepsImg from "../../../../public/blog/first-principles/steps.jpg";
-import feynmanImg from "../../../../public/blog/first-principles/feynman.jpg";
-import wideImg from "../../../../public/blog/first-principles/wide.jpg";
+import heroImg from "../../../../public/blog/first-principles/first-principles-thinking-cover.webp";
+import stepsImg from "../../../../public/blog/first-principles/steps.webp";
+import feynmanImg from "../../../../public/blog/first-principles/feynman.webp";
+import wideImg from "../../../../public/blog/first-principles/wide.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/first-principles/first-principles-thinking-cover.png",
+        url: "https://www.visakhunni.com/blog/first-principles/first-principles-thinking-cover.webp",
         width: 1200,
         height: 630,
         alt: "Beyond the Obvious: Seeing Through the Lens of First Principles",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Beyond the Obvious: Seeing Through the Lens of First Principles",
     description: "To get past biases, we need a careful and thoughtful approach called first principles thinking.",
     images: [
-      "https://www.visakhunni.com/blog/first-principles/first-principles-thinking-cover.png",
+      "https://www.visakhunni.com/blog/first-principles/first-principles-thinking-cover.webp",
     ],
   },
 };

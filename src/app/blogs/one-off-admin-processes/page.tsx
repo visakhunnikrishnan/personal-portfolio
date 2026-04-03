@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/one-off-admin-processes/technician-in-server-room.png";
-import img0 from "../../../../public/blog/one-off-admin-processes/dev-prod-migration-commands.png";
+import heroImg from "../../../../public/blog/one-off-admin-processes/technician-in-server-room.webp";
+import img0 from "../../../../public/blog/one-off-admin-processes/dev-prod-migration-commands.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/one-off-admin-processes/technician-in-server-room.png",
+        url: "https://www.visakhunni.com/blog/one-off-admin-processes/technician-in-server-room.webp",
         width: 1200,
         height: 630,
         alt: "One-Off Admin Processes",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "One-Off Admin Processes",
     description: "Why admin tasks like database migrations and data fixes should run as one-off processes in the same environment as your application.",
     images: [
-      "https://www.visakhunni.com/blog/one-off-admin-processes/technician-in-server-room.png",
+      "https://www.visakhunni.com/blog/one-off-admin-processes/technician-in-server-room.webp",
     ],
   },
 };

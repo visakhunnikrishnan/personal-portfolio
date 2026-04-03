@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg";
+import heroImg from "../../../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.webp";
 import { RelatedPosts } from "@/components/related-posts";
 import { NewbornStomachSize } from "@/components/newborn-stomach-size";
 import { FeedingVolumeChart } from "@/components/feeding-volume-chart";
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg",
+        url: "https://www.visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.webp",
         width: 1200,
         height: 630,
         alt: "What I Learned in My First Month as a New Parent",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     description:
       "Notes from a first-time parent on newborn feeding, sleep, and postpartum nutrition - what the research says and what actually helped.",
     images: [
-      "https://www.visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg",
+      "https://www.visakhunni.com/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.webp",
     ],
   },
 };

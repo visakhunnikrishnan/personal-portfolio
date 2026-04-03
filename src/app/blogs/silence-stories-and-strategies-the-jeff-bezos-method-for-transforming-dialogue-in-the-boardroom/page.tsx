@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png";
-import img0 from "../../../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/bezos-blueprint-book-carmine-gallo.png";
-import img1 from "../../../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/edward-tufte-pitching-out-corrupts-within.jpg";
+import heroImg from "../../../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.webp";
+import img0 from "../../../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/bezos-blueprint-book-carmine-gallo.webp";
+import img1 from "../../../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/edward-tufte-pitching-out-corrupts-within.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png",
+        url: "https://www.visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.webp",
         width: 1200,
         height: 630,
         alt: "Silence, Stories, and Strategies: The Jeff Bezos Method for Transforming Dialogue in the Boardroom",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "The Jeff Bezos Method for Transforming Dialogue in the Boardroom",
     description: "How Amazon replaced PowerPoint with narrative memos, silent reading, and structured discussion to make meetings actually productive.",
     images: [
-      "https://www.visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png",
+      "https://www.visakhunni.com/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.webp",
     ],
   },
 };

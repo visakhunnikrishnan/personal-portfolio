@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import heroImg from "../../../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.png";
+import heroImg from "../../../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.webp";
 import { RelatedPosts } from "@/components/related-posts";
 import { BenchmarkSaturation } from "@/components/benchmark-saturation";
 import { AgiLevelsComparison } from "@/components/agi-levels-comparison";
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/intelligence-measurement-and-the-path-to-agi/intelligence.png",
+        url: "https://www.visakhunni.com/blog/intelligence-measurement-and-the-path-to-agi/intelligence.webp",
         width: 1200,
         height: 630,
         alt: "Measuring Machine Intelligence",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       "What intelligence actually means, how we measure it in humans and machines, and where we really stand on the road to AGI - the definitions, the benchmarks, and the open questions.",
     images: [
-      "https://www.visakhunni.com/blog/intelligence-measurement-and-the-path-to-agi/intelligence.png",
+      "https://www.visakhunni.com/blog/intelligence-measurement-and-the-path-to-agi/intelligence.webp",
     ],
   },
 };

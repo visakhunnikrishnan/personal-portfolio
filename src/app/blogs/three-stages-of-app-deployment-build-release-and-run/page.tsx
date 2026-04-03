@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png";
-import img1 from "../../../../public/blog/three-stages-of-app-deployment-build-release-and-run/build-release-run-stages-diagram.jpg";
+import heroImg from "../../../../public/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.webp";
+import img1 from "../../../../public/blog/three-stages-of-app-deployment-build-release-and-run/build-release-run-stages-diagram.webp";
 import { BuildReleaseRunChart } from "@/components/build-release-run-chart";
 import { RelatedPosts } from "@/components/related-posts";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png",
+        url: "https://www.visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.webp",
         width: 1200,
         height: 630,
         alt: "Three Stages of App Deployment: Build, Release, and Run",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Three Stages of App Deployment: Build, Release, and Run",
     description: "Why separating build, release, and run stages matters, and how immutable releases make rollbacks trivial and deployments predictable.",
     images: [
-      "https://www.visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.png",
+      "https://www.visakhunni.com/blog/three-stages-of-app-deployment-build-release-and-run/abstract-silhouette-profiles-illustration.webp",
     ],
   },
 };

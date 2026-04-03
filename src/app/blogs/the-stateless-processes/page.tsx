@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/the-stateless-processes/person-floating-among-laptops.png";
-import img0 from "../../../../public/blog/the-stateless-processes/stateless-processes-redis-database-diagram.png";
+import heroImg from "../../../../public/blog/the-stateless-processes/person-floating-among-laptops.webp";
+import img0 from "../../../../public/blog/the-stateless-processes/stateless-processes-redis-database-diagram.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.png",
+        url: "https://www.visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.webp",
         width: 1200,
         height: 630,
         alt: "The Stateless Processes",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "The Stateless Processes",
     description: "Why your application processes should not store anything locally, and practical patterns for moving state out of your app.",
     images: [
-      "https://www.visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.png",
+      "https://www.visakhunni.com/blog/the-stateless-processes/person-floating-among-laptops.webp",
     ],
   },
 };

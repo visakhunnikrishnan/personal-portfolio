@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import heroImg from "../../../../public/blog/data-storytelling/data-storytelling-cover.png";
-import normanImg from "../../../../public/blog/data-storytelling/norman-principles.png";
-import napoleonImg from "../../../../public/blog/data-storytelling/napoleon-march.png";
-import choleraImg from "../../../../public/blog/data-storytelling/cholera-map.png";
-import tufteImg from "../../../../public/blog/data-storytelling/tufte.png";
+import heroImg from "../../../../public/blog/data-storytelling/data-storytelling-cover.webp";
+import normanImg from "../../../../public/blog/data-storytelling/norman-principles.webp";
+import napoleonImg from "../../../../public/blog/data-storytelling/napoleon-march.webp";
+import choleraImg from "../../../../public/blog/data-storytelling/cholera-map.webp";
+import tufteImg from "../../../../public/blog/data-storytelling/tufte.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/data-storytelling/data-storytelling-cover.png",
+        url: "https://www.visakhunni.com/blog/data-storytelling/data-storytelling-cover.webp",
         width: 1200,
         height: 630,
         alt: "From Numbers to Narratives: The UX of Storytelling with Data",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "From Numbers to Narratives: The UX of Storytelling with Data",
     description: "Delving into the UX aspects of data visualization, drawing inspiration from Don Norman and Edward Tufte.",
     images: [
-      "https://www.visakhunni.com/blog/data-storytelling/data-storytelling-cover.png",
+      "https://www.visakhunni.com/blog/data-storytelling/data-storytelling-cover.webp",
     ],
   },
 };

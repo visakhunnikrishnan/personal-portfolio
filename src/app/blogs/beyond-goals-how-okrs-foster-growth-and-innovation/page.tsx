@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png";
-import img0 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/measure-what-matters-book-cover.jpeg";
-import img1 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/andrew-grove-john-doerr-portraits.jpg";
-import img2 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/okr-lifecycle-isometric-building.jpg";
-import img3 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/okr-workspace-collaboration-hub.jpg";
-import img4 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/health-forward-office-isometric.jpg";
+import heroImg from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.webp";
+import img0 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/measure-what-matters-book-cover.webp";
+import img1 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/andrew-grove-john-doerr-portraits.webp";
+import img2 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/okr-lifecycle-isometric-building.webp";
+import img3 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/okr-workspace-collaboration-hub.webp";
+import img4 from "../../../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/health-forward-office-isometric.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png",
+        url: "https://www.visakhunni.com/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.webp",
         width: 1200,
         height: 630,
         alt: "Beyond Goals: How OKRs Foster Growth and Innovation",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Beyond Goals: How OKRs Foster Growth and Innovation",
     description: "How OKRs and CFRs, pioneered by Andrew Grove at Intel and popularized by John Doerr at Google, create focus and alignment.",
     images: [
-      "https://www.visakhunni.com/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png",
+      "https://www.visakhunni.com/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.webp",
     ],
   },
 };

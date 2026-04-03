@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/deep-dive-into-concurrency/runners-at-starting-line.png";
-import img0 from "../../../../public/blog/deep-dive-into-concurrency/process-types-web-worker-cache.png";
+import heroImg from "../../../../public/blog/deep-dive-into-concurrency/runners-at-starting-line.webp";
+import img0 from "../../../../public/blog/deep-dive-into-concurrency/process-types-web-worker-cache.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/deep-dive-into-concurrency/runners-at-starting-line.png",
+        url: "https://www.visakhunni.com/blog/deep-dive-into-concurrency/runners-at-starting-line.webp",
         width: 1200,
         height: 630,
         alt: "Concurrency",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Concurrency",
     description: "Why scaling means running more processes and not bigger ones, how to split work across web, worker, and clock process types, and practical patterns for horizontal scaling.",
     images: [
-      "https://www.visakhunni.com/blog/deep-dive-into-concurrency/runners-at-starting-line.png",
+      "https://www.visakhunni.com/blog/deep-dive-into-concurrency/runners-at-starting-line.webp",
     ],
   },
 };

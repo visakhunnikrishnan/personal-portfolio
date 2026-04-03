@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png";
-import img0 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/future-value-formulas-handwritten-notes.jpg";
-import img1 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/monte-carlo-simulation-25-years.png";
-import img2 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-value-simulation-20-years.png";
-import img3 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/sharpe-ratio-formula-explained.jpg";
-import img4 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-return-weighted-average-formula.jpg";
-import img5 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-volatility-covariance-matrix.jpg";
-import img6 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-variance-derivation-matrix.jpg";
-import img7 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/covariance-portfolio-worked-example.jpg";
-import img8 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/maximum-sharpe-ratio-optimization.jpg";
-import img9 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/efficient-frontier-sharpe-ratio-heatmap.png";
-import img10 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-rebalancing-comparison-chart.png";
+import heroImg from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.webp";
+import img0 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/future-value-formulas-handwritten-notes.webp";
+import img1 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/monte-carlo-simulation-25-years.webp";
+import img2 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-value-simulation-20-years.webp";
+import img3 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/sharpe-ratio-formula-explained.webp";
+import img4 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-return-weighted-average-formula.webp";
+import img5 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-volatility-covariance-matrix.webp";
+import img6 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-variance-derivation-matrix.webp";
+import img7 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/covariance-portfolio-worked-example.webp";
+import img8 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/maximum-sharpe-ratio-optimization.webp";
+import img9 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/efficient-frontier-sharpe-ratio-heatmap.webp";
+import img10 from "../../../../public/blog/a-quantitative-approach-to-personalized-investment-planning/portfolio-rebalancing-comparison-chart.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png",
+        url: "https://www.visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.webp",
         width: 1200,
         height: 630,
         alt: "A Quantitative Approach to Personalized Investment Planning",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "A Quantitative Approach to Personalized Investment Planning",
     description: "Using compound interest, Monte Carlo simulations, Modern Portfolio Theory, and rebalancing strategies to build a data-driven investment plan.",
     images: [
-      "https://www.visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png",
+      "https://www.visakhunni.com/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.webp",
     ],
   },
 };

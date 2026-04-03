@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import heroImg from "../../../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png";
-import vonNeumannImg from "../../../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/von-neumann-morgenstern.png";
+import heroImg from "../../../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.webp";
+import vonNeumannImg from "../../../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/von-neumann-morgenstern.webp";
 import { RelatedPosts } from "@/components/related-posts";
 import { TitForTatTournament } from "@/components/tit-for-tat-tournament";
 
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png",
+        url: "https://www.visakhunni.com/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.webp",
         width: 1200,
         height: 630,
         alt: "Understanding Game Theory: How Strategic Thinking Shapes Our World",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description:
       "From the Prisoner's Dilemma to AI development, discover how game theory reveals the hidden logic behind decision-making in politics, business, and everyday life.",
     images: [
-      "https://www.visakhunni.com/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png",
+      "https://www.visakhunni.com/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.webp",
     ],
   },
 };

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/the-dev-prod-parity/golden-nebula-space-explosion.png";
-import img0 from "../../../../public/blog/the-dev-prod-parity/dev-prod-parity-docker-cicd-diagram.png";
+import heroImg from "../../../../public/blog/the-dev-prod-parity/golden-nebula-space-explosion.webp";
+import img0 from "../../../../public/blog/the-dev-prod-parity/dev-prod-parity-docker-cicd-diagram.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/the-dev-prod-parity/golden-nebula-space-explosion.png",
+        url: "https://www.visakhunni.com/blog/the-dev-prod-parity/golden-nebula-space-explosion.webp",
         width: 1200,
         height: 630,
         alt: "The Dev/Prod Parity",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "The Dev/Prod Parity",
     description: "Why 'works on my machine' is a design problem, the three gaps that cause dev/prod drift, and practical strategies for environment parity.",
     images: [
-      "https://www.visakhunni.com/blog/the-dev-prod-parity/golden-nebula-space-explosion.png",
+      "https://www.visakhunni.com/blog/the-dev-prod-parity/golden-nebula-space-explosion.webp",
     ],
   },
 };

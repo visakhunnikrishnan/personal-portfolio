@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import heroImg from "../../../../public/blog/ai-native-software-engineering/ai-native-sw-eng.png";
+import heroImg from "../../../../public/blog/ai-native-software-engineering/ai-native-sw-eng.webp";
 import { RelatedPosts } from "@/components/related-posts";
 import { ProductivityParadoxChart } from "@/components/productivity-paradox-chart";
 import { EnterpriseAdoptionScoreboard } from "@/components/enterprise-adoption-scoreboard";
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/ai-native-software-engineering/ai-native-sw-eng.png",
+        url: "https://www.visakhunni.com/blog/ai-native-software-engineering/ai-native-sw-eng.webp",
         width: 1200,
         height: 630,
         alt: "AI-Native Software Engineering",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     description:
       "What changes when AI writes most of the code - the productivity paradox, the new developer skillset, and how Anthropic, Stripe, and others are rebuilding software engineering from the ground up.",
     images: [
-      "https://www.visakhunni.com/blog/ai-native-software-engineering/ai-native-sw-eng.png",
+      "https://www.visakhunni.com/blog/ai-native-software-engineering/ai-native-sw-eng.webp",
     ],
   },
 };

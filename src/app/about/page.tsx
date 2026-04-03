@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PhotoGallery } from "./photo-gallery";
 
-import heroImg from "../../../public/about/hero.png";
-import wovenLampCeiling from "../../../public/about/woven-lamp-ceiling.jpg";
-import baliVolcanoLandscape from "../../../public/about/bali-volcano-landscape.jpg";
-import nusaPenidaCliffOcean from "../../../public/about/nusa-penida-cliff-ocean.jpg";
-import nilgiriTahrMunnar from "../../../public/about/nilgiri-tahr-munnar.jpg";
-import munnarTeaPlantations from "../../../public/about/munnar-tea-plantations.jpg";
-import watchtowerContrailSky from "../../../public/about/watchtower-contrail-sky.jpg";
-import airplaneWingSunset from "../../../public/about/airplane-wing-sunset.jpg";
-import streetArtFestiveLights from "../../../public/about/street-art-festive-lights.jpg";
-import stormCloudsLightning from "../../../public/about/storm-clouds-lightning.jpg";
+import heroImg from "../../../public/about/hero.webp";
+import wovenLampCeiling from "../../../public/about/woven-lamp-ceiling.webp";
+import baliVolcanoLandscape from "../../../public/about/bali-volcano-landscape.webp";
+import nusaPenidaCliffOcean from "../../../public/about/nusa-penida-cliff-ocean.webp";
+import nilgiriTahrMunnar from "../../../public/about/nilgiri-tahr-munnar.webp";
+import munnarTeaPlantations from "../../../public/about/munnar-tea-plantations.webp";
+import watchtowerContrailSky from "../../../public/about/watchtower-contrail-sky.webp";
+import airplaneWingSunset from "../../../public/about/airplane-wing-sunset.webp";
+import streetArtFestiveLights from "../../../public/about/street-art-festive-lights.webp";
+import stormCloudsLightning from "../../../public/about/storm-clouds-lightning.webp";
 
 export const metadata: Metadata = {
   title: "About - Visakh Unni",

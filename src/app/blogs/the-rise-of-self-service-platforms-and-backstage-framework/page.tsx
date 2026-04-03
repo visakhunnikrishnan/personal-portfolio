@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/the-rise-of-self-service-platforms-and-backstage-framework/developers-working-in-open-office.png";
-import img0 from "../../../../public/blog/the-rise-of-self-service-platforms-and-backstage-framework/team-topologies-book-cover.jpg";
+import heroImg from "../../../../public/blog/the-rise-of-self-service-platforms-and-backstage-framework/developers-working-in-open-office.webp";
+import img0 from "../../../../public/blog/the-rise-of-self-service-platforms-and-backstage-framework/team-topologies-book-cover.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/the-rise-of-self-service-platforms-and-backstage-framework/developers-working-in-open-office.png",
+        url: "https://www.visakhunni.com/blog/the-rise-of-self-service-platforms-and-backstage-framework/developers-working-in-open-office.webp",
         width: 1200,
         height: 630,
         alt: "Building Self-Service Platforms That Developers Actually Use",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Building Self-Service Platforms That Developers Actually Use",
     description: "Why platform engineering matters, how self-service portals and CLIs reduce developer cognitive load, and practical lessons from building IDPs.",
     images: [
-      "https://www.visakhunni.com/blog/the-rise-of-self-service-platforms-and-backstage-framework/developers-working-in-open-office.png",
+      "https://www.visakhunni.com/blog/the-rise-of-self-service-platforms-and-backstage-framework/developers-working-in-open-office.webp",
     ],
   },
 };

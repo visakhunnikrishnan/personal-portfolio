@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.png";
-import img0 from "../../../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/thinking-in-systems-book-donella-meadows.jpg";
+import heroImg from "../../../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.webp";
+import img0 from "../../../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/thinking-in-systems-book-donella-meadows.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.png",
+        url: "https://www.visakhunni.com/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.webp",
         width: 1200,
         height: 630,
         alt: "The Hidden Connections: Understanding the World Through Systems Thinking",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "The Hidden Connections: Understanding the World Through Systems Thinking",
     description: "How systems thinking helps us see connections, understand feedback loops and leverage points, and avoid the traps of fixing problems in isolation.",
     images: [
-      "https://www.visakhunni.com/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.png",
+      "https://www.visakhunni.com/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.webp",
     ],
   },
 };

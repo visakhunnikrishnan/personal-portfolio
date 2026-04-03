@@ -2,18 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import profileImg from "../../public/visakh-unni.avif";
 
-import heroBilt from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-estate.png";
-import hero0 from "../../public/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.png";
-import heroNewborn from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.jpg";
-import heroGameTheory from "../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.png";
-import heroMeditation from "../../public/blog/the-science-of-meditation/meditation.png";
-import heroAGI from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.png";
-import heroAiNative from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.png";
-import hero17 from "../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.png";
-import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.png";
-import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.png";
-import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.png";
-import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.png";
+import heroBilt from "../../public/blog/why-india-needs-its-own-bilt-rewards/real-estate.webp";
+import hero0 from "../../public/blog/a-quantitative-approach-to-personalized-investment-planning/boy-saving-coin-piggy-bank.webp";
+import heroNewborn from "../../public/blog/what-i-learned-in-my-first-week-as-a-new-parent/baby.webp";
+import heroGameTheory from "../../public/blog/understanding-game-theory-how-strategic-thinking-shapes-our-world/nash-equilibrium.webp";
+import heroMeditation from "../../public/blog/the-science-of-meditation/meditation.webp";
+import heroAGI from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.webp";
+import heroAiNative from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.webp";
+import hero17 from "../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.webp";
+import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.webp";
+import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.webp";
+import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.webp";
+import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.webp";
 
 const featuredPosts = [
   {

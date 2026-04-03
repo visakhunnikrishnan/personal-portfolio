@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/vintage-camera-hands-closeup.png";
-import img0 from "../../../../public/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/monitoring-alert-workflow-diagram.png";
+import heroImg from "../../../../public/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/vintage-camera-hands-closeup.webp";
+import img0 from "../../../../public/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/monitoring-alert-workflow-diagram.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/vintage-camera-hands-closeup.png",
+        url: "https://www.visakhunni.com/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/vintage-camera-hands-closeup.webp",
         width: 1200,
         height: 630,
         alt: "Crafting Actionable IT Alerts: A Developer's Guide to Effective Monitoring",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Crafting Actionable IT Alerts: A Developer's Guide to Effective Monitoring",
     description: "How to build alerting systems that catch real problems without drowning your team in noise - lessons from Google SRE.",
     images: [
-      "https://www.visakhunni.com/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/vintage-camera-hands-closeup.png",
+      "https://www.visakhunni.com/blog/crafting-actionable-it-alerts-a-developer-s-guide-to-effective-monitoring/vintage-camera-hands-closeup.webp",
     ],
   },
 };

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/simplifying-application-logging/aerial-view-feet-over-city.png";
-import img0 from "../../../../public/blog/simplifying-application-logging/log-aggregation-pipeline-diagram.png";
+import heroImg from "../../../../public/blog/simplifying-application-logging/aerial-view-feet-over-city.webp";
+import img0 from "../../../../public/blog/simplifying-application-logging/log-aggregation-pipeline-diagram.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/simplifying-application-logging/aerial-view-feet-over-city.png",
+        url: "https://www.visakhunni.com/blog/simplifying-application-logging/aerial-view-feet-over-city.webp",
         width: 1200,
         height: 630,
         alt: "Simplifying Application Logging",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Simplifying Application Logging",
     description: "Why your application should write logs to stdout and nothing else, and how structured logging and log aggregation work in modern deployments.",
     images: [
-      "https://www.visakhunni.com/blog/simplifying-application-logging/aerial-view-feet-over-city.png",
+      "https://www.visakhunni.com/blog/simplifying-application-logging/aerial-view-feet-over-city.webp",
     ],
   },
 };

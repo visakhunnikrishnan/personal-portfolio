@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/embracing-config-flexibility/developers-at-config-cafe.png";
-import img0 from "../../../../public/blog/embracing-config-flexibility/traditional-vs-12factor-config.jpg";
+import heroImg from "../../../../public/blog/embracing-config-flexibility/developers-at-config-cafe.webp";
+import img0 from "../../../../public/blog/embracing-config-flexibility/traditional-vs-12factor-config.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/embracing-config-flexibility/developers-at-config-cafe.png",
+        url: "https://www.visakhunni.com/blog/embracing-config-flexibility/developers-at-config-cafe.webp",
         width: 1200,
         height: 630,
         alt: "Embracing Config Flexibility",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Embracing Config Flexibility",
     description: "Why configuration should live in the environment and never in code, and practical patterns for managing config across environments.",
     images: [
-      "https://www.visakhunni.com/blog/embracing-config-flexibility/developers-at-config-cafe.png",
+      "https://www.visakhunni.com/blog/embracing-config-flexibility/developers-at-config-cafe.webp",
     ],
   },
 };

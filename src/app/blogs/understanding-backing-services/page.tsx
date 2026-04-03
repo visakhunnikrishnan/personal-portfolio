@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/understanding-backing-services/abstract-colorful-circles-black-background.jpg";
-import img1 from "../../../../public/blog/understanding-backing-services/backing-services-architecture-diagram.jpg";
+import heroImg from "../../../../public/blog/understanding-backing-services/abstract-colorful-circles-black-background.webp";
+import img1 from "../../../../public/blog/understanding-backing-services/backing-services-architecture-diagram.webp";
 import { BackingServicesChart } from "@/components/backing-services-chart";
 import { RelatedPosts } from "@/components/related-posts";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/understanding-backing-services/abstract-colorful-circles-black-background.jpg",
+        url: "https://www.visakhunni.com/blog/understanding-backing-services/abstract-colorful-circles-black-background.webp",
         width: 1200,
         height: 630,
         alt: "Understanding Backing Services",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Understanding Backing Services",
     description: "Why your application shouldn't care where its dependencies live, and the resilience patterns that matter when services go down.",
     images: [
-      "https://www.visakhunni.com/blog/understanding-backing-services/abstract-colorful-circles-black-background.jpg",
+      "https://www.visakhunni.com/blog/understanding-backing-services/abstract-colorful-circles-black-background.webp",
     ],
   },
 };

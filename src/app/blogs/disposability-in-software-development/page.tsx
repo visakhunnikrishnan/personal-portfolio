@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/disposability-in-software-development/technician-at-server-rack.png";
-import img0 from "../../../../public/blog/disposability-in-software-development/process-lifecycle-diagram.png";
+import heroImg from "../../../../public/blog/disposability-in-software-development/technician-at-server-rack.webp";
+import img0 from "../../../../public/blog/disposability-in-software-development/process-lifecycle-diagram.webp";
 import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/disposability-in-software-development/technician-at-server-rack.png",
+        url: "https://www.visakhunni.com/blog/disposability-in-software-development/technician-at-server-rack.webp",
         width: 1200,
         height: 630,
         alt: "Disposability in Software Development",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Disposability in Software Development",
     description: "Why your processes should start fast and shut down cleanly, and practical patterns for handling SIGTERM and crash safety in containers.",
     images: [
-      "https://www.visakhunni.com/blog/disposability-in-software-development/technician-at-server-rack.png",
+      "https://www.visakhunni.com/blog/disposability-in-software-development/technician-at-server-rack.webp",
     ],
   },
 };

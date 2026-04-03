@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import heroImg from "../../../../public/blog/the-science-of-meditation/meditation.png";
+import heroImg from "../../../../public/blog/the-science-of-meditation/meditation.webp";
 import { RelatedPosts } from "@/components/related-posts";
 import { MeditationResearchGrowth } from "@/components/meditation-research-growth";
 import { MeditationEffectSizes } from "@/components/meditation-effect-sizes";
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/the-science-of-meditation/meditation.png",
+        url: "https://www.visakhunni.com/blog/the-science-of-meditation/meditation.webp",
         width: 1200,
         height: 630,
         alt: "The Science of Meditation",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description:
       "What 30,000 studies reveal about meditation's effects on your brain, stress, and mental health  - the evidence, the mechanisms, and the risks nobody talks about.",
     images: [
-      "https://www.visakhunni.com/blog/the-science-of-meditation/meditation.png",
+      "https://www.visakhunni.com/blog/the-science-of-meditation/meditation.webp",
     ],
   },
 };

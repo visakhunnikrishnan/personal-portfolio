@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import heroImg from "../../../../public/blog/the-codebase-principle/retro-terminal-version-control.png";
+import heroImg from "../../../../public/blog/the-codebase-principle/retro-terminal-version-control.webp";
 import img1 from "../../../../public/blog/the-codebase-principle/dev-staging-production-deployment-flow.jpg";
 import { CodebaseDeploysChart } from "@/components/codebase-deploys-chart";
 import { RelatedPosts } from "@/components/related-posts";
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.png",
+        url: "https://www.visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.webp",
         width: 1200,
         height: 630,
         alt: "The Codebase Principle",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "The Codebase Principle",
     description: "Why one repository should produce every deploy, and how to keep development, staging, and production running the same code.",
     images: [
-      "https://www.visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.png",
+      "https://www.visakhunni.com/blog/the-codebase-principle/retro-terminal-version-control.webp",
     ],
   },
 };
