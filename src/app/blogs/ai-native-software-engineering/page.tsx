@@ -84,9 +84,8 @@ export default function AiNativeSEBlog() {
         <p className="italic text-muted-foreground">
           At my current org, I work on the internal developer platform and
           we&apos;ve been using frontier AI models a lot - for building the platform
-          and for helping other teams adopt AI in their own work. At some point I realized I was
-          just using these tools without really knowing what the best teams
-          are doing differently. So I started reading - engineering blogs,
+          and for helping other teams adopt AI in their own work. I wanted to see how other firms are also using it
+          and adopt the best practices. So I started reading - engineering blogs,
           research papers, conference talks, earnings calls. This post is
           what I&apos;ve pieced together so far. I&apos;ll keep updating it
           as things change.
@@ -218,14 +217,11 @@ export default function AiNativeSEBlog() {
           <li>
             <strong>Refactoring is more important than ever.</strong>{" "}
             AI-generated code duplicates logic rather than abstracting it.
-            GitClear confirms refactoring collapsed from 25% to under 10%.
             Schedule refactoring sprints deliberately.
           </li>
           <li>
             <strong>Review is the new bottleneck.</strong> &ldquo;There&apos;s
             a lot more code going out there, a lot more code to review.&rdquo;
-            If you don&apos;t restructure review, you&apos;ll drown in
-            AI-generated PRs.
           </li>
           <li>
             <strong>Experiment and share openly.</strong> Fowler is
@@ -266,9 +262,9 @@ export default function AiNativeSEBlog() {
             conventions, architecture decisions, and coding standards
           </li>
           <li>
-            <strong>Tool subsets per task</strong> - Stripe&apos;s Toolshed
-            has 400+ tools but agents only see a curated handful relevant to
-            their task. Too many tools degrades reasoning.
+            <strong>Tool subsets per task</strong> - agents should only see
+            tools relevant to their current task. Too many tools degrades
+            reasoning (more on this in the Stripe section below).
           </li>
           <li>
             <strong>Just-in-Time (JIT) instructions</strong> - Shopify ran
@@ -346,8 +342,10 @@ export default function AiNativeSEBlog() {
           One notable experiment: Nicholas Carlini used 16 Claude Opus 4.6
           agents in parallel Docker containers to build a 100,000-line
           Rust-based C compiler. It passed ~99% of GCC torture tests and
-          compiled QEMU, FFmpeg, SQLite, Postgres, Redis, and Lua. Cost:
-          $20,000. <a href="#ref-8">[8]</a>
+          compiled QEMU, FFmpeg, SQLite, Postgres, Redis, and Lua. The
+          total API cost was $20,000 in tokens - a fraction of what a team
+          of engineers would cost to build the same thing over months.{" "}
+          <a href="#ref-8">[8]</a>
         </p>
 
         <h3>Stripe: 1,300 AI-written PRs per week</h3>
@@ -408,20 +406,16 @@ export default function AiNativeSEBlog() {
 
         <p>
           Their key insight: <strong>&ldquo;Context is everything, not
-          prompting.&rdquo;</strong> That Slack discussion that aligned the
-          team on an architecture pattern? If it isn&apos;t discoverable in
-          the repo, it&apos;s invisible to the agent - just like it would be
-          to a new hire joining three months later. Teams need to document
-          architectural decisions, engineering norms, and product principles
-          in-repo, not in ephemeral Slack threads.
+          prompting.&rdquo;</strong> If an architectural decision lives only
+          in a Slack thread, it&apos;s invisible to the agent - just like it
+          would be to a new hire joining three months later.
         </p>
 
         <p>
           They favor <strong>&ldquo;boring tech&rdquo;</strong> - stable APIs,
           composable libraries, things well represented in training data.
-          Technologies that are &ldquo;boring&rdquo; tend to be easier for
-          agents because of composability, API stability, and representation
-          in the training set. The key workflow: engineers run 3-4 completely
+          Agents work better with these because of API stability and broad
+          coverage in the training set. The key workflow: engineers run 3-4 completely
           independent tasks simultaneously. They describe the problem in
           short sentences, fire off the task, immediately switch to the next
           one, and return later to check status.
@@ -448,9 +442,6 @@ export default function AiNativeSEBlog() {
           <span>&rarr;</span>
           <span className="rounded border border-border bg-muted/50 px-2 py-1 font-medium text-foreground">Human selects best</span>
         </div>
-
-        <p>
-        </p>
 
         <p>
           GitHub&apos;s Copilot Coding Agent works asynchronously - you assign
@@ -532,13 +523,9 @@ export default function AiNativeSEBlog() {
         <AiNativePrinciples />
 
         <p>
-          The anti-patterns are equally consistent. Giving agents unlimited
-          tool access degrades quality (Shopify hit this at 50+ tools). <a href="#ref-14">[14]</a>{" "}
-          Uncapped retry loops waste tokens - Stripe caps at 2 CI rounds.
-          Measuring code volume without engineering outcomes is meaningless -
-          Port.io found 21 companies reporting AI code metrics in earnings
-          calls, but zero connecting them to actual outcomes.{" "}
-          <a href="#ref-35">[35]</a>
+          The anti-patterns are equally consistent: unlimited tool access,
+          uncapped retry loops, and measuring code volume without tying it
+          to actual engineering outcomes.
         </p>
 
         {/* ── SECTION 5: SWE-BENCH ── */}
@@ -595,11 +582,10 @@ export default function AiNativeSEBlog() {
         </p>
 
         <p>
-          Two practices that help: create{" "}
-          <strong>CLAUDE.md or AGENTS.md</strong> files that tell AI tools
-          about your project&apos;s conventions, and write detailed specs
-          before generating any code. The spec becomes the contract the
-          agent works against. <a href="#ref-9">[9]</a>
+          The context engineering practices described earlier - CLAUDE.md
+          files, detailed specs, curated tool access - make the biggest
+          difference here. The spec becomes the contract the agent works
+          against. <a href="#ref-9">[9]</a>
         </p>
 
         <h3>Your Definition of Done needs updating</h3>
@@ -635,15 +621,9 @@ export default function AiNativeSEBlog() {
         <p>
           This is the one thing everyone agrees on - Fowler, Beck, DORA
           elite performers, the Codemanship research group.{" "}
-          <a href="#ref-32">[32]</a> The workflow: write failing tests first,
-          let AI write code to pass them, then review and clean up. Studies
-          show AI produces measurably better code when you give it tests
-          alongside the problem description. <a href="#ref-38">[38]</a>
-        </p>
-
-        <p>
-          One thing to watch for: AI agents will sometimes delete or disable
-          tests to make them &ldquo;pass.&rdquo; If your tests break after
+          <a href="#ref-32">[32]</a> Studies show AI produces measurably
+          better code when you give it tests alongside the problem
+          description. <a href="#ref-38">[38]</a> If your tests break after
           an AI change, go back to the last working commit. Leaving broken
           code in the context window makes all future AI output worse.
         </p>
@@ -674,9 +654,7 @@ export default function AiNativeSEBlog() {
         </ol>
 
         <p>
-          Microsoft does this at scale - AI assists in 90%+ of their 600K+
-          monthly PRs. <a href="#ref-28">[28]</a> The rule: <strong>the
-          human always has final say</strong>.
+          The rule: <strong>the human always has final say</strong>.
         </p>
 
         <h3>Standups and retros need new questions</h3>
@@ -714,11 +692,9 @@ export default function AiNativeSEBlog() {
         <h3>AI is creating tech debt faster than humans ever did</h3>
 
         <p>
-          GitClear analyzed 211 million lines of code and found a worrying
-          pattern: <a href="#ref-18">[18]</a> refactoring dropped from 25%
-          to under 10% of commits. Code duplication grew 4x. Complexity went
-          up 39% in repos where agents do most of the work. The reason is
-          simple - agents optimize for making tests pass, not for clean
+          The GitClear data from earlier tells the story: refactoring down,
+          duplication up, complexity up 39% in agent-heavy repos. The reason
+          is simple - agents optimize for making tests pass, not for clean
           architecture. The fix: schedule dedicated refactoring sprints, and
           give AI refactoring tasks too, not just feature work.
         </p>
@@ -946,16 +922,14 @@ export default function AiNativeSEBlog() {
         <h3>Once you have the basics</h3>
 
         <p>
-          Move to a TDD-first workflow: humans write the test specs, AI
-          writes code to pass them, humans review and clean up. Restructure
-          code review so AI handles the first pass (style, basic security,
-          static analysis) and humans focus on architecture, intent, and
-          security boundaries. Start tracking AI vs. human code metrics
-          separately - error rates, cycle time, review outcomes. Without
-          this data, you&apos;re flying blind. Run a controlled experiment
-          on one team to actually measure whether AI is helping before you
-          roll it out everywhere. And set up a shared prompt and workflow
-          library so people aren&apos;t reinventing the wheel.
+          Adopt the TDD-first workflow described above and restructure
+          code review into AI-first-pass, human-second-pass. Start tracking
+          AI vs. human code metrics separately - error rates, cycle time,
+          review outcomes. Without this data, you&apos;re flying blind. Run
+          a controlled experiment on one team to actually measure whether AI
+          is helping before you roll it out everywhere. And set up a shared
+          prompt and workflow library so people aren&apos;t reinventing the
+          wheel.
         </p>
 
         <h3>As your team matures</h3>
@@ -963,10 +937,8 @@ export default function AiNativeSEBlog() {
         <p>
           Think about how your team is spending its time. If engineers are
           still writing most code by hand, you may need to shift toward
-          more reviewing and less typing - possibly creating a dedicated
-          Context Architect role. Make your codebase agent-friendly:
-          consistent naming, strong typing, well-scoped modules,
-          comprehensive CLAUDE.md documentation. Set up self-healing
+          more reviewing and less typing. Invest in making your codebase
+          agent-friendly (see the earlier section). Set up self-healing
           patterns for your most critical pipelines. Start a monthly AI
           code audit - pick 10 random AI-generated files and have a senior
           engineer review them deeply. Plan for MCP integration in your
