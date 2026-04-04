@@ -91,9 +91,8 @@ export default function AGIBlog() {
           formal sense, how we measure it in humans, or what the benchmarks for
           AI really test. So I went looking. What I found was a field where
           trillion-dollar investment decisions depend on definitions that nobody
-          agrees on, benchmarks that keep breaking, and a gap between what AI
-          can do on a test and what it can do in the real world. Here&apos;s
-          what I learned.
+          agrees on and benchmarks that keep breaking. Here&apos;s what I
+          learned.
         </p>
 
         <hr />
@@ -136,9 +135,12 @@ export default function AGIBlog() {
           In 1904, Charles Spearman noticed something odd. When you give people
           a bunch of unrelated cognitive tests - vocabulary, spatial reasoning,
           arithmetic, pattern recognition - their scores are always positively
-          correlated. People who do well on one tend to do well on others. This
-          is called the <strong>positive manifold</strong>, and it&apos;s been
-          called the most replicated finding in all of psychology.{" "}
+          correlated. People who do well on one tend to do well on others.
+          You&apos;d expect vocabulary skill to be independent of spatial
+          reasoning, but they aren&apos;t - there&apos;s always a positive
+          relationship. This is called the{" "}
+          <strong>positive manifold</strong>, and it&apos;s been called the
+          most replicated finding in all of psychology.{" "}
           <a href="#ref-1">[1]</a>
         </p>
 
@@ -155,20 +157,28 @@ export default function AGIBlog() {
             X = &Lambda;f + &epsilon;
           </p>
           <p className="text-sm text-muted-foreground">
-            Think of it this way. You take a bunch of cognitive tests and get
-            a score on each - that&apos;s <strong>X</strong>. Spearman&apos;s
-            insight was that your scores aren&apos;t random. There&apos;s a
-            hidden factor <strong>f</strong> (general intelligence, or g)
-            pulling them all in the same direction. <strong>&Lambda;</strong>{" "}
-            captures how strongly each test is connected to that hidden factor
-            - some tests (like abstract reasoning) are tightly linked to g,
-            while others (like memorizing digits) are less so.
-            And <strong>&epsilon;</strong> is everything else - luck, how you
-            were feeling that day, test-specific skills.
+            <strong>X</strong> is a vector of your scores across multiple
+            cognitive tests - say, vocabulary, spatial reasoning, arithmetic,
+            and pattern recognition. Spearman&apos;s insight was that these
+            scores aren&apos;t independent. There&apos;s a hidden factor{" "}
+            <strong>f</strong> (general intelligence, or g) pulling them all
+            in the same direction. <strong>&Lambda;</strong> (lambda) is a
+            matrix of &ldquo;factor loadings&rdquo; - it captures how
+            strongly each test is connected to that hidden factor. Abstract
+            reasoning might have a loading of 0.8 (tightly linked to g),
+            while digit memorization might only be 0.3 (weakly linked).
+            And <strong>&epsilon;</strong> is the residual - everything the
+            model doesn&apos;t explain: luck, how you were feeling that day,
+            skills specific to one test.
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
-            When researchers run this math across large populations, the g
-            factor alone explains{" "}
+            A concrete example: suppose someone has high g. Their abstract
+            reasoning score will be high (strong loading), their vocabulary
+            will be above average (moderate loading), and their digit span
+            might be only slightly above average (weak loading). The same
+            hidden factor produces different-sized effects on different
+            tests - and that&apos;s exactly what &Lambda; encodes. When
+            researchers run this across large populations, g alone explains{" "}
             <strong>40-50% of the total variation</strong> in scores across
             all the different tests. That&apos;s a lot for a single number.{" "}
             <a href="#ref-1">[1]</a>
@@ -181,20 +191,39 @@ export default function AGIBlog() {
           Today, the most accepted model is the{" "}
           <strong>Cattell-Horn-Carroll (CHC) model</strong>.{" "}
           <a href="#ref-4">[4]</a> <a href="#ref-5">[5]</a>{" "}
-          <a href="#ref-6">[6]</a> Think of it as a three-layer pyramid. At the
-          top sits g. In the middle are 16 broad abilities like reasoning,
-          memory, and processing speed. At the bottom are 80+ specific skills.
+          <a href="#ref-6">[6]</a> It combines decades of research from
+          Raymond Cattell, John Horn, and John Carroll into a single
+          framework. Think of it as a three-layer pyramid. At the top sits
+          g - the general factor. In the middle are 16 broad abilities:
+          fluid reasoning, crystallized knowledge, short-term memory,
+          long-term retrieval, processing speed, visual-spatial processing,
+          and others. At the bottom are 80+ narrow skills - things like
+          spelling ability, spatial scanning, or number facility. Each
+          narrow skill loads onto a broad ability, and each broad ability
+          loads onto g. This hierarchy explains why someone good at math is
+          also <em>likely</em> (but not guaranteed) to be good at verbal
+          reasoning - both draw on the same general factor, even though
+          they use different broad and narrow abilities.
         </p>
 
         <p>
           The distinction that matters most for AI is between two of those
-          broad abilities. <strong>Fluid intelligence</strong> is your ability
-          to solve problems you&apos;ve never seen before - pure reasoning
-          with no prior knowledge to lean on. <strong>Crystallized
-          intelligence</strong> is what you know - facts, vocabulary, learned
-          procedures. Here&apos;s the thing: most AI benchmarks test
-          crystallized knowledge (what the model has seen in training). Very few
-          test fluid reasoning (can it figure out something genuinely new?).
+          broad abilities. <strong>Fluid intelligence (Gf)</strong> is your
+          ability to solve problems you&apos;ve never seen before - pure
+          reasoning with no prior knowledge to lean on. If someone shows
+          you a pattern you&apos;ve never encountered and asks you to
+          figure out the rule, that&apos;s fluid intelligence.{" "}
+          <strong>Crystallized intelligence (Gc)</strong> is what you&apos;ve
+          accumulated - facts, vocabulary, learned procedures, expertise
+          built up over years. Knowing that water boils at 100&deg;C or
+          that Python uses indentation for scope is crystallized knowledge.
+          In humans, fluid intelligence peaks in your mid-20s and gradually
+          declines, while crystallized intelligence keeps growing well into
+          old age - which is why experienced professionals often outperform
+          younger ones despite slower raw processing. Here&apos;s the
+          thing: most AI benchmarks test crystallized knowledge (what the
+          model has seen in training data). Very few test fluid reasoning
+          (can it figure out something genuinely new?).
         </p>
 
         <FluidVsCrystallized />
@@ -264,13 +293,19 @@ export default function AGIBlog() {
 
         <p>
           This was formalized through something called{" "}
-          <strong>Kolmogorov complexity</strong>. <a href="#ref-15">[15]</a>{" "}
-          It measures how complex a piece of data is by asking: what&apos;s
-          the shortest computer program that can produce it? For example, the
-          string &ldquo;010101010101&rdquo; is simple - you can generate it
-          with a tiny program (&ldquo;repeat 01 six times&rdquo;). A truly
-          random string can&apos;t be compressed at all - you&apos;d need a
-          program just as long as the string itself.
+          <strong>Kolmogorov complexity</strong>, developed independently by
+          Andrey Kolmogorov, Ray Solomonoff, and Gregory Chaitin in the
+          1960s. <a href="#ref-15">[15]</a> It measures how complex a piece
+          of data is by asking: what&apos;s the shortest computer program
+          that can produce it? For example, the string
+          &ldquo;010101010101&rdquo; is simple - you can generate it with a
+          tiny program (&ldquo;repeat 01 six times&rdquo;). The first
+          million digits of pi are also simple in this sense - there are
+          short formulas that generate them. But a truly random string
+          can&apos;t be compressed at all - you&apos;d need a program just
+          as long as the string itself. The key insight: if you can find a
+          short description of something, you&apos;ve understood its
+          underlying structure.
         </p>
 
         <div className="not-prose my-6 rounded-lg border border-border bg-muted/50 px-5 py-4">
@@ -278,25 +313,46 @@ export default function AGIBlog() {
             K(x) = min &#123; |p| : U(p) = x &#125;
           </p>
           <p className="text-sm text-muted-foreground">
-            K(x) is the Kolmogorov complexity of some data x. It&apos;s the
-            length of the shortest program p that produces x on a universal
-            Turing machine U. The catch: you can never be 100% sure
-            you&apos;ve found the shortest possible program. It&apos;s
-            mathematically proven to be incomputable.{" "}
+            Reading this formula: <strong>K(x)</strong> is the Kolmogorov
+            complexity of some data x. <strong>p</strong> is a program
+            (a sequence of instructions). <strong>|p|</strong> is the
+            length of that program in bits. <strong>U</strong> is a
+            universal Turing machine - a theoretical computer that can
+            simulate any other computer. <strong>U(p) = x</strong> means
+            &ldquo;running program p on U produces x.&rdquo; So the whole
+            formula says: look at every possible program that outputs x,
+            and pick the shortest one. Its length is K(x).
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            For example, K(&ldquo;010101...01&rdquo;) is small - maybe a
+            few bytes for &ldquo;repeat 01 n times.&rdquo; But
+            K(random noise) is roughly equal to the length of the noise
+            itself, because there&apos;s no shorter way to describe it.
+            The catch: you can never be 100% sure you&apos;ve found the
+            shortest possible program. It&apos;s mathematically proven to
+            be incomputable - no algorithm can calculate K(x) for all
+            inputs. You can approximate it, but never know it exactly.{" "}
             <a href="#ref-15">[15]</a>
           </p>
         </div>
 
         <p>
           Why does this matter for intelligence? Because compression and
-          prediction are the same thing. If you can compress data, you&apos;ve
-          found the pattern. If you&apos;ve found the pattern, you can predict
-          what comes next. And predicting well is really what intelligence is
-          about. Ray Solomonoff made this rigorous in 1964{" "}
-          <a href="#ref-16">[16]</a> - he showed that the best possible
-          predictor is one that favors simpler explanations over complex ones
-          (shorter programs get higher weight). This is basically Occam&apos;s
-          razor, expressed as math.
+          prediction are two sides of the same coin. If you can compress
+          data, you&apos;ve found its underlying pattern. If you&apos;ve
+          found the pattern, you can predict what comes next. Consider
+          weather: if you notice &ldquo;it rains every third day,&rdquo;
+          you&apos;ve compressed the weather data into a simple rule - and
+          now you can predict tomorrow. A system that compresses better
+          understands more deeply and predicts more accurately. Ray
+          Solomonoff formalized this in 1964 with his theory of inductive
+          inference. <a href="#ref-16">[16]</a> His key result: the best
+          possible predictor is one that considers all programs that could
+          have generated the data you&apos;ve seen, and weights each one
+          by its simplicity (shorter programs get exponentially higher
+          weight). When multiple explanations fit the data, bet on the
+          simpler one. This is Occam&apos;s razor expressed as math - and
+          it&apos;s provably optimal in a formal sense.
         </p>
 
         <h3>Putting a number on intelligence</h3>
@@ -315,15 +371,29 @@ export default function AGIBlog() {
             V<sub>&mu;</sub><sup>&pi;</sup>
           </p>
           <p className="text-sm text-muted-foreground">
-            Here&apos;s what it says in plain English: take an agent
-            (&pi;). Test it in every possible environment (&mu;). Add up
-            how well it does in each one - but give more weight to simpler
-            environments (the 2<sup>-K(&mu;)</sup> part). That total is its
-            intelligence score. Why weight simpler environments more? Because
-            most real-world problems have underlying structure. An agent that
-            only solves bizarre, contrived edge cases but fails at everyday
-            tasks isn&apos;t very intelligent. Weighting by simplicity is
-            Occam&apos;s razor built into the formula.{" "}
+            Breaking this down piece by piece:{" "}
+            <strong>&Upsilon;(&pi;)</strong> is the intelligence score of
+            agent &pi;. <strong>&mu;</strong> is an environment - a
+            specific problem or world the agent could be placed in.{" "}
+            <strong>V<sub>&mu;</sub><sup>&pi;</sup></strong> is how much
+            reward (how well) the agent &pi; achieves in environment &mu;
+            - think of it as its score on that particular challenge.{" "}
+            <strong>2<sup>-K(&mu;)</sup></strong> is the weight given to
+            that environment, based on its Kolmogorov complexity. A simple
+            environment (small K) gets a high weight; a complex one gets
+            exponentially less. An environment with K=3 gets weight 2<sup>-3</sup>{" "}
+            = 1/8; one with K=20 gets weight 2<sup>-20</sup> &asymp;
+            0.000001.
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            The sum adds up these weighted scores across <em>every
+            possible</em> environment. So the formula says: an intelligent
+            agent is one that performs well across many environments, with
+            extra credit for doing well in structured, simple environments
+            (the kinds of problems that show up most in reality). An agent
+            that only solves bizarre edge cases but fails at everyday tasks
+            would score low. Weighting by simplicity is Occam&apos;s razor
+            built into the formula.{" "}
             <a href="#ref-13">[13]</a>
           </p>
         </div>
@@ -341,13 +411,21 @@ export default function AGIBlog() {
         <p>
           Marcus Hutter extended this with <strong>AIXI</strong>{" "}
           <a href="#ref-14">[14]</a> - a theoretical design for the most
-          intelligent possible agent. AIXI always makes the best decision
-          in any environment by considering every possible explanation for
-          what it observes, weighted by simplicity. It&apos;s been proven
-          optimal. It&apos;s also been proven impossible to actually build -
-          it would require infinite computation. Researchers have built
-          simplified versions (like MC-AIXI-CTW <a href="#ref-17">[17]</a>),
-          but they only work in very simple environments.
+          intelligent possible agent. AIXI combines Solomonoff&apos;s
+          prediction theory with sequential decision-making. At each
+          step, it considers every possible model of the world that&apos;s
+          consistent with what it has observed so far. It weights each
+          model by simplicity (again using Kolmogorov complexity), then
+          picks the action that maximizes expected future reward across
+          all those models. It&apos;s been proven optimal - no other agent
+          can do better over the long run. It&apos;s also been proven
+          impossible to actually build, because it requires searching
+          over infinitely many programs at every single step. Researchers
+          have built practical approximations (like MC-AIXI-CTW{" "}
+          <a href="#ref-17">[17]</a>, which uses Monte Carlo sampling
+          and a context-tree weighting algorithm to approximate the
+          infinite search), but they only work in very simple
+          environments like small grid worlds.
         </p>
 
         <blockquote>
@@ -412,10 +490,7 @@ export default function AGIBlog() {
             Why this matters
           </p>
           <p>
-            If a model has seen the test during training, its score tells you
-            how good it is at memorizing, not at thinking. Imagine a student
-            who got a perfect score - but only because they had the answer key
-            beforehand. The field is fighting this with private test sets (HLE,
+            The field is fighting this with private test sets (HLE,
             ARC-AGI-2), constantly refreshed benchmarks (LiveBench), and tools
             that detect contamination after the fact. But it&apos;s an ongoing
             arms race.
@@ -427,10 +502,17 @@ export default function AGIBlog() {
         <p>
           Fran&ccedil;ois Chollet made an important argument in 2019: being
           good at a task doesn&apos;t mean you&apos;re intelligent.{" "}
-          <a href="#ref-23">[23]</a> You might just have a lot of practice or
-          training data. What actually shows intelligence is how fast you can
-          pick up something completely new from just a few examples. He called
-          this <strong>skill-acquisition efficiency</strong>.
+          <a href="#ref-23">[23]</a> A chess engine that&apos;s been
+          trained on millions of games is skilled, but is it intelligent?
+          Chollet argued no - skill is just the output. What actually shows
+          intelligence is how fast you can pick up something completely new
+          from just a few examples. He called this{" "}
+          <strong>skill-acquisition efficiency</strong>: how much new
+          capability you gain per unit of experience. A child who learns
+          to play a new card game after watching two rounds is
+          demonstrating high skill-acquisition efficiency. A system that
+          needs a million examples to learn the same game is not - no
+          matter how well it plays afterwards.
         </p>
 
         <p>
@@ -487,8 +569,7 @@ export default function AGIBlog() {
           The term was first used by Mark Gubrud in 1997{" "}
           <a href="#ref-33">[33]</a> and became widely known after a 2007
           book by Ben Goertzel and Cassio Pennachin.{" "}
-          <a href="#ref-34">[34]</a> But to this day, there&apos;s no agreed
-          definition. Each major AI lab has its own version:
+          <a href="#ref-34">[34]</a> Here&apos;s how the major labs define it:
         </p>
 
         <AgiLevelsComparison />
@@ -540,9 +621,8 @@ export default function AGIBlog() {
           complex, multi-step project over days without losing track.{" "}
           <strong>Social cognition</strong> means understanding what another
           person is thinking and feeling from context. These are hard to test
-          because they&apos;re hard to put into a multiple-choice format. But
-          they&apos;re exactly the abilities that separate passing a test from
-          functioning in the real world.
+          because they&apos;re hard to put into a multiple-choice format -
+          and they&apos;re exactly the abilities that matter most.
         </p>
 
         <p>
@@ -582,10 +662,15 @@ export default function AGIBlog() {
         <p>
           The picture is clear: AI crushes structured academic tests but
           struggles with messy real-world tasks. Researchers call this the{" "}
-          <strong>jagged frontier</strong>. <a href="#ref-37">[37]</a> The
-          system can be expert-level at one thing and completely fail at
-          something that seems simpler. The edges of what it can and can&apos;t
-          do are unpredictable.
+          <strong>jagged frontier</strong>. <a href="#ref-37">[37]</a> If
+          you plot AI capabilities across different tasks, you don&apos;t
+          get a smooth line - you get a jagged, spiky shape. The system
+          can write a legal brief better than most lawyers, then fail to
+          count the number of &ldquo;r&rdquo;s in &ldquo;strawberry.&rdquo;
+          It can solve graduate-level physics but get confused by a simple
+          word problem a ten-year-old could handle. The edges of what it
+          can and can&apos;t do are unpredictable, which makes it
+          dangerous to assume competence in one area transfers to another.
         </p>
 
         <JaggedCapabilityProfile />
@@ -755,19 +840,17 @@ export default function AGIBlog() {
 
         <p>
           <strong>We can&apos;t properly measure what we&apos;re building.</strong>{" "}
-          Half of the cognitive abilities that make up intelligence don&apos;t
-          have proper AI evaluations yet. The benchmarks we do have saturate
-          in a few years, suffer from contamination, and mostly test
-          memorized knowledge rather than real reasoning. We&apos;re building
-          systems faster than we can evaluate them.
+          As the DeepMind framework shows, half of the cognitive abilities
+          that make up intelligence don&apos;t have proper AI evaluations
+          yet. We&apos;re building systems faster than we can evaluate them.
         </p>
 
         <p>
-          <strong>AI is brilliant at some things and terrible at others.</strong>{" "}
-          And the boundary between the two isn&apos;t intuitive. It can ace a
-          PhD-level science exam and then fail at a task any human could do.
-          This creates real danger when people assume it&apos;s good at
-          everything because it&apos;s good at the thing they tested.
+          <strong>The jagged frontier is real.</strong>{" "}
+          The boundary between what AI can and can&apos;t do isn&apos;t
+          intuitive, and that creates real danger when people assume
+          it&apos;s good at everything because it&apos;s good at the thing
+          they tested.
         </p>
 
         <p>

@@ -170,8 +170,8 @@ export function CognitiveFaculties() {
         <circle cx={CX} cy={CY} r={38} className="dark:hidden" fill="url(#cf-center)" filter="url(#cf-glow)" />
         <circle cx={CX} cy={CY} r={38} className="hidden dark:block" fill="url(#cf-center-dark)" filter="url(#cf-glow)" />
         <circle cx={CX - 8} cy={CY - 10} r={9} fill="white" fillOpacity="0.15" />
-        <text x={CX} y={CY - 2} textAnchor="middle" fontSize="10" fontWeight="600" className="fill-foreground">General</text>
-        <text x={CX} y={CY + 12} textAnchor="middle" fontSize="10" fontWeight="600" className="fill-foreground">Intelligence</text>
+        <text x={CX} y={CY - 2} textAnchor="middle" fontSize="10" fontWeight="400" className="fill-foreground">General</text>
+        <text x={CX} y={CY + 12} textAnchor="middle" fontSize="10" fontWeight="400" className="fill-foreground">Intelligence</text>
 
         {/* Front orbit half */}
         <ellipse
