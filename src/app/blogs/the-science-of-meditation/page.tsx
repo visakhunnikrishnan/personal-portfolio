@@ -188,7 +188,9 @@ export default function MeditationBlog() {
           In 2011, <strong>Britta H&ouml;lzel</strong> took this further. She
           scanned 16 people before and after an 8-week MBSR (Mindfulness-Based
           Stress Reduction) program and found
-          they had more gray matter in the hippocampus (memory), posterior
+          they had more gray matter - the tissue that contains most of
+          your brain&apos;s neurons and does the actual processing - in the
+          hippocampus (memory), posterior
           cingulate cortex (self-awareness), and temporo-parietal junction
           (empathy){" "}<a href="#ref-8">[8]</a>. In a related study, people who reported less stress after
           MBSR also showed a smaller amygdala - the brain&apos;s fear and
@@ -259,8 +261,13 @@ export default function MeditationBlog() {
           hooked up eight Buddhist monks with 10,000 to 50,000 hours of
           practice to an EEG. During compassion meditation, their brains
           produced powerful{" "}
-          <strong>gamma waves (25&ndash;42 Hz)</strong> - fast brainwaves
-          linked to heightened awareness and learning. Neuroscientists had never
+          <strong>gamma waves (25&ndash;42 Hz)</strong> - the fastest
+          brainwaves your brain produces, associated with intense focus,
+          heightened awareness, and learning. For reference, the theta
+          waves from relaxation are 4&ndash;8 Hz, alpha waves (calm
+          alertness) are 8&ndash;13 Hz, and gamma is 25&ndash;42 Hz -
+          so the monks&apos; brains were firing at several times the
+          speed of a relaxed brain. Neuroscientists had never
           seen anything like it. Even when the monks were just resting and not
           meditating, their gamma activity was elevated - and the more years of
           practice they had, the stronger it was. Their brains had been
@@ -299,9 +306,11 @@ export default function MeditationBlog() {
           controlled trials) with 3,515
           participants. It found that meditation had moderate effects on anxiety
           (effect size 0.38), depression (0.30), and pain (0.33) after 8 weeks.
-          To put those numbers in context: antidepressants in primary care
-          typically score around 0.2&ndash;0.3 - so meditation is in the same
-          ballpark. But here&apos;s the important part: meditation wasn&apos;t
+          Effect size is how researchers measure whether something actually
+          works - 0.2 is considered small, 0.5 is medium, and 0.8 is large.
+          So meditation lands in the small-to-medium range. To put those
+          numbers in context: antidepressants in primary care typically score
+          around 0.2&ndash;0.3 - so meditation is in the same ballpark. But here&apos;s the important part: meditation wasn&apos;t
           better than any other active treatment they compared it to. It works,
           but it&apos;s not special.{" "}<a href="#ref-1">[1]</a>
         </p>
@@ -322,8 +331,11 @@ export default function MeditationBlog() {
           groups improved. MBSR reduced symptoms by 1.35 points on the Clinical
           Global Impressions scale. The drug reduced them by 1.43 points. That
           difference was small enough to meet what researchers call
-          &ldquo;non-inferiority&rdquo; - meaning MBSR was not meaningfully
-          worse than the medication.
+          &ldquo;non-inferiority&rdquo; - a statistical standard used in
+          clinical trials that means the new treatment (MBSR) is not
+          meaningfully worse than the established one (the drug). It&apos;s
+          not saying they&apos;re identical, but that any difference is too
+          small to matter clinically.
         </p>
 
         <p>
@@ -373,18 +385,24 @@ export default function MeditationBlog() {
           The <strong>Shamatha Project</strong> at UC Davis - one of the
           longest and most detailed meditation studies ever done - found that
           retreat participants had about one-third more telomerase activity
-          than controls. Telomerase is the enzyme that protects the caps on
-          your chromosomes (telomeres) from wearing down as you age. This
-          study was done with Nobel laureate Elizabeth Blackburn, who won the
-          prize for discovering how telomerase works{" "}<a href="#ref-21">[21]</a>.
+          than controls. Telomerase is the enzyme that rebuilds the caps on
+          your chromosomes (telomeres). Every time a cell divides, these
+          caps get a little shorter - and when they get too short, the cell
+          stops working properly or dies. This is one of the core mechanisms
+          of aging. More telomerase means your cells can maintain themselves
+          longer. This study was done with Nobel laureate Elizabeth
+          Blackburn, who won the prize for discovering how telomerase
+          works{" "}<a href="#ref-21">[21]</a>.
         </p>
 
         <p>
           At the genetic level, studies from the Benson-Henry Institute found
           that long-term meditators had 2,209 genes expressed differently from
           non-meditators - particularly genes involved in inflammation. The
-          NF-&kappa;B pathway, which drives inflammatory responses in your
-          body, was significantly dialed down{" "}<a href="#ref-22">[22]</a>.
+          NF-&kappa;B pathway - a molecular switch that tells your
+          immune cells to produce inflammation - was significantly dialed
+          down{" "}<a href="#ref-22">[22]</a>. Chronic inflammation is linked to heart disease,
+          diabetes, and depression, so quieting this pathway is a big deal.
         </p>
 
         <p>
@@ -395,8 +413,11 @@ export default function MeditationBlog() {
           <strong>57% less unpleasantness</strong> and{" "}
           <strong>40% less pain intensity</strong>{" "}<a href="#ref-23">[23]</a>. A follow-up study with 75
           people showed this wasn&apos;t just placebo - meditation activated
-          different brain regions (the orbitofrontal cortex and anterior
-          cingulate cortex) than what you see with placebo responses{" "}<a href="#ref-24">[24]</a>.
+          different brain regions than what you see with placebo responses.
+          Specifically, it engaged the orbitofrontal cortex (which
+          reappraises how important a sensation is) and the anterior
+          cingulate cortex (which regulates your emotional response to
+          pain) - a top-down control mechanism, not just distraction{" "}<a href="#ref-24">[24]</a>.
         </p>
 
         <p>
@@ -641,7 +662,9 @@ export default function MeditationBlog() {
           al. (2023) study showed MBSR was just as effective as an SSRI for
           anxiety - but with far fewer side effects. Goldberg et al. (2018)
           compared mindfulness programs to established treatments and found
-          essentially no difference (d&nbsp;=&nbsp;&minus;0.004).
+          essentially no difference (d&nbsp;=&nbsp;&minus;0.004 - so close
+          to zero that it means the two groups were virtually identical in
+          outcome).
         </p>
 
         <p>
