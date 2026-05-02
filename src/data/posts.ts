@@ -28,6 +28,7 @@ import hero24 from "../../public/blog/understanding-game-theory-how-strategic-th
 import hero25 from "../../public/blog/the-science-of-meditation/meditation.webp";
 import hero26 from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.webp";
 import hero27 from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.webp";
+import hero28 from "../../public/blog/journaling/journaling.webp";
 
 export interface Post {
   slug: string;
@@ -40,6 +41,16 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "journaling",
+    title: "Journalling",
+    description:
+      "Why writing things down brings clarity - the four cognitive mechanisms that explain it, and what the research actually says about how to journal properly.",
+    date: "May 2, 2026",
+    readTime: "16 min read",
+    image: hero28,
+    tags: ["Health", "Science"],
+  },
   {
     slug: "ai-native-software-engineering",
     title: "AI-Native Software Engineering",
