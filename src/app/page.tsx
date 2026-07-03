@@ -10,6 +10,7 @@ import heroMeditation from "../../public/blog/the-science-of-meditation/meditati
 import heroAGI from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.webp";
 import heroAiNative from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.webp";
 import heroJournaling from "../../public/blog/journaling/journaling.webp";
+import heroIems from "../../public/blog/how-to-choose-iems/audiophile-swirl.webp";
 import hero17 from "../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.webp";
 import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.webp";
 import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.webp";
@@ -17,6 +18,14 @@ import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.
 import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.webp";
 
 const featuredPosts = [
+  {
+    slug: "how-to-choose-iems",
+    title: "Notes on IEMs",
+    date: "Jul 3, 2026",
+    readTime: "9 min read",
+    image: heroIems,
+    tag: "Audio",
+  },
   {
     slug: "journaling",
     title: "Journalling",

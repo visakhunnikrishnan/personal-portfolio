@@ -29,6 +29,7 @@ import hero25 from "../../public/blog/the-science-of-meditation/meditation.webp"
 import hero26 from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.webp";
 import hero27 from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.webp";
 import hero28 from "../../public/blog/journaling/journaling.webp";
+import hero29 from "../../public/blog/how-to-choose-iems/audiophile-swirl.webp";
 
 export interface Post {
   slug: string;
@@ -41,6 +42,16 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "how-to-choose-iems",
+    title: "Notes on IEMs",
+    description:
+      "What frequency response graphs actually tell you, why the Harman target matters, and a shortlist of IEMs that are easy to recommend - in plain terms, with interactive graphs.",
+    date: "Jul 3, 2026",
+    readTime: "9 min read",
+    image: hero29,
+    tags: ["Audio", "Data"],
+  },
   {
     slug: "journaling",
     title: "Journalling",
