@@ -30,6 +30,7 @@ import hero26 from "../../public/blog/intelligence-measurement-and-the-path-to-a
 import hero27 from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.webp";
 import hero28 from "../../public/blog/journaling/journaling.webp";
 import hero29 from "../../public/blog/how-to-choose-iems/audiophile-swirl.webp";
+import hero30 from "../../public/blog/tsanomaly/tsanomaly-banner.webp";
 
 export interface Post {
   slug: string;
@@ -42,6 +43,16 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "tsanomaly",
+    title: "tsanomaly: A Generic Framework for Time-Series Anomaly Detection",
+    description:
+      "Why time-series anomaly detection is harder than it looks, what Anodot's patents taught me about solving it, and how I built tsanomaly - an open-source Python library with self-calibrating envelopes, explainable scores, and incident grouping.",
+    date: "Jul 19, 2026",
+    readTime: "8 min read",
+    image: hero30,
+    tags: ["Data", "Open Source"],
+  },
   {
     slug: "how-to-choose-iems",
     title: "Notes on IEMs",

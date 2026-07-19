@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 268" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <!-- row 1 -->
+  <g>
+    <rect x="24" y="30" width="128" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="88" y="57" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">ingest</text>
+    <text x="88" y="76" text-anchor="middle" fill="#6b7280" font-size="10">names, dims, UTC</text>
+
+    <rect x="170" y="30" width="128" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="234" y="57" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">clean</text>
+    <text x="234" y="76" text-anchor="middle" fill="#6b7280" font-size="10">gaps, outliers</text>
+
+    <rect x="316" y="30" width="128" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="380" y="57" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">profile</text>
+    <text x="380" y="76" text-anchor="middle" fill="#6b7280" font-size="10">metric type</text>
+
+    <rect x="462" y="30" width="128" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="526" y="57" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">seasonality</text>
+    <text x="526" y="76" text-anchor="middle" fill="#6b7280" font-size="10">find the rhythms</text>
+
+    <rect x="608" y="30" width="128" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="672" y="57" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">baseline</text>
+    <text x="672" y="76" text-anchor="middle" fill="#6b7280" font-size="10">level + trend</text>
+  </g>
+
+  <line x1="152" y1="61" x2="166" y2="61" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="298" y1="61" x2="312" y2="61" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="444" y1="61" x2="458" y2="61" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="590" y1="61" x2="604" y2="61" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- connector: baseline down to detection -->
+  <path d="M 672 92 L 672 132 L 101 132 L 101 162" fill="none" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#arr)"/>
+  <text x="386" y="125" text-anchor="middle" fill="#3b82f6" font-size="10.5" font-style="italic">expected value + self-calibrating envelope</text>
+
+  <!-- row 2 -->
+  <g>
+    <rect x="19" y="166" width="164" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="101" y="193" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">detection</text>
+    <text x="101" y="212" text-anchor="middle" fill="#6b7280" font-size="10">episodes, CUSUM, regime</text>
+
+    <rect x="205" y="166" width="164" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="287" y="193" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">score 0-100</text>
+    <text x="287" y="212" text-anchor="middle" fill="#6b7280" font-size="10">magnitude x duration x persistence</text>
+
+    <rect x="391" y="166" width="164" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="473" y="193" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">incidents</text>
+    <text x="473" y="212" text-anchor="middle" fill="#6b7280" font-size="10">lead/lag grouping</text>
+
+    <rect x="577" y="166" width="164" height="62" rx="10" fill="#6366f1" fill-opacity="0.07" stroke="#6366f1" stroke-opacity="0.35"/>
+    <text x="659" y="193" text-anchor="middle" fill="#6366f1" font-size="12.5" font-weight="600">explain</text>
+    <text x="659" y="212" text-anchor="middle" fill="#6b7280" font-size="10">provenance, counterfactual</text>
+  </g>
+
+  <line x1="183" y1="197" x2="199" y2="197" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="369" y1="197" x2="385" y2="197" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="555" y1="197" x2="571" y2="197" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#arr)"/>
+</svg>
