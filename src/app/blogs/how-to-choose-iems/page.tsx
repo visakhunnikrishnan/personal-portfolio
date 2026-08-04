@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import heroImg from "../../../../public/blog/how-to-choose-iems/audiophile-swirl.webp";
+import heroImg from "../../../../public/blog/how-to-choose-iems/iem-listening-session.webp";
 import { RelatedPosts } from "@/components/related-posts";
 import { FrAnatomy } from "@/components/fr-anatomy";
 import { SoundSignatureExplorer } from "@/components/sound-signature-explorer";
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     authors: ["Visakh Unni"],
     images: [
       {
-        url: "https://www.visakhunni.com/blog/how-to-choose-iems/audiophile-swirl.webp",
+        url: "https://www.visakhunni.com/blog/how-to-choose-iems/iem-listening-session.webp",
         width: 1200,
         height: 630,
         alt: "Notes on IEMs",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     description:
       "What frequency response graphs actually tell you, why the Harman target matters, and a shortlist of IEMs that are easy to recommend - in plain terms, with interactive graphs.",
     images: [
-      "https://www.visakhunni.com/blog/how-to-choose-iems/audiophile-swirl.webp",
+      "https://www.visakhunni.com/blog/how-to-choose-iems/iem-listening-session.webp",
     ],
   },
 };
@@ -73,7 +73,7 @@ export default function HowToChooseIemsBlog() {
 
       <Image
         src={heroImg}
-        alt="Glowing blue audio cables swirling into a spiral, dotted with bokeh light particles"
+        alt="Profile of a person wearing a wired in-ear monitor, eyes closed, beside a listening tracklist"
         className="mb-10 w-full rounded-md"
         priority
         placeholder="blur"

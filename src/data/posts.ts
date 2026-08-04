@@ -29,7 +29,7 @@ import hero25 from "../../public/blog/the-science-of-meditation/meditation.webp"
 import hero26 from "../../public/blog/intelligence-measurement-and-the-path-to-agi/intelligence.webp";
 import hero27 from "../../public/blog/ai-native-software-engineering/ai-native-sw-eng.webp";
 import hero28 from "../../public/blog/journaling/journaling.webp";
-import hero29 from "../../public/blog/how-to-choose-iems/audiophile-swirl.webp";
+import hero29 from "../../public/blog/how-to-choose-iems/iem-listening-session.webp";
 import hero30 from "../../public/blog/tsanomaly/tsanomaly-banner.webp";
 
 export interface Post {
