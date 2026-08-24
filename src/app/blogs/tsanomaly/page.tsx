@@ -80,10 +80,12 @@ export default function TsanomalyBlog() {
           >
             tsanomaly
           </a>{" "}
-          - a Python library I recently open-sourced for autonomous,
-          explainable, real-time anomaly detection on time-series metrics.
-          Notes on the mechanisms behind it, and on the concepts from the
-          Anodot patents that inspired it.
+          - a Python library I recently open-sourced for anomaly detection
+          on time-series metrics. It is an attempt at a generalized solution
+          with no thresholds to configure: it learns the normal behavior and
+          seasonality of each individual metric on its own, and explains why
+          a point was flagged as anomalous. The design is inspired by
+          Anodot&apos;s original patents. Here is how it works.
         </p>
 
         <hr />
@@ -91,37 +93,43 @@ export default function TsanomalyBlog() {
         <h2>The Curse of Low Dimensionality</h2>
 
         <p>
-          I have spent a good part of my career building analytics and data
-          science solutions on top of machine data - sensor readings,
-          industrial telemetry, operational metrics. Time series from machines
-          have a property that quietly breaks most of the modeling playbook:
-          they carry very little information per observation. An image has
-          thousands of correlated pixels; a document has a vocabulary. A metric
-          has a timestamp and one number. That is the entire feature space.
+          I&apos;ve spent a good amount of my career building analytics and
+          data science solutions on machine data - sensor readings, industrial
+          telemetry, operational metrics etc. This kind of data has one
+          defining property: each observation is extremely low-dimensional.
+          An image has thousands of correlated pixels. A document has a whole
+          vocabulary. A metric has just a timestamp and a single number - even
+          though the system that produced it is just as complex. That&apos;s
+          what makes time series hard to model: most of the times the data
+          doesn&apos;t have enough dimensions to capture what is really
+          happening underneath.
         </p>
 
         <p>
-          With so few dimensions, forecasting and anomaly detection models have
-          almost nothing to hold on to. Static thresholds drown you in false
-          alarms the moment a metric has a daily rhythm. Classical models want
-          per-series tuning, which is unthinkable when you monitor thousands of
-          metrics. And every metric has its own personality - a spiky network
-          counter and a smooth temperature sensor should not be judged by the
-          same yardstick.
+          With so few dimensions, forecasting and anomaly detection models
+          have very little to work with. So in practice, teams fall back on
+          simpler approaches - and each one breaks down at scale. Static
+          thresholds generate too many false alarms once a metric has a daily
+          cycle. Classical models need per-series tuning, which is not
+          practical when you monitor thousands of metrics. And every metric
+          behaves differently - a spiky network counter and a smooth
+          temperature sensor should not be judged by the same rule. What you
+          really need is a system that learns each metric on its own, without
+          a human in the loop.
         </p>
 
         <p>
-          Years ago, while digging through this problem space, I came across
-          the patents of <strong>Anodot</strong>, an Israeli company that had
-          built a generic anomaly-detection product for exactly this kind of
-          data. I really liked the way they framed the solution: learn a
-          baseline for every metric autonomously, score anomalies against that
-          metric&apos;s <em>own</em> history rather than a global rule, detect
-          seasonality automatically, and condense concurrent anomalies across
-          metrics into single incidents <a href="#ref-1">[1]</a>{" "}
-          <a href="#ref-2">[2]</a>. That framing stuck with me. tsanomaly is my
-          take on the same problem - inspired by those ideas, implemented with
-          different, more recent statistical machinery.
+          Years ago, while working in this problem space, I came across the
+          patents of <strong>Anodot</strong>, an Israeli company that built a
+          generic anomaly-detection product for this kind of data. I liked the
+          way they framed the solution: learn a baseline for every metric
+          automatically, score anomalies against that metric&apos;s{" "}
+          <em>own</em> history instead of a global rule, detect seasonality
+          automatically, and group concurrent anomalies across metrics into
+          single incidents <a href="#ref-1">[1]</a> <a href="#ref-2">[2]</a>.
+          That framing stuck with me. tsanomaly is my take on the same
+          problem - inspired by those ideas, but implemented with more recent
+          statistical techniques.
         </p>
 
         <h2>What tsanomaly Is</h2>
@@ -150,7 +158,8 @@ for anomaly in result.alerts(min_score=70):
         <p>
           Here is real output on real data - NYC taxi ridership from the
           Numenta Anomaly Benchmark <a href="#ref-8">[8]</a>. The detector
-          learned the daily and weekly rhythm on four months of history, then
+          learned the daily and weekly seasonality on four months of history,
+          then
           found the documented disruptions on its own:
         </p>
 
@@ -186,120 +195,166 @@ for anomaly in result.alerts(min_score=70):
         />
 
         <p>
-          Every metric flows through the same loop: learn normal behavior,
-          predict a corridor of expected values, detect departures, score their
-          severity, explain them. A few of the stages carry most of the
-          intelligence:
+          Every metric goes through the same pipeline: learn its normal
+          behavior, predict a range of expected values, detect deviations,
+          score their severity, and explain them. A few stages do most of the
+          work:
         </p>
 
         <ul>
           <li>
-            <strong>Seasonality is proposed, then verified.</strong> A
-            Lomb-Scargle periodogram <a href="#ref-11">[11]</a> proposes
-            candidate periods (robust to missing data, easily fooled by
-            noise); autocorrelation at the period and its multiples verifies
-            them against a block-shuffle null (hard to fool). The shortest
-            verified period wins, gets subtracted, and the search repeats - so
-            a metric with both daily and weekly rhythm gets both, and a weekly
-            harmonic never masquerades as the real cycle.
+            <strong>Seasonality is proposed, then verified.</strong> Finding
+            seasonality happens in two steps. First, a Lomb-Scargle
+            periodogram <a href="#ref-11">[11]</a> scans the metric&apos;s
+            frequency spectrum and proposes candidate periods - for example,
+            &ldquo;this metric might repeat every 24 hours&rdquo;. It handles
+            missing data well, but noise can produce false peaks, so no
+            candidate is trusted on its own. Second, each candidate is
+            verified: if the period is real, the metric should correlate
+            strongly with itself one, two, and three periods back. That
+            correlation is compared against the same measurement on shuffled
+            copies of the data, where any real seasonality has been destroyed
+            - a candidate that does not clearly beat the shuffled copies is
+            rejected. Verified periods are removed one at a time, shortest
+            first, and the search repeats on what remains. This way a metric
+            with both daily and weekly seasonality gets both, and a multiple
+            of the daily cycle is never mistaken for a real weekly pattern.
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/blog/tsanomaly/seasonality-propose-verify.svg"
+              alt="Two-step seasonality detection: a periodogram proposes candidate periods of 24 hours and 37 hours; autocorrelation checks confirm the 24-hour period and reject the 37-hour one because it does not beat shuffled data"
+              className="my-6 w-full"
+            />
           </li>
           <li>
-            <strong>The envelope is measured, not assumed.</strong> The
-            corridor of normal around the prediction is calibrated by adaptive
-            conformal inference <a href="#ref-6">[6]</a>: the width follows the
-            measured error distribution, and a feedback loop keeps actual
-            coverage at the 99.5% target. If the metric gets noisier, the
-            envelope widens itself; anomalous points are never allowed to
-            widen their own envelope.
+            <strong>The envelope is measured, not assumed.</strong> For every
+            metric, the model predicts what the next value should be and draws
+            an envelope around that prediction - the range where normal values
+            are expected to land. Anything outside it is a potential anomaly,
+            so getting the width right is everything. Instead of assuming a
+            distribution (&ldquo;errors are Gaussian, so use three
+            sigma&rdquo;), the width is calibrated with adaptive conformal
+            inference <a href="#ref-6">[6]</a>: it is set from the prediction
+            errors actually observed on that metric, and a feedback loop
+            adjusts it so the envelope keeps containing 99.5% of normal
+            points. If a metric gets noisier, its envelope widens
+            automatically. The one exception: points already flagged as
+            anomalous are excluded from this calibration - otherwise a large
+            anomaly would stretch the envelope and hide the anomalies that
+            follow it.
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/blog/tsanomaly/envelope-calibration.svg"
+              alt="A metric line inside a shaded envelope of expected values; the envelope widens where the metric gets noisier, and one point spiking outside the envelope is marked as a potential anomaly"
+              className="my-6 w-full"
+            />
           </li>
           <li>
-            <strong>Rarity comes from extreme value theory.</strong> How far
-            outside the envelope a point landed is converted to a probability
-            with a generalized Pareto tail model <a href="#ref-7">[7]</a> -
-            because Gaussian tails badly overstate how rare large deviations
-            are on real metrics.
+            <strong>Rarity comes from extreme value theory.</strong> Knowing a
+            point is outside the envelope is not enough - the score should
+            reflect how rare that deviation actually is. The naive approach is
+            to assume errors are Gaussian and read the probability off that
+            curve, but real metrics have heavy tails: deviations a Gaussian
+            calls once-in-a-million can show up every week. So the tail is
+            modeled directly with a generalized Pareto distribution{" "}
+            <a href="#ref-7">[7]</a>, fitted to the large deviations actually
+            observed on that metric. How far a point landed outside the
+            envelope is then converted into an honest probability - and that
+            probability is what the 0-100 score is built from.
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/blog/tsanomaly/gaussian-vs-pareto-tail.svg"
+              alt="Two probability curves for large deviations: the Gaussian tail drops to nearly zero quickly, while the measured heavy tail stays higher; a real large deviation sits in the region the Gaussian calls almost impossible"
+              className="my-6 w-full"
+            />
           </li>
           <li>
-            <strong>Detection works on episodes, not points.</strong> A single
-            point outside a 99.5% envelope is expected once in 200 samples, so
-            consecutive excursions are grouped with hysteresis and scored as
-            one event, from three kinds of evidence: magnitude, duration, and
-            persistence, combined with a harmonic-mean p-value{" "}
-            <a href="#ref-9">[9]</a> that stays valid when the evidence is
-            correlated.
+            <strong>Detection works on episodes, not points.</strong> A 99.5%
+            envelope, by definition, lets one normal point in every 200 land
+            outside it - alerting on every single excursion would be constant
+            noise. So consecutive out-of-envelope points are grouped into one
+            episode, with hysteresis: a brief dip back inside the envelope
+            does not end the episode. Each episode is then scored on three
+            kinds of evidence: how far outside the envelope it went
+            (magnitude), how long it lasted (duration), and how consistently
+            it stayed outside (persistence). These three are obviously not
+            independent - a severe episode tends to score high on all of them
+            - so they are combined with a harmonic-mean p-value{" "}
+            <a href="#ref-9">[9]</a>, a method that stays statistically valid
+            even when the evidence is correlated.
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/blog/tsanomaly/episodes-not-points.svg"
+              alt="A metric with its envelope: one isolated point outside the envelope is ignored as expected noise, while a sustained run of points outside is grouped into a single scored episode, and a brief return inside the envelope does not end the episode"
+              className="my-6 w-full"
+            />
           </li>
           <li>
-            <strong>A new normal is not an anomaly.</strong> When a deploy
-            drops latency permanently, Bayesian online changepoint detection{" "}
-            <a href="#ref-5">[5]</a> resolves the shift into a single
-            &ldquo;regime change&rdquo; finding and re-anchors the baseline -
-            one notification instead of days of alerts.
+            <strong>A new normal is not an anomaly.</strong> Sometimes a
+            metric shifts permanently - a deploy cuts latency in half, a
+            config change doubles traffic. To a detector that only compares
+            against the old baseline, every point after such a shift looks
+            anomalous, and it will keep alerting for days until the baseline
+            catches up. Bayesian online changepoint detection{" "}
+            <a href="#ref-5">[5]</a> is used to tell the two apart: a
+            deviation that settles into a new stable level is recognized as a
+            &ldquo;regime change&rdquo; rather than an anomaly. The baseline
+            is re-anchored to the new level, and you get one notification
+            instead of days of alerts.
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/blog/tsanomaly/regime-change.svg"
+              alt="A metric drops permanently to a new lower level; the old baseline continues as a dashed ghost, the shift is flagged once as a regime change, and a new baseline is re-anchored around the new level instead of days of alerts"
+              className="my-6 w-full"
+            />
           </li>
           <li>
-            <strong>Concurrent anomalies become one incident.</strong> When
-            episodes on different metrics overlap far more than chance
-            predicts, they merge into an incident whose members are ordered by
-            who moved first - a built-in root-cause hint, with the effective
-            number of independent signals computed properly{" "}
-            <a href="#ref-10">[10]</a> so correlated members are never
+            <strong>Concurrent anomalies become one incident.</strong> A
+            single real-world failure rarely touches just one metric - a bad
+            deploy can push latency, error rate, and queue depth sideways at
+            the same time, and paging someone twenty times for one outage
+            helps no one. So when episodes on different metrics overlap in
+            time far more than chance would predict, they are merged into a
+            single incident. Inside the incident, metrics are ordered by
+            which one moved first - a useful root-cause hint, since the
+            origin of a failure usually moves before its downstream effects.
+            One subtlety: twenty metrics that always move together are not
+            twenty independent pieces of evidence, so the incident&apos;s
+            significance is computed from the effective number of independent
+            signals <a href="#ref-10">[10]</a> and correlated metrics are not
             double-counted.
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/blog/tsanomaly/incident-grouping.svg"
+              alt="Three metric lanes for latency, error rate, and queue depth each show an anomaly episode overlapping in time; latency moved first as a root-cause hint, and the three episodes merge into one incident instead of three separate alerts"
+              className="my-6 w-full"
+            />
           </li>
         </ul>
 
         <p>
-          And everything explains itself: every anomaly carries its expected
-          range, its score decomposition, the model that produced it, and a
-          counterfactual - &ldquo;no alert would have fired for values between
-          X and Y at that time.&rdquo;
+          Every anomaly comes with a full explanation: the expected range, the
+          score breakdown, the model that produced it, and a counterfactual -
+          &ldquo;no alert would have fired for values between X and Y at that
+          time.&rdquo;
         </p>
 
         <h2>Prior Works</h2>
 
         <p>
-          The architecture - autonomous per-metric baselines, scoring against a
-          metric&apos;s own history, automatic seasonality, incident grouping -
-          is the shape Anodot&apos;s patents describe{" "}
-          <a href="#ref-1">[1]</a> <a href="#ref-2">[2]</a>{" "}
-          <a href="#ref-3">[3]</a>. The mechanisms inside each box are
-          deliberately different, and in most cases benefit from statistical
-          tools published after those patents were filed:
-        </p>
-
-        <ul>
-          <li>
-            Envelope widths come from <strong>adaptive conformal
-            inference</strong> (2021) with a measured coverage guarantee,
-            rather than distributional assumptions around the baseline.
-          </li>
-          <li>
-            Seasonality uses <strong>periodogram-plus-verification</strong>{" "}
-            with a permutation null, rather than the patents&apos;
-            geometrically-sampled autocorrelation scan{" "}
-            <a href="#ref-2">[2]</a>.
-          </li>
-          <li>
-            Tail rarity uses <strong>extreme value theory</strong> (the
-            DSPOT lineage <a href="#ref-7">[7]</a>) rather than learned
-            distributions of past anomaly intensities <a href="#ref-1">[1]</a>.
-          </li>
-          <li>
-            Regime changes are resolved by <strong>Bayesian online changepoint
-            detection</strong> with explicit stationarity gates, and scores are
-            damped while the re-anchored baseline re-learns - the system knows
-            when it does not yet know.
-          </li>
-          <li>
-            Evidence combination uses the <strong>harmonic-mean p-value</strong>{" "}
-            (2019) and incident significance uses <strong>Galwey&apos;s
-            effective number of tests</strong>, replacing heuristic score
-            combination.
-          </li>
-        </ul>
-
-        <p>
-          None of this is a claim of superiority over a product that has been
-          refined in production for a decade - it is a design lineage,
-          acknowledged openly in the{" "}
+          The overall architecture - per-metric baselines learned
+          automatically, scoring against a metric&apos;s own history,
+          automatic seasonality detection, incident grouping - is the shape
+          Anodot&apos;s patents describe <a href="#ref-1">[1]</a>{" "}
+          <a href="#ref-2">[2]</a> <a href="#ref-3">[3]</a>. The methods
+          inside each stage are deliberately different: I used statistical
+          techniques published after those patents were filed, such as
+          adaptive conformal inference for envelope widths, extreme value
+          theory for tail probabilities, Bayesian online changepoint
+          detection for regime changes, and the harmonic-mean p-value for
+          combining evidence. None of this is a claim that tsanomaly is
+          better than a product refined in production for a decade. It is a
+          design lineage, acknowledged openly in the{" "}
           <a
             href="https://github.com/visakhunnikrishnan/tsanomaly/blob/main/docs/architecture.md"
             target="_blank"
@@ -307,11 +362,12 @@ for anomaly in result.alerts(min_score=70):
           >
             architecture doc
           </a>
-          , with the mechanisms swapped for ones I could build honestly in the
-          open, on published research.
+          : I kept the architecture the patents describe, and swapped the
+          mechanisms for ones I could build in the open, on published
+          research.
         </p>
 
-        <h2>Proving It on Machine Data</h2>
+        <h2>Validating on Machine Data</h2>
 
         <p>
           Given where this started for me, the test I cared most about was
