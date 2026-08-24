@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 196" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif" role="img" aria-label="Two-step seasonality detection: a periodogram proposes candidate periods of 24 hours and 37 hours; autocorrelation checks confirm the 24-hour period and reject the 37-hour one because it does not beat shuffled data">
+
+<text x="24" y="22" text-anchor="start" fill="#6b7280" font-size="10" font-weight="600">1 · Propose candidate periods</text>
+<line x1="20" y1="152" x2="296" y2="152" stroke="#9ca3af" stroke-width="1"/>
+<path d="M 24.0,140.2 L 28.0,142.9 L 32.0,145.6 L 36.0,148.0 L 40.0,149.7 L 44.0,150.5 L 48.0,150.3 L 52.0,149.2 L 56.0,147.5 L 60.0,145.6 L 64.0,143.9 L 68.0,142.8 L 72.0,142.5 L 76.0,143.0 L 80.0,144.3 L 84.0,146.0 L 88.0,147.8 L 92.0,149.3 L 96.0,150.1 L 100.0,150.0 L 104.0,148.9 L 108.0,147.0 L 112.0,144.4 L 116.0,141.7 L 120.0,139.1 L 124.0,137.2 L 128.0,136.2 L 132.0,136.3 L 136.0,137.3 L 140.0,139.0 L 144.0,141.2 L 148.0,143.3 L 152.0,145.0 L 156.0,146.0 L 160.0,146.1 L 164.0,145.4 L 168.0,144.1 L 172.0,142.5 L 176.0,141.0 L 180.0,140.0 L 184.0,139.7 L 188.0,140.4 L 192.0,141.9 L 196.0,144.2 L 200.0,146.7 L 204.0,149.2 L 208.0,151.2 L 212.0,152.3 L 216.0,152.4 L 220.0,151.5 L 224.0,149.7 L 228.0,147.3 L 232.0,144.8 L 236.0,142.6 L 240.0,141.0 L 244.0,140.3 L 248.0,140.5 L 252.0,141.5 L 256.0,142.9 L 260.0,144.5 L 264.0,145.8 L 268.0,146.5 L 272.0,146.4 L 276.0,145.4 L 280.0,143.7 L 284.0,141.5 L 288.0,139.2 L 292.0,137.3" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+<path d="M 104,151 L 110,58 L 116,151" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/>
+<text x="110" y="48" text-anchor="middle" fill="#6b7280" font-size="10">24 h?</text>
+<path d="M 204,151 L 210,100 L 216,151" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linejoin="round"/>
+<text x="210" y="90" text-anchor="middle" fill="#6b7280" font-size="10">37 h?</text>
+<text x="158" y="172" text-anchor="middle" fill="#6b7280" font-size="10">periodogram peaks (noise can fake these)</text>
+
+<text x="352" y="22" text-anchor="start" fill="#6b7280" font-size="10" font-weight="600">2 · Verify by self-correlation</text>
+<rect x="348" y="120" width="272" height="32" fill="#9ca3af" fill-opacity="0.18"/>
+<line x1="348" y1="120" x2="620" y2="120" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="616" y="132" text-anchor="end" fill="#6b7280" font-size="10">explainable by noise</text>
+<line x1="348" y1="152" x2="620" y2="152" stroke="#9ca3af" stroke-width="1"/>
+<rect x="374" y="62" width="16" height="90" rx="3" fill="#10b981"/>
+<rect x="414" y="72" width="16" height="80" rx="3" fill="#10b981"/>
+<rect x="454" y="80" width="16" height="72" rx="3" fill="#10b981"/>
+<text x="422" y="50" text-anchor="middle" fill="#10b981" font-size="10" font-weight="600">✓ 24 h verified</text>
+<text x="382" y="168" text-anchor="middle" fill="#6b7280" font-size="10">24h</text>
+<text x="422" y="168" text-anchor="middle" fill="#6b7280" font-size="10">48h</text>
+<text x="462" y="168" text-anchor="middle" fill="#6b7280" font-size="10">72h</text>
+<rect x="540" y="134" width="16" height="18" rx="3" fill="#ef4444"/>
+<text x="548" y="108" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="600">✗ 37 h rejected</text>
+<text x="548" y="168" text-anchor="middle" fill="#6b7280" font-size="10">37h</text>
+<text x="320" y="190" text-anchor="middle" fill="#6b7280" font-size="10">a candidate must beat shuffled copies of the data, where real seasonality is destroyed</text>
+</svg>

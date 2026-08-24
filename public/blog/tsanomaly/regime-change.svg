@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 196" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif" role="img" aria-label="A metric drops permanently to a new lower level; the old baseline continues as a dashed ghost, the shift is flagged once as a regime change, and a new baseline is re-anchored around the new level instead of days of alerts">
+
+<rect x="20" y="52" width="280" height="28" fill="#3b82f6" fill-opacity="0.12"/>
+<line x1="300" y1="52" x2="620" y2="52" stroke="#9ca3af" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="300" y1="80" x2="620" y2="80" stroke="#9ca3af" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="614" y="62" text-anchor="end" fill="#6b7280" font-size="10">old baseline: every point below it would alert for days</text>
+<rect x="352" y="114" width="268" height="28" fill="#3b82f6" fill-opacity="0.12"/>
+<text x="614" y="166" text-anchor="end" fill="#6b7280" font-size="10">baseline re-anchored to the new normal</text>
+<text x="308" y="166" text-anchor="start" fill="#6b7280" font-size="10">re-learning</text>
+<path d="M 20.0,63.5 L 26.0,67.7 L 32.0,65.6 L 38.0,65.9 L 44.0,69.1 L 50.0,64.3 L 56.0,61.2 L 62.0,69.0 L 68.0,71.0 L 74.0,62.6 L 80.0,62.4 L 86.0,68.7 L 92.0,67.2 L 98.0,64.9 L 104.0,67.5 L 110.0,65.1 L 116.0,62.3 L 122.0,68.8 L 128.0,70.7 L 134.0,62.2 L 140.0,61.8 L 146.0,69.7 L 152.0,68.5 L 158.0,63.6 L 164.0,65.9 L 170.0,66.3 L 176.0,63.7 L 182.0,68.0 L 188.0,69.9 L 194.0,62.2 L 200.0,61.8 L 206.0,70.4 L 212.0,69.2 L 218.0,62.3 L 224.0,64.7 L 230.0,67.7 L 236.0,65.1 L 242.0,66.8 L 248.0,68.7 L 254.0,62.8 L 260.0,62.3 L 266.0,70.7 L 272.0,69.4 L 278.0,61.3 L 284.0,63.9 L 290.0,69.3 L 296.0,66.3 L 302.0,74.1 L 308.0,103.0 L 314.0,126.0 L 320.0,125.2 L 326.0,132.3 L 332.0,131.1 L 338.0,122.8 L 344.0,125.5 L 350.0,132.6 L 356.0,129.1 L 362.0,125.5 L 368.0,128.6 L 374.0,127.6 L 380.0,126.1 L 386.0,131.2 L 392.0,130.5 L 398.0,122.9 L 404.0,125.7 L 410.0,133.5 L 416.0,129.4 L 422.0,123.9 L 428.0,127.9 L 434.0,129.5 L 440.0,126.9 L 446.0,129.7 L 452.0,129.8 L 458.0,123.7 L 464.0,126.1 L 470.0,133.7 L 476.0,129.4 L 482.0,122.7 L 488.0,127.6 L 494.0,131.3 L 500.0,127.4 L 506.0,127.8 L 512.0,129.3 L 518.0,125.1 L 524.0,126.5 L 530.0,133.2 L 536.0,129.1 L 542.0,122.1 L 548.0,127.6 L 554.0,132.8 L 560.0,127.6 L 566.0,125.8 L 572.0,128.9 L 578.0,126.9 L 584.0,126.9 L 590.0,132.0 L 596.0,128.8 L 602.0,122.2 L 608.0,127.8 L 614.0,133.7 L 620.0,127.5" fill="none" stroke="#8b919c" stroke-width="2"/>
+<line x1="300" y1="24" x2="300" y2="176" stroke="#10b981" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="292" y="22" text-anchor="end" fill="#10b981" font-size="10" font-weight="600">✓ regime change — one notification</text>
+<text x="26" y="110" text-anchor="start" fill="#6b7280" font-size="10">e.g. a deploy cuts latency for good</text>
+</svg>
