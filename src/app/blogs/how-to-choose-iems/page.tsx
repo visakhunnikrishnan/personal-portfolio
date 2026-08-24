@@ -81,11 +81,12 @@ export default function HowToChooseIemsBlog() {
 
       <div className="prose sm:prose-lg prose-neutral max-w-none dark:prose-invert prose-headings:tracking-tight prose-p:leading-relaxed prose-blockquote:border-l-primary prose-blockquote:not-italic prose-img:rounded-md">
         <p className="italic text-muted-foreground">
-          These are my notes on what I have learned about IEMs and wired
-          headphones in the hobby - the one graph that explains almost
-          everything, what the technical terms actually mean, and the
-          gear that is easy to recommend. All of it in plain terms, so it
-          is easy to find your way into a genuinely rewarding hobby.
+          These are my notes on what I have learned about IEMs (in-ear
+          monitors) and wired headphones. It is an attempt to explain the
+          concepts in simple language - enough to identify your own music
+          taste and pick the gear that fits it. Beyond that, this is a
+          genuinely rewarding hobby, and if you are just getting started
+          with IEMs, these notes should be a good starting point.
         </p>
 
         <hr />
@@ -93,16 +94,16 @@ export default function HowToChooseIemsBlog() {
         <h2>The Only Graph That Matters</h2>
 
         <p>
-          Every earphone has one defining property: how loudly it plays low
-          notes versus high notes. That is the whole secret. Plot it on a
-          chart - frequency from left (deep bass) to right (shimmering
-          highs), loudness up and down - and you get a{" "}
-          <strong>frequency response graph</strong>. Reviewers treat it
-          like scripture, and the reverence is earned: research on
-          listener preference keeps finding that this curve explains most
-          of why an earphone sounds good or bad to people{" "}
-          <a href="#ref-1">[1]</a>. Not the driver count, not the cable,
-          not the price tag. The curve.
+          Every earphone has one defining property: how loudly it plays
+          each frequency relative to the others - deep bass, midrange,
+          highs. Plot it on a chart - frequency from left (deep bass) to
+          right (highs), loudness up and down - and you get a{" "}
+          <strong>frequency response graph</strong>. Reviewers lean on
+          this graph heavily, and for good reason: research on listener
+          preference keeps finding that this curve explains most of why an
+          earphone sounds good or bad to people <a href="#ref-1">[1]</a>.
+          Not the driver count, not the cable, not the price tag. The
+          curve.
         </p>
 
         <p>
@@ -127,16 +128,15 @@ export default function HowToChooseIemsBlog() {
         <h2>What Should the Line Look Like, Then?</h2>
 
         <p>
-          For decades the honest answer was &ldquo;nobody knows, buy
-          whatever the magazine likes.&rdquo; Then a research team at
-          Harman International, led by <strong>Sean Olive</strong>, did
-          something refreshingly scientific: they put hundreds of
-          listeners through controlled blind tests, let them tune bass and
-          treble to taste, and measured what people actually preferred{" "}
-          <a href="#ref-1">[1]</a>. The result is the{" "}
-          <strong>Harman target curve</strong> - a moderate bass lift, a
-          clean midrange, and that natural ear-gain hill, followed by
-          gently declining treble.
+          For decades there was no evidence-based answer - you bought
+          whatever the magazines liked. Then a research team at Harman
+          International, led by <strong>Sean Olive</strong>, answered it
+          with data: they put hundreds of listeners through controlled
+          blind tests, let them tune bass and treble to taste, and
+          measured what people actually preferred <a href="#ref-1">[1]</a>.
+          The result is the <strong>Harman target curve</strong> - a
+          moderate bass lift, a clean midrange, and that natural ear-gain
+          hill, followed by gently declining treble.
         </p>
 
         <p>
@@ -153,17 +153,21 @@ export default function HowToChooseIemsBlog() {
         <SoundSignatureExplorer />
 
         <p>
-          In words: <strong>Harman</strong> is the tested default - a
-          touch of extra bass, clear vocals. <strong>Neutral</strong>{" "}
-          plays the recording straight, nothing boosted - the studio
-          reference sound. <strong>V-shaped</strong> lifts both bass and
-          treble and lets the vocals step back - exciting at first listen,
-          which is why so many store demos are tuned this way.{" "}
-          <strong>Warm</strong> adds low-end body and relaxes the treble -
-          smooth for long sessions. <strong>Bright</strong> pushes detail
-          and air forward at the cost of eventually tiring your ears.
-          None of these is objectively best. They are flavors, and the
-          graph is just the recipe written down.
+          Look at the graph above as you read these:{" "}
+          <strong>Harman</strong> is the tested default - a touch of extra
+          bass over neutral, with vocals kept clear.{" "}
+          <strong>Neutral</strong> boosts nothing and plays the recording
+          as it was mixed - the reference sound studios work with.{" "}
+          <strong>V-shaped</strong> lifts both ends of the graph, bass and
+          treble; vocals live in the midrange between them, so they take a
+          step back. The result is exciting at first listen, which is why
+          so many store demos are tuned this way. <strong>Warm</strong>{" "}
+          adds extra low end and pulls the treble down a little - a smooth
+          sound that is easy to listen to for hours.{" "}
+          <strong>Bright</strong> does the opposite: it pushes the treble
+          up, which brings out fine detail but tires your ears over long
+          sessions. None of these is objectively best. They are flavors,
+          and the graph is just the recipe written down.
         </p>
 
         <h2>Which One Is Yours?</h2>
@@ -222,29 +226,30 @@ export default function HowToChooseIemsBlog() {
         <h2>Do You Need an Amp? (A Small One Helps)</h2>
 
         <p>
-          You do not need a desk full of amplifiers to enjoy IEMs - but
-          the answer is no longer a flat no either, because phones killed
-          the headphone jack. Something has to
-          sit between your USB-C port and your IEMs anyway, and that
-          something matters more than people expect: my own IEMs stepped
-          up noticeably when I swapped a bare adapter for a proper dongle
-          DAC. The humble $10 Apple dongle measures genuinely well and is
-          the floor; dongles in the $20-100 range (Moondrop Dawn Pro,
-          FiiO KA11) add cleaner power and a lower noise floor on top.
-          Full desktop amps only matter if you someday wander into
-          full-size territory - high-impedance headphones and
-          power-hungry planars.
+          You do not need a stack of amplifiers to enjoy IEMs. But since
+          phones dropped the headphone jack, something has to sit between
+          your USB-C port and your IEMs - a <strong>DAC</strong>{" "}
+          (digital-to-analog converter), the chip that turns your digital
+          music into the electrical signal the earphones play. That piece
+          matters more than people expect: my own IEMs sounded noticeably
+          better when I swapped a bare adapter for a proper dongle DAC.
+          The $10 Apple dongle measures genuinely well and is the floor;
+          dongles in the $20-100 range (Moondrop Dawn Pro, FiiO KA11) add
+          cleaner power and a lower noise floor. Full desktop amps only
+          matter if you later move to full-size headphones -
+          high-impedance or power-hungry planar models that a dongle
+          cannot drive.
         </p>
 
         <p>
           One caveat: the chain is only as good as what you feed it.
-          Bluetooth compresses everything it touches, and standard
-          Spotify streams are lossy - so a wired IEM with a dongle DAC
-          only delivers its actual output when the source is lossless.
-          Apple Music includes lossless at no extra cost; Tidal, Qobuz,
-          and Amazon Music have equivalents. Wired IEMs plus a lossless
-          subscription is the cheapest genuine upgrade in this whole
-          hobby.
+          Bluetooth compresses the audio, and standard Spotify streams
+          are lossy - compressed in a way that throws away detail. A
+          wired IEM with a dongle DAC only pays off when the source is
+          lossless. Apple Music includes lossless at no extra cost;
+          Tidal, Qobuz, and Amazon Music have equivalents. Wired IEMs
+          plus a lossless subscription is the cheapest genuine upgrade in
+          this whole hobby.
         </p>
 
         <h2>My Go-To Picks</h2>
@@ -287,15 +292,15 @@ export default function HowToChooseIemsBlog() {
           </li>
           <li>
             <strong>Mind the volume.</strong> IEMs sit close to your
-            eardrum. The old 60/60 rule - under 60% volume, breaks after
-            60 minutes - is crude but keeps your future self hearing
-            cymbals.
+            eardrum. The old 60/60 rule - listen at under 60% volume, and
+            take a break after 60 minutes - is crude but protects your
+            long-term hearing.
           </li>
           <li>
             <strong>Respect diminishing returns.</strong> The jump from
-            $25 to $100 is enormous. The jump from $100 to $1,000 is an
-            expensive shrug. This hobby is kindest to people who stop at
-            &ldquo;happy.&rdquo;
+            $25 to $100 is enormous. The jump from $100 to $1,000 is
+            barely noticeable. This hobby is kindest to people who stop
+            at &ldquo;happy.&rdquo;
           </li>
         </ul>
 
