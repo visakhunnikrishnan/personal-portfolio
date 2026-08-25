@@ -12,6 +12,7 @@ import heroAiNative from "../../public/blog/ai-native-software-engineering/ai-na
 import heroJournaling from "../../public/blog/journaling/journaling.webp";
 import heroIems from "../../public/blog/how-to-choose-iems/iem-listening-session.webp";
 import heroTsanomaly from "../../public/blog/tsanomaly/tsanomaly-banner.webp";
+import heroTandem from "../../public/blog/tandem/banner.jpg";
 import hero17 from "../../public/blog/the-hidden-connections-understanding-the-world-through-systems-thinking/industrial-plant-with-blueprint-overlay.webp";
 import hero18 from "../../public/blog/silence-stories-and-strategies-the-jeff-bezos-method-for-transforming-dialogue-in-the-boardroom/executives-at-boardroom-meeting.webp";
 import hero19 from "../../public/blog/beyond-goals-how-okrs-foster-growth-and-innovation/exploding-ideas-from-mind-collage.webp";
@@ -19,6 +20,14 @@ import hero20 from "../../public/blog/data-storytelling/data-storytelling-cover.
 import hero21 from "../../public/blog/first-principles/first-principles-thinking-cover.webp";
 
 const featuredPosts = [
+  {
+    slug: "tandem",
+    title: "Tandem: An Open-Source Software KVM for macOS",
+    date: "Aug 25, 2026",
+    readTime: "8 min read",
+    image: heroTandem,
+    tag: "Open Source",
+  },
   {
     slug: "tsanomaly",
     title: "tsanomaly: A Generic Framework for Time-Series Anomaly Detection",

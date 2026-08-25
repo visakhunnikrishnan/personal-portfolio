@@ -31,6 +31,7 @@ import hero27 from "../../public/blog/ai-native-software-engineering/ai-native-s
 import hero28 from "../../public/blog/journaling/journaling.webp";
 import hero29 from "../../public/blog/how-to-choose-iems/iem-listening-session.webp";
 import hero30 from "../../public/blog/tsanomaly/tsanomaly-banner.webp";
+import hero31 from "../../public/blog/tandem/banner.jpg";
 
 export interface Post {
   slug: string;
@@ -43,6 +44,16 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "tandem",
+    title: "Tandem: An Open-Source Software KVM for macOS",
+    description:
+      "Why I built Tandem, an open-source software KVM for macOS, after Universal Control kept failing me - and the mechanisms that make it dependable: explicit pairing, automatic reconnection, encrypted peer-to-peer input streaming, and a state machine that never leaves stuck keys behind.",
+    date: "Aug 25, 2026",
+    readTime: "8 min read",
+    image: hero31,
+    tags: ["Open Source", "macOS"],
+  },
   {
     slug: "tsanomaly",
     title: "tsanomaly: A Generic Framework for Time-Series Anomaly Detection",

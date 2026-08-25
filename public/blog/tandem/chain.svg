@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 244" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif" role="img" aria-label="A three-machine chain: Mac-1 is controlling with your keyboard and trackpad, Mac-2 relays input verbatim, and Mac-3 is controlled with the cursor on its screen">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#a3a8b0"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#5aa0f8"/></marker></defs>
+
+
+<rect x="60" y="56" width="180" height="110" rx="10" fill="#f6a623" fill-opacity="0.13" stroke="#f6a623" stroke-opacity="0.55" stroke-width="1.5"/>
+<line x1="134" y1="166" x2="166" y2="166" stroke="#a3a8b0" stroke-width="0"/>
+<line x1="122" y1="180" x2="178" y2="180" stroke="#a3a8b0" stroke-width="2" stroke-linecap="round"/>
+<line x1="150" y1="166" x2="150" y2="180" stroke="#a3a8b0" stroke-width="2"/>
+<text x="150" y="200" text-anchor="middle" fill="#8b929e" font-size="10.5" font-weight="600">Mac-1</text>
+<text x="150" y="98" text-anchor="middle" fill="#f6a623" font-size="13" font-weight="700">CONTROLLING</text>
+<text x="150" y="116" text-anchor="middle" fill="#8b929e" font-size="9.5">your keyboard &amp; trackpad</text>
+
+<rect x="310" y="56" width="180" height="110" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.55" stroke-width="1.5"/>
+<line x1="384" y1="166" x2="416" y2="166" stroke="#a3a8b0" stroke-width="0"/>
+<line x1="372" y1="180" x2="428" y2="180" stroke="#a3a8b0" stroke-width="2" stroke-linecap="round"/>
+<line x1="400" y1="166" x2="400" y2="180" stroke="#a3a8b0" stroke-width="2"/>
+<text x="400" y="200" text-anchor="middle" fill="#8b929e" font-size="10.5" font-weight="600">Mac-2</text>
+<text x="400" y="98" text-anchor="middle" fill="#7d8bf8" font-size="13" font-weight="700">RELAYING</text>
+<text x="400" y="116" text-anchor="middle" fill="#8b929e" font-size="9.5">input passes through</text>
+
+<rect x="560" y="56" width="180" height="110" rx="10" fill="#2fc08f" fill-opacity="0.13" stroke="#2fc08f" stroke-opacity="0.55" stroke-width="1.5"/>
+<line x1="634" y1="166" x2="666" y2="166" stroke="#a3a8b0" stroke-width="0"/>
+<line x1="622" y1="180" x2="678" y2="180" stroke="#a3a8b0" stroke-width="2" stroke-linecap="round"/>
+<line x1="650" y1="166" x2="650" y2="180" stroke="#a3a8b0" stroke-width="2"/>
+<text x="650" y="200" text-anchor="middle" fill="#8b929e" font-size="10.5" font-weight="600">Mac-3</text>
+<text x="650" y="98" text-anchor="middle" fill="#2fc08f" font-size="13" font-weight="700">CONTROLLED</text>
+<text x="650" y="116" text-anchor="middle" fill="#8b929e" font-size="9.5">cursor is here</text>
+
+<!-- cursor dot on the controlled machine -->
+<circle cx="672" cy="138" r="5" fill="#2fc08f"/>
+<circle cx="672" cy="138" r="9" fill="none" stroke="#2fc08f" stroke-opacity="0.4"/>
+
+<path d="M 240,110 L 306,110" fill="none" stroke="#a3a8b0" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="273" y="96" text-anchor="middle" fill="#8b929e" font-size="9.5" font-style="italic">input</text>
+<path d="M 490,110 L 556,110" fill="none" stroke="#a3a8b0" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="523" y="96" text-anchor="middle" fill="#8b929e" font-size="9.5" font-style="italic">relayed verbatim</text>
+
+<text x="400" y="232" text-anchor="middle" fill="#8b929e" font-size="9.5" font-style="italic">each machine knows only its immediate neighbors - control is handed over hop by hop</text>
+</svg>
