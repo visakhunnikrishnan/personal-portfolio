@@ -42,7 +42,7 @@ const milestones = [
     position: 0.68,
   },
   {
-    year: "2027",
+    year: "2027-28",
     label: "Superhuman coder?",
     detail: "AI 2027 project prediction",
     color: "#f59e0b",

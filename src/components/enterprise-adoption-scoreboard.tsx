@@ -9,7 +9,7 @@ const LOGO_BASE = "/blog/ai-native-software-engineering/logos";
 
 const companies = [
   {
-    date: "2024",
+    date: "2025-26",
     name: "GitHub Copilot",
     metric: "20M users",
     lines: [
@@ -31,11 +31,11 @@ const companies = [
     logo: `${LOGO_BASE}/amazon.png`,
   },
   {
-    date: "2025-26",
+    date: "Apr 2026",
     name: "Google",
-    metric: "~50% AI-generated",
+    metric: "~75% AI-generated",
     lines: [
-      "Rose from 25% (Q3 2024) to 50% in 18 months.",
+      "Rose from 25% (Q3 2024) to ~75% by April 2026.",
       "All AI code reviewed and accepted by humans.",
       "Autorater evaluation loops woven into pipelines.",
     ],
@@ -74,12 +74,13 @@ const companies = [
     logo: `${LOGO_BASE}/stripe.png`,
   },
   {
-    date: "Q1 2026",
+    date: "2026",
     name: "Meta",
-    metric: "30% output increase",
+    metric: "~50% agent-assisted",
     lines: [
-      "Per-engineer productivity boost reported.",
-      "AI coding integrated across all product teams.",
+      "About half of code changes now agent-assisted.",
+      "Target: 65% of engineers writing 75%+ of code with AI.",
+      "DevMate platform plus an internal 'GitHub for agents'.",
     ],
     logo: `${LOGO_BASE}/meta.png`,
   },

@@ -41,10 +41,10 @@ const data = [
   },
   {
     label: "Refactoring share",
-    ai: 10,
+    ai: 3.8,
     human: 25,
     maxVal: 30,
-    aiLabel: "<10%",
+    aiLabel: "3.8%",
     humanLabel: "25%",
     suffix: "",
   },
@@ -229,6 +229,7 @@ export function CodeQualityImpact() {
       <figcaption className="mt-2 text-center text-sm text-muted-foreground">
         AI-generated code ships with 1.7x more defects, 1.57x more security
         vulnerabilities, and nearly 3x more XSS issues (CodeRabbit, 2025).
+        Refactoring fell to 3.8% of changed lines by early 2026 (GitClear).
       </figcaption>
     </figure>
   );
