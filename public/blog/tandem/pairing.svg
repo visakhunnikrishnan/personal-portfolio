@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 262" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif" role="img" aria-label="Pairing and session key derivation: a one-time 6-digit code is stretched with PBKDF2 into a saved pairing key; every later connection proves the key with an HMAC challenge and derives fresh per-direction ChaCha20-Poly1305 session keys via HKDF">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#a3a8b0"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#5aa0f8"/></marker></defs>
+
+<text x="40" y="34" text-anchor="start" fill="#8b929e" font-size="10.5" font-style="italic">once per pair - the 6-digit code, out of band</text>
+<rect x="40" y="50" width="200" height="62" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="140" y="71" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">pairing code</text>
+<text x="140" y="86" text-anchor="middle" fill="#8b929e" font-size="9.5">shown on one Mac,</text>
+<text x="140" y="98" text-anchor="middle" fill="#8b929e" font-size="9.5">typed on the other</text>
+<path d="M 240,81 L 296,81" fill="none" stroke="#a3a8b0" stroke-width="1.4" marker-end="url(#arr)"/>
+<rect x="300" y="50" width="180" height="62" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="390" y="71" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">PBKDF2</text>
+<text x="390" y="86" text-anchor="middle" fill="#8b929e" font-size="9.5">100k iterations,</text>
+<text x="390" y="98" text-anchor="middle" fill="#8b929e" font-size="9.5">random salt</text>
+<path d="M 480,81 L 536,81" fill="none" stroke="#a3a8b0" stroke-width="1.4" marker-end="url(#arr)"/>
+<rect x="540" y="50" width="200" height="62" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="640" y="71" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">pairing key</text>
+<text x="640" y="86" text-anchor="middle" fill="#8b929e" font-size="9.5">saved per peer,</text>
+<text x="640" y="98" text-anchor="middle" fill="#8b929e" font-size="9.5">owner-only file</text>
+
+<!-- pairing key feeds every later connection -->
+<path d="M 640,112 L 640,178" fill="none" stroke="#5aa0f8" stroke-width="1.4" marker-end="url(#arrb)"/>
+<text x="652" y="140" text-anchor="start" fill="#5aa0f8" font-size="9.5" font-style="italic">fresh nonce = new</text>
+<text x="652" y="152" text-anchor="start" fill="#5aa0f8" font-size="9.5" font-style="italic">keys every connection</text>
+
+<text x="40" y="162" text-anchor="start" fill="#8b929e" font-size="10.5" font-style="italic">every connection - prove the key, then derive fresh session keys</text>
+<rect x="40" y="182" width="200" height="62" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="140" y="203" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">challenge</text>
+<text x="140" y="218" text-anchor="middle" fill="#8b929e" font-size="9.5">random nonce,</text>
+<text x="140" y="230" text-anchor="middle" fill="#8b929e" font-size="9.5">HMAC response</text>
+<path d="M 240,213 L 296,213" fill="none" stroke="#a3a8b0" stroke-width="1.4" marker-end="url(#arr)"/>
+<text x="268" y="202" text-anchor="middle" fill="#8b929e" font-size="9.5" font-style="italic">verified</text>
+<rect x="300" y="182" width="180" height="62" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="390" y="203" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">HKDF</text>
+<text x="390" y="218" text-anchor="middle" fill="#8b929e" font-size="9.5">pairing key +</text>
+<text x="390" y="230" text-anchor="middle" fill="#8b929e" font-size="9.5">fresh nonce</text>
+<path d="M 480,213 L 536,213" fill="none" stroke="#a3a8b0" stroke-width="1.4" marker-end="url(#arr)"/>
+<rect x="540" y="182" width="200" height="62" rx="10" fill="#f6a623" fill-opacity="0.16" stroke="#f6a623" stroke-opacity="0.65"/>
+<text x="640" y="203" text-anchor="middle" fill="#f6a623" font-size="12.5" font-weight="600">session keys</text>
+<text x="640" y="218" text-anchor="middle" fill="#8b929e" font-size="9.5">one per direction,</text>
+<text x="640" y="230" text-anchor="middle" fill="#8b929e" font-size="9.5">ChaCha20-Poly1305</text>
+</svg>

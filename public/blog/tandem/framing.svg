@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 262" font-family="'Inter','Segoe UI',system-ui,-apple-system,sans-serif" role="img" aria-label="The wire format: before authentication, plaintext length-prefixed frames with type, sequence, and payload; after AUTH_OK every frame is sealed with ChaCha20-Poly1305 as length, nonce, ciphertext, and authentication tag">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#a3a8b0"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 8 5 L 0 9 z" fill="#5aa0f8"/></marker></defs>
+
+<text x="40" y="34" text-anchor="start" fill="#8b929e" font-size="10.5" font-style="italic">before authentication - handshake frames, plaintext</text>
+<rect x="40" y="48" width="110" height="54" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="95" y="72" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">length</text>
+<text x="95" y="87" text-anchor="middle" fill="#8b929e" font-size="9.5">u32</text>
+<rect x="154" y="48" width="90" height="54" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="199" y="72" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">type</text>
+<text x="199" y="87" text-anchor="middle" fill="#8b929e" font-size="9.5">u8</text>
+<rect x="248" y="48" width="100" height="54" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="298" y="72" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">seq</text>
+<text x="298" y="87" text-anchor="middle" fill="#8b929e" font-size="9.5">u32</text>
+<rect x="352" y="48" width="250" height="54" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="477" y="72" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">payload</text>
+<text x="477" y="87" text-anchor="middle" fill="#8b929e" font-size="9.5">message fields</text>
+
+<text x="400" y="130" text-anchor="middle" fill="#5aa0f8" font-size="9.5" font-style="italic">AUTH_OK is the last plaintext frame;</text>
+<text x="400" y="142" text-anchor="middle" fill="#5aa0f8" font-size="9.5" font-style="italic">a failed tag check drops the connection</text>
+
+<text x="40" y="176" text-anchor="start" fill="#8b929e" font-size="10.5" font-style="italic">after AUTH_OK - every frame sealed with ChaCha20-Poly1305</text>
+<rect x="40" y="190" width="110" height="54" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="95" y="214" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">length</text>
+<text x="95" y="229" text-anchor="middle" fill="#8b929e" font-size="9.5">u32</text>
+<rect x="154" y="190" width="140" height="54" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="224" y="214" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">nonce</text>
+<text x="224" y="229" text-anchor="middle" fill="#8b929e" font-size="9.5">12 bytes, counter</text>
+<rect x="298" y="190" width="300" height="54" rx="10" fill="#f6a623" fill-opacity="0.16" stroke="#f6a623" stroke-opacity="0.65"/>
+<text x="448" y="214" text-anchor="middle" fill="#f6a623" font-size="12.5" font-weight="600">ciphertext</text>
+<text x="448" y="229" text-anchor="middle" fill="#8b929e" font-size="9.5">type + seq + payload</text>
+<rect x="602" y="190" width="110" height="54" rx="10" fill="#7d8bf8" fill-opacity="0.13" stroke="#7d8bf8" stroke-opacity="0.5"/>
+<text x="657" y="214" text-anchor="middle" fill="#7d8bf8" font-size="12.5" font-weight="600">tag</text>
+<text x="657" y="229" text-anchor="middle" fill="#8b929e" font-size="9.5">16 bytes</text>
+</svg>
