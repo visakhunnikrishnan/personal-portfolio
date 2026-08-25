@@ -14,10 +14,17 @@ const CH = H - PAD.top - PAD.bottom;
 
 const data = [
   {
-    label: "METR RCT",
+    label: "METR RCT\n(2025)",
     perceived: 24,
     actual: -19,
     note: "Perception vs reality",
+  },
+  {
+    label: "METR RCT\n(2026)",
+    perceived: null,
+    actual: -4,
+    note: "Agentic-tools follow-up",
+    singleBar: true,
   },
   {
     label: "GitHub\nCopilot",
@@ -183,7 +190,46 @@ export function ProductivityParadoxChart() {
                 textAnchor="middle"
                 className="text-[10px] fill-muted-foreground font-medium"
               >
-                METR RCT
+                <tspan x={gx} dy="0">METR RCT</tspan>
+                <tspan x={gx} dy="12">(2025)</tspan>
+              </text>
+            </g>
+          );
+        })()}
+
+        {/* METR RCT follow-up (2026, agentic tools) */}
+        {(() => {
+          const gx = PAD.left + 1 * GROUP_W + GROUP_W / 2;
+          const barH = Math.abs((4 / RANGE) * CH);
+          return (
+            <g>
+              <rect
+                x={gx - BAR_W / 2}
+                y={ZERO_Y}
+                width={BAR_W}
+                height={barH}
+                rx={3}
+                fill="url(#pp-red)"
+                opacity={0.6}
+              />
+              <text
+                x={gx}
+                y={ZERO_Y + barH + 14}
+                textAnchor="middle"
+                fontSize="10"
+                fontWeight="600"
+                fill="#ef4444"
+              >
+                -4% (&asymp;0)
+              </text>
+              <text
+                x={gx}
+                y={PAD.top + CH + 16}
+                textAnchor="middle"
+                className="text-[10px] fill-muted-foreground font-medium"
+              >
+                <tspan x={gx} dy="0">METR RCT</tspan>
+                <tspan x={gx} dy="12">(2026)</tspan>
               </text>
             </g>
           );
@@ -191,7 +237,7 @@ export function ProductivityParadoxChart() {
 
         {/* GitHub Copilot */}
         {(() => {
-          const gx = PAD.left + 1 * GROUP_W + GROUP_W / 2;
+          const gx = PAD.left + 2 * GROUP_W + GROUP_W / 2;
           const barH = (55 / RANGE) * CH;
           return (
             <g>
@@ -228,7 +274,7 @@ export function ProductivityParadoxChart() {
 
         {/* Anthropic internal */}
         {(() => {
-          const gx = PAD.left + 2 * GROUP_W + GROUP_W / 2;
+          const gx = PAD.left + 3 * GROUP_W + GROUP_W / 2;
           const barH = (50 / RANGE) * CH;
           return (
             <g>
@@ -265,7 +311,7 @@ export function ProductivityParadoxChart() {
 
         {/* Bain real-world */}
         {(() => {
-          const gx = PAD.left + 3 * GROUP_W + GROUP_W / 2;
+          const gx = PAD.left + 4 * GROUP_W + GROUP_W / 2;
           const barH = (12.5 / RANGE) * CH;
           return (
             <g>
@@ -313,6 +359,8 @@ export function ProductivityParadoxChart() {
       <figcaption className="mt-2 text-center text-sm text-muted-foreground">
         What developers believe vs what studies find. The gap between perception
         and reality can be as large as 39 percentage points (METR, 2025).
+        METR&apos;s 2026 follow-up with agentic tools found the slowdown gone
+        (~-4%, statistically indistinguishable from zero).
       </figcaption>
     </figure>
   );

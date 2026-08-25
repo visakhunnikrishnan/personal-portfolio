@@ -35,6 +35,7 @@ export const metadata: Metadata = {
       "What changes when AI writes most of the code - the productivity paradox, the new developer skillset, and how Anthropic, Stripe, and others are rebuilding software engineering from the ground up.",
     type: "article",
     publishedTime: "2026-04-02",
+    modifiedTime: "2026-08-25",
     authors: ["Visakh Unni"],
     images: [
       {
@@ -68,7 +69,11 @@ export default function AiNativeSEBlog() {
           <span aria-hidden="true">&middot;</span>
           <time dateTime="2026-04-02">Apr 2, 2026</time>
           <span aria-hidden="true">&middot;</span>
-          <span>27 min read</span>
+          <span>
+            Updated <time dateTime="2026-08-25">Aug 25, 2026</time>
+          </span>
+          <span aria-hidden="true">&middot;</span>
+          <span>29 min read</span>
         </div>
       </header>
 
@@ -82,13 +87,14 @@ export default function AiNativeSEBlog() {
 
       <div className="prose sm:prose-lg prose-neutral max-w-none dark:prose-invert prose-headings:tracking-tight prose-p:leading-relaxed prose-blockquote:border-l-primary prose-blockquote:not-italic prose-img:rounded-md">
         <p className="italic text-muted-foreground">
-          At my current org, I work on the internal developer platform and
-          we&apos;ve been using frontier AI models a lot - for building the platform
-          and for helping other teams adopt AI in their own work. I wanted to see how other firms are also using it
-          and adopt the best practices. So I started reading - engineering blogs,
-          research papers, conference talks, earnings calls. This post is
-          what I&apos;ve pieced together so far. I&apos;ll keep updating it
-          as things change.
+          At my current org, I work on the internal developer platform, and
+          we use frontier AI models a lot - for building the platform and
+          for helping other teams adopt AI in their own work. I wanted to
+          see how other companies use AI for software engineering, so we
+          could adopt their best practices. So I started reading -
+          engineering blogs, research papers, conference talks, earnings
+          calls. This post is what I&apos;ve pieced together so far.
+          I&apos;ll keep updating it as things change.
         </p>
 
         <hr />
@@ -104,30 +110,41 @@ export default function AiNativeSEBlog() {
 
         <p>
           The study that changed how I think about this came from METR
-          (Model Evaluation and Threat Research). They ran a randomized
-          controlled trial with 16 experienced
-          open-source developers across 246 real tasks, using Cursor Pro with
-          Claude 3.5/3.7 Sonnet. <a href="#ref-10">[10]</a>
+          (Model Evaluation and Threat Research). Their mid-2025 randomized
+          controlled trial with experienced open-source developers found
+          developers were actually slower with AI tools - while believing
+          they were about 20% faster. The gap between what they felt and
+          what happened was roughly{" "}
+          <strong>39 percentage points</strong>.{" "}
+          <a href="#ref-10">[10]</a> People are bad at judging whether AI is
+          helping them.
         </p>
 
         <p>
-          The result: developers completed tasks{" "}
-          <strong>19% slower</strong> with AI tools. But here&apos;s what
-          makes this study so interesting - before starting, the developers
-          predicted AI would make them 24% faster. After finishing, they still
-          believed they were 20% faster. The gap between what they felt and
-          what happened was roughly <strong>39 percentage points</strong>.
+          Then METR ran a second, larger trial (57 developers, 800+ tasks)
+          with the late-2025 agentic tools - Claude Code and Codex - and
+          published it in February 2026. The slowdown essentially
+          disappeared: newly recruited developers measured about -4%,
+          statistically indistinguishable from zero, and METR itself
+          cautions that selection effects likely bias even that number
+          downward. <a href="#ref-60">[60]</a> Two lessons survive both
+          studies. First, measure - don&apos;t trust how fast people feel.
+          Second, whatever you measured six months ago is stale: re-run
+          your measurements with current tools before making decisions on
+          old data.
         </p>
 
         <p>
-          This doesn&apos;t mean AI is useless for coding. GitHub&apos;s
-          large-scale study with Accenture (4,800 developers) found tasks
-          completed 55% faster on a controlled JavaScript exercise.{" "}
-          <a href="#ref-37">[37]</a> Anthropic&apos;s internal survey of 132
-          engineers showed a 50% median productivity boost.{" "}
-          <a href="#ref-7">[7]</a> Jellyfish data tracking 600+ organizations
-          shows companies with high AI adoption achieving 110%+ productivity
-          gains. <a href="#ref-25">[25]</a>
+          Other studies point the same direction, with caveats. GitHub&apos;s
+          study with Accenture found tasks completed 55% faster - but on a
+          controlled, single-task JavaScript exercise, not on messy
+          production work. <a href="#ref-37">[37]</a> Anthropic&apos;s
+          internal survey of 132 engineers showed a 50% median productivity
+          boost. <a href="#ref-7">[7]</a> And Jellyfish, which sells
+          engineering analytics and can see PR data across many companies,
+          reported in 2026 that 64% of teams see at least 25% productivity
+          gains, and that the heaviest AI adopters merge about 1.8x more PRs
+          than the lightest. <a href="#ref-73">[73]</a>
         </p>
 
         <ProductivityParadoxChart />
@@ -161,10 +178,14 @@ export default function AiNativeSEBlog() {
           vulnerabilities than human-written code. <a href="#ref-16">[16]</a>{" "}
           GitClear&apos;s analysis of 211 million lines of code shows
           refactoring collapsed from 25% to under 10% of commits, while code
-          duplication grew 4x. <a href="#ref-18">[18]</a> Cortex&apos;s data
-          across 1,255 teams shows change failure rates up 30% and incidents
-          per PR up 23.5%. AI is producing more code, faster, with more
-          bugs.
+          duplication grew 4x. <a href="#ref-18">[18]</a> Their 2026
+          follow-up shows the trend deepening, not correcting: refactoring
+          fell further to 3.8% of changed lines in early 2026, and duplicated
+          blocks are up 81% compared to 2023 - the highest on record.{" "}
+          <a href="#ref-64">[64]</a> Cortex&apos;s 2026 benchmark report
+          shows change failure rates (the share of deploys that cause a
+          failure in production) up 30% and incidents per PR up 23.5%. AI is
+          producing more code, faster, with more bugs.
         </p>
 
         <div className="not-prose my-6 rounded-lg border border-border bg-muted/50 px-5 py-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -172,13 +193,29 @@ export default function AiNativeSEBlog() {
             The DORA amplifier effect
           </p>
           <p>
-            Google&apos;s DORA 2025 report found that AI magnifies whatever
+            Google&apos;s DORA (DevOps Research and Assessment) group runs
+            the industry&apos;s largest annual study of engineering
+            performance. Their 2025 report found that AI magnifies whatever
             already exists in an organization. <a href="#ref-12">[12]</a>{" "}
             Teams with strong engineering foundations see AI as a force
             multiplier. Teams with broken processes see AI make things worse -
             delivery stability drops 7.2% and throughput falls 1.5%. Only 9%
             of companies achieve AI value at scale.
           </p>
+          <p className="mt-2">
+            DORA&apos;s April 2026 follow-up, the ROI of AI report, adds a
+            second lesson: value follows a <strong>J-curve</strong> - metrics
+            often get worse before they get better, and the returns come from
+            platform quality, clear workflows, and team alignment, not from
+            the tools themselves. <a href="#ref-63">[63]</a> When you roll
+            out AI, budget for the dip.
+          </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/blog/ai-native-software-engineering/dora-j-curve.svg"
+            alt="The DORA ROI J-curve: after an AI rollout, delivery performance first dips below the pre-AI baseline, crosses back at break-even, then rises well above it once platform quality and clear workflows are in place"
+            className="mt-4 w-full"
+          />
         </div>
 
         {/* ── SECTION 2: INTELLECTUAL FRAMEWORK ── */}
@@ -186,7 +223,8 @@ export default function AiNativeSEBlog() {
         <h2>How to Think About AI-Assisted Development</h2>
 
         <p>
-          Martin Fowler has published extensively on this throughout 2025-2026,
+          Martin Fowler - one of the most influential writers on software
+          design - has published extensively on this throughout 2025-2026,
           and his thinking gives teams a practical framework. His core
           argument: LLMs are a paradigm shift comparable to the move from
           assembly language to high-level languages - not just a productivity
@@ -232,21 +270,24 @@ export default function AiNativeSEBlog() {
         </ul>
 
         <p>
-          Kent Beck&apos;s complementary view: <strong>TDD is a
-          superpower</strong> when working with AI agents, because agents
+          Kent Beck - the creator of test-driven development - adds a
+          complementary view: <strong>TDD is a superpower</strong> when
+          working with AI agents, because agents
           actively introduce regressions - and will even <em>delete tests</em>{" "}
           to make them &ldquo;pass.&rdquo; <a href="#ref-21">[21]</a> His
           system: write failing tests first, let AI generate code to pass
-          them, then review and refactor. 72% of professional developers say
-          &ldquo;vibe coding&rdquo; (hoping AI output just works) is not part
-          of their work. <a href="#ref-23">[23]</a>
+          them, then review and refactor. In Stack Overflow&apos;s 2025
+          survey, 72% of professional developers said &ldquo;vibe
+          coding&rdquo; (hoping AI output just works) is not part of their
+          work. <a href="#ref-23">[23]</a>
         </p>
 
         <p>
-          The ThoughtWorks Technology Radar Volume 33 (November 2025)
-          formalized an important shift: <strong>context engineering</strong>{" "}
-          has replaced prompt engineering as the key skill.{" "}
-          <a href="#ref-33">[33]</a>
+          ThoughtWorks&apos; Technology Radar - a twice-yearly industry
+          report on which techniques are worth adopting - formalized an
+          important shift in its November 2025 edition:{" "}
+          <strong>context engineering</strong> has replaced prompt
+          engineering as the key skill. <a href="#ref-33">[33]</a>
         </p>
 
         <p>
@@ -299,6 +340,23 @@ export default function AiNativeSEBlog() {
           you put into the context window than on how clever your prompt is.
         </p>
 
+        <p>
+          The April 2026 Radar (Volume 34) doubled down on context
+          engineering and added three themes worth acting on.{" "}
+          <a href="#ref-65">[65]</a> First, <strong>cognitive debt</strong>:
+          AI-accelerated complexity demands a return to engineering
+          fundamentals, because code nobody understands accumulates faster
+          than code nobody wrote. Second, <strong>putting coding agents on a
+          leash</strong>: constrain what agents can do, not just what they
+          see - capped retries, scoped file access, mandatory checkpoints.
+          Third, <strong>securing permission-hungry agents</strong>: agents
+          ask for broad permissions by default, so grant the minimum access
+          a task needs, and connect only the tool servers (MCP servers -
+          more on MCP later) that the task actually uses. If your agents
+          currently run with your full credentials, this is the first thing
+          to fix.
+        </p>
+
         {/* ── SECTION 3: WHAT COMPANIES ARE DOING ── */}
 
         <h2>What the Best Companies Are Actually Doing</h2>
@@ -309,22 +367,38 @@ export default function AiNativeSEBlog() {
 
         <p>
           70-80% of Anthropic&apos;s technical employees use Claude Code every
-          day. The majority of their code is now written by Claude Code.
-          The tool itself was 90% written by Claude Code.{" "}
-          <a href="#ref-7">[7]</a> Their December 2025 survey of 132 engineers
-          found AI used in 59% of work (up from 28% a year earlier), with a
-          67% increase in merged PRs per engineer. The most interesting
-          finding: 27% of Claude-assisted work consists of tasks that{" "}
+          day, and the tool itself was 90% written by Claude Code.{" "}
+          <a href="#ref-7">[7]</a> Their survey of 132 engineers (conducted
+          August 2025, published December 2025) found AI used in 59% of work
+          (up from 28% a year earlier), with a 67% increase in merged PRs per
+          engineer. The most interesting finding: 27% of Claude-assisted work
+          consists of tasks that{" "}
           <strong>wouldn&apos;t have been done otherwise</strong> - papercut
           fixes and quality improvements teams couldn&apos;t justify before.
+        </p>
+
+        <p>
+          By mid-2026 the numbers had moved again. In &ldquo;When AI Builds
+          Itself&rdquo; (June 2026), Anthropic disclosed that Claude now
+          writes <strong>more than 80% of the code merged to
+          production</strong> at the company, measured through an attribution
+          pipeline, and that engineers ship roughly 8x as much code per
+          quarter as a few years ago. <a href="#ref-61">[61]</a> One pattern
+          from that report is directly copyable: they run Claude Code as
+          scheduled <strong>daily automated maintenance</strong> on their own
+          systems - dependency bumps, lint debt, small fixes - and about 46%
+          of its automated PRs merge. A recurring agent job with a tracked
+          merge rate is something any team can set up this week.
         </p>
 
         <p>
           Their workflow: <strong>Explore, Plan, Code, Commit</strong>. They
           start by preventing Claude from writing code, having it research
           and plan first. Engineers run 2-4 simultaneous Claude instances
-          using git worktrees. They describe themselves as &ldquo;managers of
-          AI agents&rdquo; - spending 70%+ of time reviewing, not writing.
+          using git worktrees (parallel checkouts of the same repo, so
+          agents don&apos;t overwrite each other&apos;s changes). They
+          describe themselves as &ldquo;managers of AI agents&rdquo; -
+          spending 70%+ of time reviewing, not writing.
           <a href="#ref-46">[46]</a>
         </p>
 
@@ -341,8 +415,10 @@ export default function AiNativeSEBlog() {
         <p>
           One notable experiment: Nicholas Carlini used 16 Claude Opus 4.6
           agents in parallel Docker containers to build a 100,000-line
-          Rust-based C compiler. It passed ~99% of GCC torture tests and
-          compiled QEMU, FFmpeg, SQLite, Postgres, Redis, and Lua. The
+          Rust-based C compiler. It passed ~99% of GCC&apos;s torture tests
+          (the brutal edge-case suite used to validate the standard C
+          compiler) and compiled QEMU, FFmpeg, SQLite, Postgres, Redis, and
+          Lua. The
           total API cost was $20,000 in tokens - a fraction of what a team
           of engineers would cost to build the same thing over months.{" "}
           <a href="#ref-8">[8]</a>
@@ -365,9 +441,11 @@ export default function AiNativeSEBlog() {
         <p>
           Agents run on &ldquo;devboxes&rdquo; - isolated EC2 instances that
           were originally built for human developers. Agents walked in and
-          benefited automatically. Their Toolshed MCP server has 400+ tools,
-          but each agent gets a curated subset per task - never all 400 at
-          once, which would drown the context window.
+          benefited automatically. Their internal tool server
+          (&ldquo;Toolshed&rdquo;) exposes nearly 500 tools - code search,
+          docs, tickets, build status - but each agent gets a curated subset
+          per task. Handing an agent all 500 at once would drown its context
+          window and degrade its reasoning.
         </p>
 
         <p>
@@ -399,9 +477,12 @@ export default function AiNativeSEBlog() {
         <p>
           OpenAI&apos;s Harness project built an entire product where every
           line of code was written by Codex agents. Humans steered; agents
-          executed. It shipped ~1 million lines in weeks at roughly 1/10th
-          the time of hand-written development.{" "}
-          <a href="#ref-3">[3]</a>
+          executed. Starting from an empty repo in late August 2025, a team
+          of three (growing to seven) shipped roughly 1 million lines -
+          application code, tests, CI, docs, tooling - over about five
+          months, at an estimated 1/10th the time of hand-written
+          development. <a href="#ref-3">[3]</a> Codex itself passed 2 million
+          weekly active users in March 2026.
         </p>
 
         <p>
@@ -412,13 +493,31 @@ export default function AiNativeSEBlog() {
         </p>
 
         <p>
-          They favor <strong>&ldquo;boring tech&rdquo;</strong> - stable APIs,
-          composable libraries, things well represented in training data.
-          Agents work better with these because of API stability and broad
-          coverage in the training set. The key workflow: engineers run 3-4 completely
+          They favor <strong>&ldquo;boring tech&rdquo;</strong> - stable
+          APIs and widely used libraries. Agents work better with them
+          because the model has seen them thousands of times in its
+          training data. The key workflow: engineers run 3-4 completely
           independent tasks simultaneously. They describe the problem in
           short sentences, fire off the task, immediately switch to the next
           one, and return later to check status.
+        </p>
+
+        <h3>Meta: adoption as a management target</h3>
+
+        <p>
+          Meta&apos;s approach is worth studying because it treats AI
+          adoption like any other engineering metric: measured, targeted,
+          and reported. Internal goals set in early 2026 called for 65% of
+          engineers in the central product org to write more than 75% of
+          their code with AI assistance in the first half of 2026, and
+          roughly half of code changes there are now agent-assisted.{" "}
+          <a href="#ref-72">[72]</a> Their internal platform (DevMate) sits
+          alongside what employees describe as a &ldquo;GitHub for AI
+          agents&rdquo; at the source-control layer, and in August 2026 they
+          shipped Muse Code, a terminal coding agent aimed at large
+          codebases. <a href="#ref-77">[77]</a> The transferable lesson is
+          less about the tooling and more about the management style: if
+          adoption matters to you, set explicit targets and measure them.
         </p>
 
         <h3>Other companies</h3>
@@ -428,7 +527,7 @@ export default function AiNativeSEBlog() {
           a single tool - allowing experimentation while keeping centralized
           cost control. <a href="#ref-14">[14]</a> Their key lesson:
           &ldquo;Standardize infrastructure, not tools.&rdquo; Senior
-          engineers now run up to 10 parallel agents simultaneously.
+          engineers now routinely run multiple agents in parallel.
         </p>
 
         <div className="not-prose my-6 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
@@ -438,7 +537,7 @@ export default function AiNativeSEBlog() {
           <span>&rarr;</span>
           <span className="rounded border border-border bg-muted/50 px-2 py-1 font-medium text-foreground">Model routing</span>
           <span>&rarr;</span>
-          <span className="rounded border border-border bg-muted/50 px-2 py-1 font-medium text-foreground">10 parallel agents</span>
+          <span className="rounded border border-border bg-muted/50 px-2 py-1 font-medium text-foreground">Parallel agents</span>
           <span>&rarr;</span>
           <span className="rounded border border-border bg-muted/50 px-2 py-1 font-medium text-foreground">Human selects best</span>
         </div>
@@ -466,15 +565,25 @@ export default function AiNativeSEBlog() {
         <p>
           Their March 2026 agentic code review
           creates a closed loop: review finds problem, Coding Agent generates
-          fix, engineer reviews the result. Microsoft&apos;s internal system
+          fix, engineer reviews the result. In July 2026 it gained agent
+          skills and MCP support, so reviews can now invoke your team&apos;s
+          internal tools and standards. Microsoft&apos;s internal system
           AI-reviews 90%+ of their 600K+ monthly PRs.{" "}
-          <a href="#ref-28">[28]</a>
+          <a href="#ref-28">[28]</a> And a July 2026 study of
+          Microsoft&apos;s own rollout of CLI coding agents (Claude Code and
+          Copilot CLI) measured adopters merging <strong>24% more PRs per
+          engineer per day</strong>, sustained over four months - some of the
+          strongest causal evidence yet that terminal agents are worth
+          piloting. <a href="#ref-69">[69]</a>
         </p>
 
         <p>
           Google&apos;s defining lesson for 2025: &ldquo;Agents got jobs,
           evaluation became architecture, and trust became the
-          bottleneck.&rdquo; <a href="#ref-13">[13]</a>
+          bottleneck.&rdquo; <a href="#ref-13">[13]</a> Unpacked: agents now
+          do real production work, checking their output is built into the
+          systems themselves, and the limiting factor is whether humans
+          trust the results.
         </p>
 
         <div className="not-prose my-6 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
@@ -497,8 +606,11 @@ export default function AiNativeSEBlog() {
           issues. High-stakes situations escalate to human approval. This is a
           fundamental shift: evaluation is not something you do after the
           fact - it&apos;s an active component in the execution pipeline.
-          ~50% of Google&apos;s code is now AI-generated.{" "}
-          <a href="#ref-53">[53]</a>
+          The share of AI-generated code keeps climbing: at Cloud Next in
+          April 2026, Sundar Pichai put it at <strong>~75% of new code at
+          Google</strong>, up from ~50% just months earlier - with every
+          AI-generated line still human-reviewed.{" "}
+          <a href="#ref-62">[62]</a>
         </p>
 
         <p>
@@ -535,8 +647,12 @@ export default function AiNativeSEBlog() {
         <p>
           SWE-bench Verified is the most-watched benchmark for coding agents.
           It tests whether an AI can take a real GitHub issue and produce a
-          working pull request. Top scores jumped from about 65% in early 2025
-          to 80.9% by March 2026. <a href="#ref-43">[43]</a>
+          working pull request. Top scores jumped from about 65% in early
+          2025 to ~81% by March 2026 <a href="#ref-43">[43]</a> - and then
+          the benchmark effectively saturated: by August 2026 the leaders sit
+          at 95-97%, with Claude Opus 5 at 96%. <a href="#ref-66">[66]</a>{" "}
+          When every frontier model clears 95%, the benchmark stops telling
+          you which one to pick.
         </p>
 
         <SweBenchLeaderboard />
@@ -545,9 +661,13 @@ export default function AiNativeSEBlog() {
           These scores look impressive, but they don&apos;t tell the full
           story. SWE-bench Pro is a harder version of the same test, designed
           so models can&apos;t cheat by having seen the answers during
-          training. On Pro, the best models score only ~23%. And even on the
-          standard version, METR found that about half the PRs that pass the
-          tests would still get rejected by actual maintainers - they pass
+          training. Pro is moving fast too - from ~23% in early 2026 to 59%
+          on Scale&apos;s standardized leaderboard by August (GPT-5.4), with
+          vendor-reported runs claiming up to 80%.{" "}
+          <a href="#ref-67">[67]</a> The narrowing gap between Verified and
+          Pro suggests genuine improvement rather than memorization. Still,
+          the caveats stand: METR found that about half the PRs that pass the
+          tests would get rejected by actual maintainers - they pass
           technically but aren&apos;t good enough to merge. Devin AI merges
           67% of its PRs in production, but when independently tested on
           complex tasks, that dropped to just 15%.{" "}
@@ -557,14 +677,27 @@ export default function AiNativeSEBlog() {
         <h3>The AI coding tool market</h3>
 
         <p>
-          GitHub Copilot has 20 million users, 4.7 million paid subscribers,
-          and is at 90% of Fortune 100 companies.{" "}
-          <a href="#ref-57">[57]</a> Cursor went from $1M ARR in 2023 to
-          $2B+ by February 2026 with just 40-60 employees - the
-          fastest-growing SaaS company in history. But The Pragmatic
-          Engineer&apos;s 2026 survey found Claude Code has overtaken both
-          Copilot and Cursor as the most-used AI coding tool, just 8 months
-          after launch. <a href="#ref-22">[22]</a>
+          The three biggest tools tell the story. GitHub Copilot has the
+          widest reach: 20 million users (as of mid-2025), 4.7 million paid
+          subscribers (January 2026), and deployments at 90% of Fortune 100
+          companies. <a href="#ref-57">[57]</a> Cursor grew from $1M ARR in
+          2023 to roughly $3B by mid-2026 - and in June 2026, SpaceX agreed
+          to acquire its maker Anysphere for $60 billion, the largest
+          acquisition of a venture-backed startup ever.{" "}
+          <a href="#ref-70">[70]</a>
+        </p>
+
+        <p>
+          But developers&apos; preference has shifted to Claude Code. The
+          Pragmatic Engineer&apos;s 2026 survey of 906 developers found it
+          became the most-used AI coding tool just 8 months after launch -
+          46% named it their favorite, versus 19% for Cursor and 9% for
+          Copilot. <a href="#ref-22">[22]</a> Its revenue grew from about
+          $500M to $8B annualized in eight months. And the field keeps
+          widening: Google&apos;s Antigravity 2.0, xAI&apos;s Grok Build,
+          and Meta&apos;s Muse Code all launched in 2026. The practical
+          takeaway: don&apos;t bet your workflow on one vendor - the
+          leaderboard has flipped twice in eighteen months.
         </p>
 
         {/* ── SECTION 6: AGILE/DEVOPS CHANGES ── */}
@@ -671,9 +804,10 @@ export default function AiNativeSEBlog() {
         <p>
           For retros, let AI analyze your sprint metrics - defect trends,
           cycle time, ticket churn - and surface patterns you might miss.
-          But be aware of the isolation problem: only{" "}
-          <strong>17% of AI agent users</strong> say agents improved team
-          collaboration. The main benefit is still personal productivity.
+          But be aware of the isolation problem: in Stack Overflow&apos;s
+          2025 survey, only <strong>17% of AI agent users</strong> said
+          agents improved team collaboration - even though ~70% agreed they
+          cut task time. The main benefit is still personal productivity.
           Make sure people keep pairing and talking to each other, not just
           to their AI tools.
         </p>
@@ -693,7 +827,9 @@ export default function AiNativeSEBlog() {
 
         <p>
           The GitClear data from earlier tells the story: refactoring down,
-          duplication up, complexity up 39% in agent-heavy repos. The reason
+          duplication up - and an independent study of agent-assisted
+          repositories measured cognitive complexity up 39%.{" "}
+          <a href="#ref-75">[75]</a> The reason
           is simple - agents optimize for making tests pass, not for clean
           architecture. The fix: schedule dedicated refactoring sprints, and
           give AI refactoring tasks too, not just feature work.
@@ -710,7 +846,7 @@ export default function AiNativeSEBlog() {
           <strong>AI quality gates.</strong> Add AI-specific rules to your
           existing static analysis tools (SonarQube, Snyk, ESLint). AI code
           tends to have patterns human code doesn&apos;t - excessive I/O
-          operations (8x the human rate per GitClear), duplicated logic
+          operations (8x the human rate per CodeRabbit), duplicated logic
           instead of abstractions, and overly permissive error handling.
           Create custom rules that flag these. Run them as a required CI
           step that blocks merge if they fail.
@@ -778,8 +914,9 @@ export default function AiNativeSEBlog() {
         </p>
 
         <p>
-          About 40% of platform teams have adopted some form of AIOps,
-          cutting unplanned downtime by ~20% (Gartner).
+          About 40% of platform teams have adopted some form of AIOps
+          (AI-assisted IT operations), cutting unplanned downtime by ~20%
+          (Gartner).
         </p>
 
         <h3>Self-healing software is starting to work</h3>
@@ -787,22 +924,27 @@ export default function AiNativeSEBlog() {
         <p>
           The idea: AI agents watch your pipelines, detect when something
           breaks, figure out the cause, and fix it - or roll back to the
-          last working version - all without a human touching it. Teams
-          using these patterns report mean time to recovery dropping from{" "}
-          <strong>2-4 hours to under 30 seconds</strong>.{" "}
-          <a href="#ref-48">[48]</a> For a company losing $10K/hour across
-          50 incidents a year, that&apos;s $2M+ saved annually.
+          last working version - all without a human touching it. Be
+          realistic about the numbers here: published evaluations report
+          MTTR reductions in the <strong>50-80% range</strong> (one study
+          measured ~25 minutes down to ~8), while the
+          &ldquo;seconds-level&rdquo; recovery claims you see in vendor
+          material are marketing. Self-healing systems today handle only a
+          minority of real-world failure classes - keep humans in the
+          escalation path.
         </p>
 
         <h3>The multi-agent landscape</h3>
 
         <p>
-          Three frameworks have emerged as the main options:{" "}
-          <strong>LangGraph</strong> for production-grade work (600-800
-          companies using it), <strong>CrewAI</strong> for quick prototyping
-          (100K+ certified developers), and{" "}
-          <strong>Microsoft Agent Framework</strong> for Azure environments.
-          Gartner saw a 1,445% increase in multi-agent inquiries and
+          A few frameworks have emerged as the main options:{" "}
+          <strong>LangGraph</strong> for production-grade work (40M+ monthly
+          downloads; in production at Uber, LinkedIn, and Klarna),{" "}
+          <strong>CrewAI</strong> for quick prototyping (12M+ daily agent
+          executions), and <strong>Microsoft Agent Framework</strong> for
+          Azure environments, with OpenAI&apos;s Agents SDK and Google&apos;s
+          ADK rounding out the field. Gartner saw a 1,445% increase in
+          multi-agent inquiries between early 2024 and early 2025, and
           predicts 40% of enterprise apps will have embedded AI agents by
           end of 2026.
         </p>
@@ -810,10 +952,14 @@ export default function AiNativeSEBlog() {
         <p>
           Two protocols matter: Anthropic&apos;s{" "}
           <strong>MCP (Model Context Protocol)</strong> for connecting AI to
-          tools, and Google&apos;s <strong>A2A (Agent-to-Agent)</strong> for
-          agents talking to each other. ThoughtWorks put MCP in their Trial
+          tools, and <strong>A2A (Agent-to-Agent)</strong> for agents
+          talking to each other - originated at Google, now governed by the
+          Linux Foundation with 150+ member organizations.{" "}
+          <a href="#ref-71">[71]</a> ThoughtWorks put MCP in their Trial
           ring but warned against blindly converting every API to an MCP
-          endpoint. <a href="#ref-33">[33]</a>
+          endpoint - and their 2026 guidance adds: load only the MCP servers
+          a task needs, because every connected server eats context.{" "}
+          <a href="#ref-33">[33]</a>
         </p>
 
         {/* ── SECTION 7: PREDICTIONS ── */}
@@ -823,34 +969,50 @@ export default function AiNativeSEBlog() {
         <AiEngineeringTimeline />
 
         <p>
-          AI coding agents are getting better fast. The length of task they
-          can handle reliably is doubling roughly every 5-7 months. Claude
-          Opus 4.5 (November 2025) could handle ~5-hour tasks at 50%
-          reliability. By end of 2026, models are expected to manage 20-hour
-          tasks - almost half a work week. The AI 2027 project predicts a
-          &ldquo;superhuman coder&rdquo; by March 2027, though current
-          progress is tracking at about 65% of that pace.{" "}
-          <a href="#ref-50">[50]</a>
+          AI coding agents are getting better fast. The standard way to
+          measure this is METR&apos;s &ldquo;time horizon&rdquo;: the
+          longest task (measured in human working hours) that a model
+          completes successfully at least half the time. That horizon has
+          been doubling every 3-4 months on the recent trend (6.3 months
+          averaged over all time). <a href="#ref-68">[68]</a> Claude Opus
+          4.5 (November 2025) could handle ~5-hour tasks. By end of 2026,
+          models are expected to manage 20-hour tasks - almost half a work
+          week. The AI 2027 project - a widely discussed AI capability
+          forecast led by a former OpenAI researcher - originally
+          predicted a &ldquo;superhuman coder&rdquo; by March 2027; as of
+          mid-2026 its own tracker puts reality at about 70% of the
+          predicted pace, and the authors have pushed the milestone out to
+          late 2027 - mid 2028. <a href="#ref-76">[76]</a>
         </p>
 
         <p>
-          Claude Opus 4.6 currently holds the record for the longest task an
-          AI can do reliably: 14 hours 30 minutes (measured by METR).{" "}
-          <a href="#ref-49">[49]</a>
+          Claude Opus 4.6 still holds the published record for the longest
+          task an AI can do reliably: 14 hours 30 minutes (measured by
+          METR) - though METR notes the measurement is extremely noisy
+          because its task suite is nearly saturated, and none of the
+          mid-2026 models have been measured yet.{" "}
+          <a href="#ref-49">[49]</a> The model landscape itself turned over
+          since spring: GPT-5.5 (April), Anthropic&apos;s Claude Fable 5 and
+          Mythos 5 (June) and Claude Opus 5 (July), and the open-weight
+          DeepSeek V4 Pro now all sit at or near the frontier.
         </p>
 
         <p>
           Context windows - how much information the model can see at once -
-          have settled at 1-2 million tokens across the big models. That
-          means entire codebases can fit in context. The real progress now is
-          in reasoning quality and the ability to work autonomously for
-          longer periods.
+          have made 1 million tokens the de facto standard across frontier
+          models, with advertised windows ranging from 256K (GPT-5.5) to 10
+          million (Gemini 3 Pro - though nothing yet shows quality holding
+          at that length). Entire codebases fit in context. The real
+          progress now is in reasoning quality and the ability to work
+          autonomously for longer periods.
         </p>
 
         <p>
           One trend worth watching: Stanford data shows jobs for developers
           aged 22-25 dropped nearly 20% from peak, while jobs for those
-          35-49 went <em>up</em> 9%. <a href="#ref-42">[42]</a> AI makes
+          35-49 went <em>up</em> 9% - and Stanford&apos;s AI Index 2026
+          confirms the trend has not reversed.{" "}
+          <a href="#ref-42">[42]</a> <a href="#ref-74">[74]</a> AI makes
           experience more valuable while making entry-level positions harder
           to justify. Some teams are adopting &ldquo;Copilot-free
           Fridays&rdquo; - one day per week with no AI tools - specifically
@@ -915,7 +1077,9 @@ export default function AiNativeSEBlog() {
           CLAUDE.md or AGENTS.md files for your main repos - this is the
           single highest-leverage thing you can do for AI code quality.
           Make a rule that AI never writes both the code and the tests for
-          that code. And add at least one AI-specific quality gate to your
+          that code. Grant agents least-privilege access from day one - load
+          only the MCP servers and tools a task needs, never your full
+          credentials. And add at least one AI-specific quality gate to your
           CI pipeline.
         </p>
 
@@ -927,9 +1091,13 @@ export default function AiNativeSEBlog() {
           AI vs. human code metrics separately - error rates, cycle time,
           review outcomes. Without this data, you&apos;re flying blind. Run
           a controlled experiment on one team to actually measure whether AI
-          is helping before you roll it out everywhere. And set up a shared
-          prompt and workflow library so people aren&apos;t reinventing the
-          wheel.
+          is helping before you roll it out everywhere - and re-run it
+          quarterly, because METR&apos;s follow-up showed the answer changed
+          within six months as the tools improved. Expect a J-curve: DORA&apos;s
+          ROI data says metrics often dip before they improve, so agree
+          upfront how long you&apos;ll wait before judging. And set up a
+          shared prompt and workflow library so people aren&apos;t
+          reinventing the wheel.
         </p>
 
         <h3>As your team matures</h3>
@@ -939,7 +1107,12 @@ export default function AiNativeSEBlog() {
           still writing most code by hand, you may need to shift toward
           more reviewing and less typing. Invest in making your codebase
           agent-friendly (see the earlier section). Set up self-healing
-          patterns for your most critical pipelines. Start a monthly AI
+          patterns for your most critical pipelines. Give agents recurring
+          maintenance chores - dependency bumps, lint debt, papercut fixes -
+          as a scheduled job with a tracked merge rate, the way Anthropic
+          runs daily automated maintenance at a ~46% merge rate. Pilot CLI
+          agents if you haven&apos;t: Microsoft&apos;s internal rollout
+          measured 24% more merged PRs per engineer. Start a monthly AI
           code audit - pick 10 random AI-generated files and have a senior
           engineer review them deeply. Plan for MCP integration in your
           architecture. And schedule explicit refactoring sprints, because
@@ -1158,6 +1331,96 @@ export default function AiNativeSEBlog() {
             <li id="ref-57">
               Quantumrun. &ldquo;GitHub Copilot Statistics 2026.&rdquo;{" "}
               <a href="https://www.quantumrun.com/consulting/github-copilot-statistics/" target="_blank" rel="noopener noreferrer">quantumrun.com</a>
+            </li>
+          </ol>
+
+          <h3>August 2026 update</h3>
+          <ol start={60}>
+            <li id="ref-60">
+              METR. &ldquo;Update on our developer uplift study.&rdquo;
+              February 2026.{" "}
+              <a href="https://metr.org/blog/2026-02-24-uplift-update/" target="_blank" rel="noopener noreferrer">metr.org</a>
+            </li>
+            <li id="ref-61">
+              Anthropic. &ldquo;When AI Builds Itself.&rdquo; June 2026.{" "}
+              <a href="https://www.anthropic.com/institute/recursive-self-improvement" target="_blank" rel="noopener noreferrer">anthropic.com</a>
+            </li>
+            <li id="ref-62">
+              Fast Company. &ldquo;Google CEO says 75% of the company&apos;s
+              code is AI-generated.&rdquo; April 2026.{" "}
+              <a href="https://www.fastcompany.com/91531519/google-ceo-says-75-of-the-companys-code-is-ai-generated" target="_blank" rel="noopener noreferrer">fastcompany.com</a>
+            </li>
+            <li id="ref-63">
+              DORA. &ldquo;The ROI of AI-assisted Software
+              Development.&rdquo; April 2026.{" "}
+              <a href="https://dora.dev/ai/roi/report/" target="_blank" rel="noopener noreferrer">dora.dev</a>
+            </li>
+            <li id="ref-64">
+              GitClear. &ldquo;The Maintainability Gap: 2026 AI Code Quality
+              Research.&rdquo;{" "}
+              <a href="https://www.gitclear.com/the_ai_code_quality_maintainability_gap" target="_blank" rel="noopener noreferrer">gitclear.com</a>
+            </li>
+            <li id="ref-65">
+              ThoughtWorks. &ldquo;Technology Radar Volume 34.&rdquo; April
+              2026.{" "}
+              <a href="https://www.thoughtworks.com/radar" target="_blank" rel="noopener noreferrer">thoughtworks.com</a>
+            </li>
+            <li id="ref-66">
+              BenchLM. SWE-bench Verified leaderboard, August 2026.{" "}
+              <a href="https://benchlm.ai/benchmarks/swe-bench-verified" target="_blank" rel="noopener noreferrer">benchlm.ai</a>
+            </li>
+            <li id="ref-67">
+              Scale AI. SWE-bench Pro public leaderboard.{" "}
+              <a href="https://labs.scale.com/leaderboard/swe_bench_pro_public" target="_blank" rel="noopener noreferrer">labs.scale.com</a>
+            </li>
+            <li id="ref-68">
+              METR. &ldquo;Time Horizon 1.1.&rdquo; January 2026.{" "}
+              <a href="https://metr.org/blog/2026-1-29-time-horizon-1-1/" target="_blank" rel="noopener noreferrer">metr.org</a>
+            </li>
+            <li id="ref-69">
+              &ldquo;Adoption and Impact of Command-Line AI Coding Agents: A
+              Study of Microsoft&apos;s Early 2026 Rollout of Claude Code and
+              GitHub Copilot CLI.&rdquo; July 2026.{" "}
+              <a href="https://arxiv.org/abs/2607.01418" target="_blank" rel="noopener noreferrer">arXiv</a>
+            </li>
+            <li id="ref-70">
+              Quartz. &ldquo;SpaceX is buying Cursor-maker Anysphere in a
+              $60 billion deal.&rdquo; June 2026.{" "}
+              <a href="https://qz.com/spacex-buying-cursor-anysphere-60-billion-deal-061626" target="_blank" rel="noopener noreferrer">qz.com</a>
+            </li>
+            <li id="ref-71">
+              Linux Foundation. &ldquo;A2A protocol surpasses 150
+              organizations.&rdquo; April 2026.{" "}
+              <a href="https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year" target="_blank" rel="noopener noreferrer">linuxfoundation.org</a>
+            </li>
+            <li id="ref-72">
+              People Matters. &ldquo;Meta sets AI coding targets.&rdquo;
+              March 2026.{" "}
+              <a href="https://www.peoplematters.in/news/ai-and-emerging-tech/meta-sets-ai-coding-targets-with-some-teams-aiming-for-75percent-usage-49016" target="_blank" rel="noopener noreferrer">peoplematters.in</a>
+            </li>
+            <li id="ref-73">
+              Jellyfish. &ldquo;2026 State of Engineering Management.&rdquo;
+              May 2026.{" "}
+              <a href="https://jellyfish.co/2026-state-of-engineering-management/" target="_blank" rel="noopener noreferrer">jellyfish.co</a>
+            </li>
+            <li id="ref-74">
+              Stanford HAI. &ldquo;AI Index Report 2026&rdquo; (economy
+              chapter).{" "}
+              <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" target="_blank" rel="noopener noreferrer">hai.stanford.edu</a>
+            </li>
+            <li id="ref-75">
+              &ldquo;To What Extent Does Agent-generated Code Require
+              Maintenance?&rdquo; 2026.{" "}
+              <a href="https://arxiv.org/html/2605.06464" target="_blank" rel="noopener noreferrer">arXiv</a>
+            </li>
+            <li id="ref-76">
+              AI 2027 Tracker. Superhuman coder prediction status.{" "}
+              <a href="https://ai2027-tracker.com/" target="_blank" rel="noopener noreferrer">ai2027-tracker.com</a>
+            </li>
+            <li id="ref-77">
+              TechCrunch. &ldquo;Meta launches Muse Code, an AI agent for
+              large code bases.&rdquo; August 2026.{" "}
+              <a href="https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/" target="_blank" rel="noopener noreferrer">techcrunch.com</a>
             </li>
           </ol>
         </div>

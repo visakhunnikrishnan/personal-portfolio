@@ -1,9 +1,9 @@
 /*
  * SWE-bench Leaderboard – horizontal bar chart
  *
- * Shows SWE-bench Verified scores converging near 80% (March 2026),
- * with a reference line for SWE-bench Pro (~23%) to highlight the
- * benchmark gap.
+ * Shows SWE-bench Verified scores as of August 2026: the benchmark has
+ * effectively saturated near 95-97% for frontier models (scores vary
+ * slightly by scaffold/aggregator).
  */
 
 const W = 640;
@@ -13,16 +13,16 @@ const CW = W - PAD.left - PAD.right;
 const CH = H - PAD.top - PAD.bottom;
 
 const data = [
-  { label: "Claude Opus 4.5", value: 80.9, color: "#8b5cf6" },
-  { label: "Claude Opus 4.6", value: 80.8, color: "#6366f1" },
-  { label: "Gemini 3.1 Pro", value: 80.6, color: "#06b6d4" },
-  { label: "MiniMax M2.5", value: 80.2, color: "#10b981" },
-  { label: "GPT-5.2", value: 80.0, color: "#f59e0b" },
-  { label: "Claude Sonnet 4.6", value: 79.6, color: "#a855f7" },
+  { label: "Claude Opus 5", value: 96.0, color: "#8b5cf6" },
+  { label: "Claude Mythos 5", value: 95.5, color: "#6366f1" },
+  { label: "Claude Fable 5", value: 95.0, color: "#a855f7" },
+  { label: "Claude Opus 4.8", value: 88.6, color: "#06b6d4" },
+  { label: "Claude Opus 4.7", value: 87.6, color: "#10b981" },
+  { label: "Ornith-1.5-397B", value: 86.0, color: "#f59e0b" },
 ];
 
-const MAX = 85;
-const MIN_DISPLAY = 70;
+const MAX = 100;
+const MIN_DISPLAY = 80;
 const DISPLAY_RANGE = MAX - MIN_DISPLAY;
 
 const BAR_H = 30;
@@ -39,7 +39,7 @@ export function SweBenchLeaderboard() {
         viewBox={`0 0 ${W} ${H}`}
         className="w-full"
         role="img"
-        aria-label="Horizontal bar chart of SWE-bench Verified leaderboard showing top models converging near 80 percent, with SWE-bench Pro reference at 23 percent"
+        aria-label="Horizontal bar chart of SWE-bench Verified leaderboard as of August 2026, showing frontier models saturating the benchmark between 86 and 96 percent, led by Claude Opus 5"
       >
         <defs>
           {data.map((d) => (
@@ -66,7 +66,7 @@ export function SweBenchLeaderboard() {
         </defs>
 
         {/* Grid lines */}
-        {[70, 72, 74, 76, 78, 80, 82, 84].map((v) => (
+        {[80, 84, 88, 92, 96, 100].map((v) => (
           <g key={v}>
             <line
               x1={xPos(v)}
@@ -148,13 +148,14 @@ export function SweBenchLeaderboard() {
           textAnchor="middle"
           className="text-[10px] fill-muted-foreground/60"
         >
-          SWE-bench Verified score (%) &mdash; March 2026
+          SWE-bench Verified score (%) &mdash; August 2026
         </text>
       </svg>
       <figcaption className="mt-2 text-center text-sm text-muted-foreground">
-        SWE-bench Verified scores have converged near 80%. But SWE-bench
-        Pro&mdash;harder and contamination-resistant&mdash;shows best models at
-        only ~23%.
+        SWE-bench Verified has saturated: frontier models score 95&ndash;97%
+        (scores vary slightly by scaffold). SWE-bench Pro&mdash;harder and
+        contamination-resistant&mdash;is at 59% standardized, up from ~23%
+        in early 2026.
       </figcaption>
     </figure>
   );
