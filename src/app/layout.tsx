@@ -18,9 +18,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.visakhunni.com"),
   title: "Visakh Unni",
   description:
     "Research engineer exploring hidden pattern mining, parallel computing, data storytelling, and developer platforms.",
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     title: "Visakh Unni",
     description:
